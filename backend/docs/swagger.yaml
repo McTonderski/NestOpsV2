@@ -1,0 +1,25 @@
+definitions:
+  routes.ServiceList:
+    properties:
+      services:
+        items:
+          type: string
+        type: array
+    type: object
+info:
+  contact: {}
+paths:
+  /services:
+    get:
+      description: Scans the services directory and lists folders containing a docker-compose.yml
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/routes.ServiceList'
+      summary: List available services
+      tags:
+      - services
+swagger: "2.0"

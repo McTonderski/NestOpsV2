@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{graphicx} % For including graphics
+\usepackage{setspace} % For line spacing
+\usepackage{hyperref} % For clickable references
+\usepackage{titlesec} % For custom section titles
+\usepackage{tocloft} % For customizing the table of contents
+\usepackage{biblatex} % For bibliography management
+\usepackage{listing}
+\addbibresource{bibliography.bib}
+
+% Include additional settings
+\input{preamble}
+
+\begin{document}
+
+% Title page
+\input{chapters/stronatytulowa}
+
+% Abstract
+\section*{Streszczenie}
+
+W niniejszej pracy magisterskiej przedstawiono projekt i implementację systemu HomeLab, który umożliwia użytkownikom łatwe zarządzanie infrastrukturą IT w środowisku domowym. Celem projektu było stworzenie rozwiązania, które pozwala na automatyczne wdrażanie i kontrolowanie maszyn wirtualnych, kontenerów oraz zasobów sieciowych, przy jednoczesnym zapewnieniu wysokiego poziomu bezpieczeństwa i intuicyjności obsługi.
+
+Praca rozpoczyna się od omówienia koncepcji HomeLab oraz analizy istniejących rozwiązań do zarządzania infrastrukturą IT, takich jak Proxmox, Unraid, Docker, Kubernetes i inne narzędzia do automatyzacji oraz monitorowania. Wskazano ich zalety i ograniczenia, co pozwoliło na określenie luki technologicznej, którą uzupełnia proponowany system.
+
+Kolejne rozdziały opisują szczegóły techniczne dotyczące architektury systemu, sposobu implementacji oraz wykorzystanych technologii. Główne elementy składające się na rozwiązanie to:
+\begin{itemize}
+    \item Backend stworzony w technologii GoLang zarządzający uzytkownikami, usługami oraz monitorujący system.
+    \item Baza danych SQLite przechowująca informację o zarejestrowanych uzytkownikach, przeprowadzonych ostatnich pomiarach oraz monitorująca
+    \item Interfejs użytkownika stworzony przy użyciu TypeScript oraz szablonu TailAdmin,
+    \item Mechanizmy uwierzytelniania i autoryzacji z wykorzystaniem JWT, zapewniające bezpieczeństwo operacji,
+\end{itemize}
+
+W pracy przeprowadzono również testy wydajnościowe, które potwierdziły, że system jest w stanie obsłużyć duże obciążenie i działa stabilnie przy wysokiej liczbie jednoczesnych użytkowników. Ponadto przedstawiono teoretyczne aspekty testowania bezpieczeństwa, wskazując najlepsze praktyki oraz narzędzia stosowane do analizy podatności systemu.
+
+Opracowany system HomeLab stanowi kompleksowe i skalowalne rozwiązanie, które może być wykorzystywane przez administratorów IT, pasjonatów nowych technologii oraz osoby chcące zwiększyć swoją kontrolę nad infrastrukturą IT w środowisku domowym. Praca ta dostarcza także szczegółowej analizy istniejących narzędzi oraz wdrożonych mechanizmów, stanowiąc podstawę do dalszego rozwoju podobnych systemów.
+
+
+\newpage
+
+% Table of Contents
+\renewcommand{\contentsname}{Spis treści}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+% Chapters
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
+\input{chapters/chapter6}
+
+% Bibliography
+\newpage
+\printbibliography
+
+\end{document}

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - /sys/class/thermal:/sys/class/thermal:ro
+      - /proc:/host/proc:ro
+    #   - ./backend:/app
+    environment:
+      - GIN_MODE=debug
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:3000"
+    volumes:
+      - ./frontend:/app

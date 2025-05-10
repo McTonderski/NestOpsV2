@@ -1,0 +1,142 @@
+\chapter{Czym jest HomeLab oraz analiza istniejących rozwiązań}
+
+\section{Definicja HomeLab oraz znaczenie}
+HomeLab jest prywatnym środowiskiem IT, dzięki któremu entuzjaści nowych technologii, administratorzy systemów oraz programiści mogą w lokalnym – domowym środowisku testować, rozwijać oraz zarządzać własną infrastrukturą IT. Jego głównym zamierzeniem jest stworzenie realistycznego środowiska do eksperymentowania z technologiami chmurowymi, wirtualizacją, konteneryzacją oraz narzędziami DevOps. Własny system HomeLab to również metoda na rezygnację z komercyjnych subskrypcji, takich jak Google Drive, Dropbox czy OneDrive, co pozwala na pełną kontrolę nad dostępem do prywatnych danych. Dzięki niemu zwiększa się prywatność poprzez wyeliminowanie potrzeby przechowywania zdjęć w usługach chmurowych, takich jak Google Photos.
+
+HomeLaby znajdują zastosowanie w wielu obszarach, w tym:
+\begin{itemize}
+    \item nauka administracji serwerami i sieciami,
+    \item testowanie nowych technologii przed użyciem ich w środowisku produkcyjnym,
+    \item budowanie prywatnej chmury oraz rozwiązań do przechowywania danych,
+    \item analiza bezpieczeństwa i przeprowadzanie testów penetracyjnych,
+    \item tworzenie automatyzacji dla infrastruktury IT,
+    \item uniezależnienie się od komercyjnych dostawców chmury w celu zwiększenia kontroli nad własnymi danymi.
+\end{itemize}
+
+\section{Technologie wykorzystywane w HomeLabach}
+HomeLab może składać się z różnych komponentów, od dedykowanych serwerów fizycznych po rozwiązania chmurowe i kontenerowe. Kluczowe technologie wykorzystywane w HomeLabach obejmują:
+
+\subsection{Wirtualizacja i konteneryzacja}
+\begin{itemize}
+    \item Proxmox VE – platforma do zarządzania maszynami wirtualnymi i kontenerami.
+    \item VMware ESXi – profesjonalne narzędzie do wirtualizacji serwerów.
+    \item Hyper-V – narzędzie do wirtualizacji dostarczane przez Microsoft wraz z systemem Windows.
+    \item Docker i Kubernetes – technologie konteneryzacji, pozwalające na elastyczne zarządzanie aplikacjami i zasobami.
+\end{itemize}
+
+\subsection{Automatyzacja i zarządzanie konfiguracją}
+\begin{itemize}
+    \item Ansible, Terraform, Puppet, Chef – narzędzia do automatyzacji wdrażania i zarządzania infrastrukturą.
+\end{itemize}
+
+\subsection{Monitoring i analiza}
+\begin{itemize}
+    \item Prometheus i Grafana – rozwiązania do monitorowania wydajności i wizualizacji danych.
+    \item Zabbix – platforma do monitorowania infrastruktury IT.
+\end{itemize}
+
+\section{Analiza istniejących systemów do zarządzania homelabem}
+\subsection{Przegląd dostępnych rozwiązań}
+Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najpopularniejszych nalezą:
+\begin{itemize}
+    \item Proxmox VE \cite{Proxmox} - rozbudowany, open-source rozwiązanie do zarządzania maszynami wirtualnymi i kontenerami, oferujące intrgeację z Ceph i wysoką dostępność.
+    \item Unraid \cite{Unraid} - popularne rozwiązanie NAS z obsługą wirtualizacji i kontenerów, cenione za łatwość obsługi ale ograniczone zastosowanie korporacyjne.
+    \item OpenStack \cite{OpenStack} - potęzna platforma chmurowa, która moze być uzywana do zarządzania homelabem, ale jej skomplikowana konfiguracja sprawia, ze nie jest przyjazna dla poczatkujacych uzytkowników.
+    \item TrueNAS \cite{TrueNAS} - rozbudowane oprogramowanie do zarządzania przestrzenią dyskową, które umozliwa tworzenie prywatnych chmur danych
+    \item Docker \cite{Docker} + Kubernetes \cite{Kubernetes} - stosowane w bardziej zaawansowanych wdrozeniach do zarzadzania kontenerami, ale wymagające większej wiedzy technicznej.
+\end{itemize}
+\subsection{Zalety i ograniczenia konkurencyjnych systemów}
+
+\subsubsection{Proxmox VE \cite{Proxmox}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Darmowa wersja open-source.
+        \item Wsparcie dla maszyn wirtualnych (KVM) i kontenerów (LXC).
+        \item Mozliwość tworzenia klastrów wysokiej dostępności.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Brak pełnej automatyzacji wdrozeń.
+        \item Stosunkowo wysoki próg wejścia dla początkujących uzytkowników.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{Unraid \cite{Unraid}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Intuicyjny interfejs uzytkownika.
+        \item Łatwa obsługa pamięci masowej i kontrolerów.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Model licencyjny oparty na opłacie jednorazowej.
+        \item Ograniczona integracja z systemami chmurowymi.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{OpenStack \cite{OpenStack}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Zaawansowane funkcje chmurowe.
+        \item Skalowalność i modularność.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Bardzo wysoka trudność wdrozenia.
+        \item Wymaga duzej ilości zasobów sprzętowych.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{TrueNAS \cite{TrueNAS}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Silne wsparcie dla przechowywania danych.
+        \item Wbudowana replikacja i ochrona RAID
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Skupione głównie na funkcjach NAS.
+        \item Brak natywnego wsparcia dla maszyn wirtualnych.
+    \end{itemize}
+\end{minipage}
+
+
+\subsubsection{Docker \cite{Docker} + Kubernetes \cite{Kubernetes}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Elastyczność w zarządzaniu aplikacjami kontenerowymi.
+        \item Łatwe skalowanie infrastruktury.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Wymaga duzej wiedzy technicznej.
+        \item Brak wsparcia dla maszyn wirtualnych.
+    \end{itemize}
+\end{minipage}
+
+
+\subsection{Identyfikacja luki technologicznej}
+Analiza powyższego porównania dostępnych systemów pokazuje, że żadne z obecnych rozwiązań nie zapewnia jednocześnie:
+\begin{itemize}
+    \item Pełnej integracji zarządzania maszynami wirtualnymi, kontenerami i przestrzenią dyskową w jednym ekosystemie.
+    \item Prostego i intuicyjnego interfejsu dla użytkowników niebędących ekspertami w zarządzaniu infrastrukturą IT.
+    \item Natychmiastowej automatyzacji wdrażania, bez konieczności skomplikowanej konfiguracji narzędzi DevOps.
+    \item Wbudowanej funkcjonalności związanej z bezpieczeństwem i prywatnością, eliminującej konieczność korzystania z komercyjnych rozwiązań chmurowych.
+\end{itemize}
+
+Proponowany system HomeLab ma na celu uzupełnienie tej luki poprzez stworzenie intuicyjnego narzędzia do zarządzania domową infrastrukturą IT, które zapewni łatwość obsługi, pełną automatyzację oraz zwiększoną prywatność użytkowników.

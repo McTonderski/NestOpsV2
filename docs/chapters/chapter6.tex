@@ -1,0 +1,95 @@
+\chapter{Podsumowanie i wnioski}
+
+\section{Podsumowanie pracy}
+
+W niniejszej pracy magisterskiej przedstawiono projekt, implementację oraz analizę systemu zarządzania usługami i monitorowania serwera, bazującego na technologii FastAPI. Celem pracy było stworzenie wydajnej i bezpiecznej aplikacji umożliwiającej administratorom zarządzanie usługami systemowymi, monitorowanie wykorzystania zasobów oraz przeprowadzanie operacji administracyjnych na serwerze.
+
+W trakcie realizacji projektu skupiono się na kilku kluczowych aspektach, w tym projektowaniu interfejsu użytkownika, implementacji API, zarządzaniu użytkownikami, optymalizacji wydajności oraz aspektach teoretycznych związanych z bezpieczeństwem aplikacji webowych. Każdy z tych elementów został szczegółowo opisany i przeanalizowany, co pozwoliło na wyciągnięcie cennych wniosków dotyczących zarówno samej technologii FastAPI, jak i szeroko pojętego zarządzania infrastrukturą IT.
+
+\subsection{Osiągnięcia i rezultaty pracy}
+
+W ramach realizacji pracy osiągnięto następujące kluczowe rezultaty:
+\begin{itemize}
+    \item Zaprojektowano i wdrożono interfejs użytkownika przy użyciu platformy no-code Appsmith, co umożliwiło szybkie tworzenie funkcjonalnego panelu administracyjnego bez konieczności implementacji kodu frontendowego,
+    \item Stworzono API oparte na FastAPI, pozwalające na zarządzanie użytkownikami, usługami oraz monitorowanie zasobów systemowych w sposób wydajny i skalowalny,
+    \item Zaimplementowano mechanizmy uwierzytelniania i autoryzacji użytkowników oparte na JWT, co zapewnia bezpieczeństwo dostępu do systemu oraz możliwość nadawania różnych ról użytkownikom,
+    \item Wdrożono funkcje zarządzania użytkownikami, obejmujące rejestrację, edycję, listowanie oraz usuwanie użytkowników – dostępne wyłącznie dla administratorów,
+    \item Dodano możliwość zarządzania usługami systemowymi, co pozwala administratorom na rejestrowanie, uruchamianie, zatrzymywanie oraz monitorowanie stanu usług w systemie,
+    \item Przeprowadzono testy wydajnościowe z wykorzystaniem Locust, które wykazały, że system jest w stanie obsłużyć duże obciążenie i działa stabilnie nawet przy dużej liczbie równoczesnych użytkowników,
+    \item Omówiono teoretyczne aspekty związane z testowaniem bezpieczeństwa aplikacji, prezentując najlepsze praktyki i narzędzia stosowane w celu identyfikacji oraz eliminacji potencjalnych podatności systemu.
+\end{itemize}
+
+System opracowany w ramach pracy magisterskiej został zaprojektowany w sposób modularny i elastyczny, co pozwala na jego dalszą rozbudowę. Obecna wersja aplikacji spełnia założenia funkcjonalne, umożliwiając administratorom efektywne zarządzanie systemem w sposób zautomatyzowany oraz intuicyjny.
+
+\subsection{Wnioski i przyszłe kierunki rozwoju}
+
+Na podstawie przeprowadzonych analiz i testów można stwierdzić, że zastosowanie technologii FastAPI w połączeniu z podejściem no-code do budowy interfejsu użytkownika pozwala na szybkie wdrażanie funkcjonalnych i wydajnych aplikacji webowych. System zaprezentowany w niniejszej pracy wykazuje wysoką skalowalność i jest przystosowany do dalszego rozwoju.
+
+Jednym z istotnych wniosków płynących z tej pracy jest znaczenie testowania wydajności i optymalizacji aplikacji webowych. Wyniki testów wydajnościowych wykazały, że system działa efektywnie pod dużym obciążeniem, jednak istnieją obszary, które mogą zostać zoptymalizowane w przyszłości, takie jak:
+\begin{itemize}
+    \item Implementacja mechanizmu cache’owania wyników zapytań dotyczących monitorowania systemu w celu redukcji liczby żądań do zasobów,
+    \item Wdrożenie dodatkowych zabezpieczeń przed atakami DoS poprzez ograniczenie liczby żądań w krótkim czasie,
+    \item Rozszerzenie API o dodatkowe metody pozwalające na integrację systemu z innymi narzędziami do zarządzania infrastrukturą IT,
+    \item Automatyczne generowanie raportów dotyczących stanu systemu i jego wydajności,
+    \item Integracja z systemami SIEM (Security Information and Event Management) w celu zwiększenia poziomu monitorowania i analizy bezpieczeństwa.
+\end{itemize}
+
+Kolejnym krokiem w rozwoju systemu mogłoby być także wdrożenie mechanizmu kolejkowania zadań (np. przy użyciu Celery lub Redis) w celu lepszego zarządzania operacjami wymagającymi intensywnego przetwarzania. Ponadto możliwe jest wprowadzenie bardziej zaawansowanych metod autoryzacji, takich jak uwierzytelnianie wieloskładnikowe (MFA) lub integracja z systemami LDAP w celu centralnego zarządzania dostępem użytkowników.
+
+Podsumowując, niniejsza praca magisterska dostarcza kompleksowego rozwiązania umożliwiającego zarządzanie usługami i monitorowanie zasobów systemowych w sposób efektywny, skalowalny i zgodny z najlepszymi praktykami inżynierii oprogramowania. Opracowany system stanowi solidną podstawę do dalszego rozwoju oraz może być wykorzystywany w rzeczywistych scenariuszach administracji systemami informatycznymi.
+
+
+\section{Możliwości dalszego rozwoju systemu}
+
+Opracowany system zarządzania usługami i monitorowania serwera został zaprojektowany w sposób modularny i skalowalny, co pozwala na jego dalszą rozbudowę. Możliwe kierunki rozwoju obejmują zarówno ulepszenia funkcjonalne, jak i wdrożenie zaawansowanych mechanizmów zwiększających wydajność oraz bezpieczeństwo systemu. W niniejszym rozdziale przedstawiono propozycje rozszerzeń, które mogą znacząco zwiększyć wartość aplikacji w praktycznym zastosowaniu.
+
+\subsection{Rozszerzenie funkcjonalności zarządzania usługami}
+Jednym z kluczowych aspektów rozwoju systemu jest zwiększenie możliwości zarządzania usługami. W obecnej wersji administratorzy mogą rejestrować, uruchamiać, zatrzymywać i monitorować usługi. Można jednak wprowadzić dodatkowe funkcjonalności, takie jak:
+\begin{itemize}
+    \item \textbf{Automatyczna rekonfiguracja usług} – możliwość dynamicznego dostosowywania parametrów działania usług na podstawie monitorowanych wskaźników wydajności,
+    \item \textbf{Harmonogramowanie zadań} – funkcja umożliwiająca administratorom zaplanowanie uruchamiania lub restartowania usług w określonych przedziałach czasowych,
+    \item \textbf{Rejestrowanie logów systemowych} – pełna historia zmian w stanie usług wraz z integracją z narzędziami do analizy logów (np. ELK Stack),
+    \item \textbf{Automatyczna naprawa błędów} – system wykrywania i samonaprawy usług w przypadku wykrycia awarii.
+\end{itemize}
+
+\subsection{Zaawansowane mechanizmy monitorowania}
+Obecnie system pozwala na podstawowe monitorowanie wykorzystania CPU, pamięci RAM oraz aktywnych usług. Możliwości dalszego rozwoju obejmują:
+\begin{itemize}
+    \item \textbf{Monitorowanie wykorzystania sieci} – analiza ruchu sieciowego generowanego przez poszczególne usługi,
+    \item \textbf{Alerty i powiadomienia} – implementacja powiadomień o przekroczeniu krytycznych wartości obciążenia systemu (NTFY \cite{NTFY}, Slack \cite{Slack}, Telegram \cite{Telegram}),
+    \item \textbf{Predykcja awarii} – zastosowanie algorytmów uczenia maszynowego do przewidywania potencjalnych awarii na podstawie analizy historycznych danych,
+    \item \textbf{Dashboard w czasie rzeczywistym} – interaktywna wizualizacja danych systemowych z aktualizacją w czasie rzeczywistym,
+    \item \textbf{Integracja z Prometheus i Grafana} – zaawansowane narzędzia monitorowania umożliwiające gromadzenie metryk i ich wizualizację.
+\end{itemize}
+
+\subsection{Optymalizacja wydajności systemu}
+Testy wydajnościowe wykazały, że system działa sprawnie, ale jego dalszy rozwój może skupić się na:
+\begin{itemize}
+    \item \textbf{Implementacji cache'owania danych} – redukcja liczby zapytań do bazy danych i API poprzez zastosowanie Redis lub dekoratora cache,
+    \item \textbf{Asynchronicznego przetwarzania operacji} – wdrożenie systemu kolejkowania zadań (np. Celery) dla długotrwałych operacji,
+    \item \textbf{Load Balancing} – równoważenie obciążenia poprzez podział ruchu między wiele instancji serwera API,
+    \item \textbf{Obsługa kontenerów} – rozszerzenie systemu o pełne zarządzanie kontenerami Docker, w tym automatyczne skalowanie usług w zależności od obciążenia.
+\end{itemize}
+
+\subsection{Zaawansowane mechanizmy bezpieczeństwa}
+Chociaż w pracy omówiono teoretyczne aspekty bezpieczeństwa, możliwe są dodatkowe usprawnienia:
+\begin{itemize}
+    \item \textbf{Wdrożenie uwierzytelniania wieloskładnikowego (MFA)} – zwiększenie poziomu bezpieczeństwa użytkowników,
+    \item \textbf{Rozszerzone uprawnienia użytkowników} – możliwość nadawania niestandardowych ról z precyzyjnie określonymi uprawnieniami,
+    \item \textbf{Audyt logów i analiza zachowań} – monitorowanie aktywności użytkowników oraz automatyczne wykrywanie podejrzanych działań,
+    \item \textbf{Automatyczne skanowanie podatności} – integracja z narzędziami do analizy bezpieczeństwa, np. OWASP ZAP czy Nessus,
+    \item \textbf{Szyfrowanie danych wrażliwych} – wdrożenie szyfrowania kluczowych danych przechowywanych w systemie.
+\end{itemize}
+
+\subsection{Integracja z innymi systemami}
+W celu zwiększenia użyteczności systemu warto rozważyć jego integrację z innymi rozwiązaniami IT, np.:
+\begin{itemize}
+    \item \textbf{Integracja z Active Directory / LDAP} – centralne zarządzanie użytkownikami i uprawnieniami,
+    \item \textbf{Integracja z systemami DevOps} – połączenie z narzędziami CI/CD (Jenkins, GitHub Actions) w celu automatyzacji wdrożeń,
+    \item \textbf{API publiczne} – umożliwienie innym systemom korzystania z funkcjonalności poprzez bezpieczne, udokumentowane API,
+    \item \textbf{Obsługa wielu serwerów} – rozbudowa systemu do zarządzania wieloma maszynami w ramach jednej platformy,
+    \item \textbf{Integracja z chmurą} – możliwość wdrożenia systemu w chmurach publicznych (AWS, Azure, GCP) i zarządzania zasobami.
+\end{itemize}
+
+\subsection{Podsumowanie}
+Proponowane kierunki rozwoju pokazują szerokie możliwości dalszej rozbudowy systemu. Obecna wersja stanowi solidną bazę do wprowadzania nowych funkcjonalności, zarówno pod kątem optymalizacji działania, jak i zwiększenia bezpieczeństwa oraz zakresu zastosowań. W przyszłości system może ewoluować w kierunku kompleksowego narzędzia do zarządzania infrastrukturą IT, łącząc aspekty monitorowania, automatyzacji i bezpieczeństwa w jednym rozwiązaniu. Dzięki elastycznej architekturze opartej na FastAPI, aplikacja jest gotowa na integrację z innymi systemami i dalszy rozwój w zależności od potrzeb użytkowników.

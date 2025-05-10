@@ -1,0 +1,27 @@
+graph TD;
+    subgraph User Access
+        User[Użytkownik] -->|Logowanie| AppSmith
+    end
+
+    subgraph Application Layer
+        AppSmith -->|API Calls| FastAPI
+    end
+
+    subgraph Backend
+            FastAPI -->|Read/Write| MongoDB
+    end
+
+    subgraph Network Configuration
+        FastAPI -->|DuckDNS & VPN| Internet
+        Internet -.->|Remote Access| User
+    end
+
+    subgraph Deployment & Infrastructure
+        FastAPI & MongoDB & AppSmith -->|Containers| Docker
+        Docker -->|Managed by| RaspberryPi5
+        GitHubActions -->|CI/CD| Docker
+    end
+
+    subgraph Secure Connection
+        RaspberryPi5 -->|Tailscale VPN| Internet
+    end

@@ -1,0 +1,47 @@
+W ramach tworzenia rozwiązania powstał również program instalacyjny, który zostanie umieszczony na stronie internetowej rozwiązania umożliwiając pobranie przez zainteresowane korzystaniem z rozwiązania osoby.
+\paragraph{Opis programu instalacyjnego}
+
+\begin{lstlisting}
+package main
+
+import (
+	"archive/zip"
+	"fmt"
+	"io"
+	"net/http"
+	"os"
+	"os/exec"
+	"path/filepath"
+	"runtime"
+)
+
+const (
+	releaseURL = "https://github.com/youruser/homelab/releases/latest/download/homelab.zip"
+	installDir = "./homelab" // Można zmienić na /opt/homelab lub %ProgramFiles%
+)
+
+func main() {
+	fmt.Println("🔍 Sprawdzanie Docker...")
+
+	if !isDockerInstalled() {
+		fmt.Println("🚧 Docker nie znaleziony. Instaluję...")
+		if err := installDocker(); err != nil {
+			fmt.Fprintf(os.Stderr, "❌ Błąd instalacji Dockera: %v\n", err)
+			return
+		}
+	} else {
+		fmt.Println("✅ Docker jest już zainstalowany.")
+	}
+
+	fmt.Println("📦 Pobieranie aplikacji...")
+	if err := downloadAndExtract(releaseURL, installDir); err != nil {
+		fmt.Fprintf(os.Stderr, "❌ Błąd podczas pobierania/rozpakowywania: %v\n", err)
+		return
+	}
+
+	fmt.Println("🚀 Uruchamianie aplikacji...")
+	if err := runApp(installDir); err != nil {
+		fmt.Fprintf(os.Stderr, "❌ Nie udało się uruchomić aplikacji: %v\n", err)
+	}
+}
+\end{lstlisting}
