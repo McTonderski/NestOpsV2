@@ -1,0 +1,317 @@
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 8      100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.26746s
+✔️  Successful Run: 15     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.22738s
+✔️  Successful Run: 20     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.35909s
+✔️  Successful Run: 29     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.41898s
+✔️  Successful Run: 35     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.42625s
+✔️  Successful Run: 45     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.40511s
+✔️  Successful Run: 50     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.38380s
+
+
+RESULT
+-------------------------------------
+Success Count:    50    (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0001s
+  Server Processing    :0.3837s
+  Response Read        :0.0000s
+  Total                :0.3838s
+
+Status Code (Message) :Count
+  200 (OK)    :50
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 13     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18119s
+✔️  Successful Run: 28     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17832s
+✔️  Successful Run: 43     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17579s
+✔️  Successful Run: 58     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17269s
+✔️  Successful Run: 73     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17385s
+✔️  Successful Run: 88     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17310s
+✔️  Successful Run: 100    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.17338s
+
+
+RESULT
+-------------------------------------
+Success Count:    100   (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0000s
+  Server Processing    :0.1733s
+  Response Read        :0.0000s
+  Total                :0.1734s
+
+Status Code (Message) :Count
+  200 (OK)    :100
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 19     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20441s
+✔️  Successful Run: 43     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19649s
+✔️  Successful Run: 66     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19776s
+✔️  Successful Run: 88     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19466s
+✔️  Successful Run: 111    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19222s
+✔️  Successful Run: 133    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18974s
+✔️  Successful Run: 150    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18863s
+
+
+RESULT
+-------------------------------------
+Success Count:    150   (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0000s
+  Server Processing    :0.1886s
+  Response Read        :0.0000s
+  Total                :0.1886s
+
+Status Code (Message) :Count
+  200 (OK)    :150
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 24     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18447s
+✔️  Successful Run: 56     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18534s
+✔️  Successful Run: 86     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18662s
+✔️  Successful Run: 116    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18623s
+✔️  Successful Run: 146    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18619s
+✔️  Successful Run: 176    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18556s
+✔️  Successful Run: 200    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.18550s
+
+
+RESULT
+-------------------------------------
+Success Count:    200   (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0000s
+  Server Processing    :0.1854s
+  Response Read        :0.0000s
+  Total                :0.1855s
+
+Status Code (Message) :Count
+  200 (OK)    :200
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 31     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19762s
+✔️  Successful Run: 71     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20099s
+✔️  Successful Run: 106    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19993s
+✔️  Successful Run: 146    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19526s
+✔️  Successful Run: 184    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19697s
+✔️  Successful Run: 221    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19580s
+✔️  Successful Run: 250    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.19620s
+
+
+RESULT
+-------------------------------------
+Success Count:    250   (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0000s
+  Server Processing    :0.1961s
+  Response Read        :0.0000s
+  Total                :0.1962s
+
+Status Code (Message) :Count
+  200 (OK)    :250
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 39     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.21205s
+✔️  Successful Run: 84     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20481s
+✔️  Successful Run: 129    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20497s
+✔️  Successful Run: 172    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20245s
+✔️  Successful Run: 213    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.20806s
+✔️  Successful Run: 261    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.23719s
+✔️  Successful Run: 300    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.23212s
+
+
+RESULT
+-------------------------------------
+Success Count:    300   (100%)
+Failed Count:     0     (0%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0000s
+  Request Write        :0.0001s
+  Server Processing    :0.2320s
+  Response Read        :0.0000s
+  Total                :0.2321s
+
+Status Code (Message) :Count
+  200 (OK)    :300
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 35     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.43283s
+✔️  Successful Run: 68     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.61207s
+✔️  Successful Run: 106    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.82295s
+✔️  Successful Run: 135    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.01786s
+✔️  Successful Run: 159    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.21909s
+✔️  Successful Run: 186    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.49544s
+✔️  Successful Run: 212    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.82649s
+✔️  Successful Run: 221     90%       ❌ Failed Run: 24      10%       ⏱️  Avg. Duration: 1.93759s
+✔️  Successful Run: 296     84%       ❌ Failed Run: 54      16%       ⏱️  Avg. Duration: 2.52078s
+
+
+RESULT
+-------------------------------------
+Success Count:    296   (84%)
+Failed Count:     54    (16%)
+
+Durations (Avg):
+  DNS                  :0.0000s
+  Connection           :0.0001s
+  Request Write        :0.0000s
+  Server Processing    :0.0726s
+  Response Read        :0.0000s
+  Total                :2.4346s
+
+Status Code (Message) :Count
+  200 (OK)    :296
+
+Server Error Distribution (Count:Reason):
+  54     :connection timeout
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 29     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.48108s
+✔️  Successful Run: 73     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.74634s
+✔️  Successful Run: 114    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.97677s
+✔️  Successful Run: 146    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.20351s
+✔️  Successful Run: 174    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.45382s
+✔️  Successful Run: 188    100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.58951s
+✔️  Successful Run: 210     95%       ❌ Failed Run: 10       5%       ⏱️  Avg. Duration: 1.90963s
+✔️  Successful Run: 213     76%       ❌ Failed Run: 67      24%       ⏱️  Avg. Duration: 1.95244s
+✔️  Successful Run: 213     64%       ❌ Failed Run: 119     36%       ⏱️  Avg. Duration: 1.95244s
+✔️  Successful Run: 213     54%       ❌ Failed Run: 179     46%       ⏱️  Avg. Duration: 1.95244s
+✔️  Successful Run: 214     53%       ❌ Failed Run: 186     47%       ⏱️  Avg. Duration: 1.96661s
+
+
+RESULT
+-------------------------------------
+Success Count:    214   (53%)
+Failed Count:     186   (47%)
+
+Durations (Avg):
+  DNS                  :0.0001s
+  Connection           :0.0001s
+  Request Write        :0.0000s
+  Server Processing    :0.5548s
+  Response Read        :0.0001s
+  Total                :1.9505s
+
+Status Code (Message) :Count
+  200 (OK)    :214
+
+Server Error Distribution (Count:Reason):
+  186     :connection timeout
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 9      100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.75748s
+✔️  Successful Run: 13     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.12564s
+✔️  Successful Run: 15     100%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 1.53689s
+✔️  Successful Run: 16      39%       ❌ Failed Run: 25      61%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16      14%       ❌ Failed Run: 94      86%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       9%       ❌ Failed Run: 160     91%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       6%       ❌ Failed Run: 225     94%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       5%       ❌ Failed Run: 291     95%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       4%       ❌ Failed Run: 359     96%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       3%       ❌ Failed Run: 426     97%       ⏱️  Avg. Duration: 1.69952s
+✔️  Successful Run: 16       3%       ❌ Failed Run: 434     97%       ⏱️  Avg. Duration: 1.69952s
+
+
+RESULT
+-------------------------------------
+Success Count:    16    (3%)
+Failed Count:     434   (97%)
+
+Durations (Avg):
+  DNS                  :0.0001s
+  Connection           :0.0003s
+  Request Write        :0.0000s
+  Server Processing    :1.6977s
+  Response Read        :0.0013s
+  Total                :1.6995s
+
+Status Code (Message) :Count
+  200 (OK)    :16
+
+Server Error Distribution (Count:Reason):
+  434     :connection timeout
+
+Test Status : Success
+⚙️  Initializing... 
+🔥 Engine fired. 
+
+🛑 CTRL+C to gracefully stop.
+✔️  Successful Run: 0        0%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 0        0%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 45     100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 110    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 180    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 260    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 335    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 410    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 485    100%       ⏱️  Avg. Duration: 0.00000s
+✔️  Successful Run: 0        0%       ❌ Failed Run: 500    100%       ⏱️  Avg. Duration: 0.00000s
+
+
+RESULT
+-------------------------------------
+Success Count:    0     (0%)
+Failed Count:     500   (100%)
+
+Durations (Avg):
+
+Server Error Distribution (Count:Reason):
+  500     :connection timeout
+
+Test Status : Success

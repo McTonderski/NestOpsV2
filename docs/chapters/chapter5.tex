@@ -5,7 +5,7 @@ Testowanie oprogramowania jest kluczowym elementem zapewnienia jego jakości, st
 
 \subsection{Testy jednostkowe}
 
-Testy jednostkowe koncentrują się na sprawdzaniu poprawności działania pojedynczych funkcji i metod w izolacji. Ich głównym celem jest szybkie wykrywanie błędów w logice aplikacji oraz zapewnienie, że każdy komponent działa zgodnie z oczekiwaniami. W testowaniu jednostkowym zastosowano bibliotekę \textbf{pytest} oraz narzędzie \textbf{unittest} w Pythonie.
+Testy jednostkowe koncentrują się na sprawdzaniu poprawności działania pojedynczych funkcji i metod w izolacji. Ich głównym celem jest szybkie wykrywanie błędów w logice aplikacji oraz zapewnienie, że każdy komponent działa zgodnie z oczekiwaniami. Do przeprowadzenia testów jednostkowych zastosowano \textbf{go test}
 
 Przykładowe testy jednostkowe obejmowały:
 \begin{itemize}
@@ -17,27 +17,14 @@ Przykładowe testy jednostkowe obejmowały:
 
 Wszystkie testy jednostkowe zostały zautomatyzowane i uruchamiane w ramach procesu CI/CD z wykorzystaniem GitHub Actions oraz samodzielnie hostowanych runnerów.
 
-\subsection{Testy integracyjne}
-
-Testy integracyjne mają na celu sprawdzenie współpracy różnych komponentów systemu, takich jak API, baza danych oraz interfejs użytkownika. W ramach pracy przeprowadzono testy integracyjne z użyciem frameworka \textbf{pytest} wraz z modułem \textbf{httpx}, umożliwiającym wysyłanie zapytań HTTP do testowanego serwera.
-
-Zakres testów integracyjnych obejmował:
-\begin{itemize}
-    \item Sprawdzenie poprawności obsługi żądań API przez FastAPI,
-    \item Testy poprawności integracji systemu uwierzytelniania JWT z bazą danych,
-    \item Weryfikację działania operacji na usługach, takich jak rejestrowanie, uruchamianie i zatrzymywanie kontenerów.
-\end{itemize}
-
-Testy integracyjne zostały przeprowadzone zarówno w środowisku lokalnym, jak i w środowisku testowym z wykorzystaniem kontenerów Docker.
-
-\subsection{Podsumowanie testów}
-
-Przeprowadzone testy jednostkowe i integracyjne pozwoliły na wykrycie oraz eliminację potencjalnych błędów na wczesnym etapie rozwoju aplikacji. Dzięki zastosowaniu automatyzacji testów oraz integracji z procesem CI/CD, system został zoptymalizowany pod kątem stabilności i niezawodności. Testowanie stanowiło istotny element procesu wdrażania i potwierdziło poprawność działania kluczowych funkcjonalności systemu HomeLab.
+Przeprowadzenie testów jednostkowych umożliwiło rozwój serwisu API bez konieczności posiadania gotowego rozwiązania frontend. Dzięki czemu od samego początku możliwa była weryfikacja oraz wychwycenie błędów logicznych w aplikacji. Takie podejście umożliwia szybki rozwój programu bez obawy o działanie pojedynczych metod i funkcji. Testy jednostkowe nie weryfikują całości działania aplikacji a jedynie indywidualnie jej najmniejsze komponenty. Należy mieć na uwadze, że zgodnie ze sztuką testy jednostkowe powinny nie być zależne od innych metod i funkcji a jeśli dana funkcja lub metoda posiada taką zależność należy ją zasymulować w kodzie poprzez stosowanie tzw. \textbf{Mocków}. Jest to nic innego jak symulowanie działania innej funkcji. Umożliwia ono np. w środowisku testowym uzyskiwać odpowiedzi HTTP poprzez zwracanie stałych odpowiedzi bez konieczności wykonywania zapytań HTTP. Pozwala na integrację z plikami bez fizycznej manipulacji plików. Testy jednostkowe to podstawowy element procesu sprawdzania poprawności oprogramowania. Testów tych powinno być najwięcej zgodnie z paradygmem \textbf{Shift Left}.
 
 \section{Testy wydajnościowe i bezpieczeństwa}
 \subsection{Testowanie wydajności systemu}
 
-Testowanie wydajności aplikacji jest kluczowym elementem zapewnienia jej stabilności i efektywności w warunkach produkcyjnych. W celu przeprowadzenia testów wydajnościowych wykorzystano narzędzie \textbf{Locust}, które pozwala na symulację obciążenia aplikacji przez wielu użytkowników jednocześnie.
+Testowanie wydajności aplikacji jest kluczowe do zweryfikowania zachowania działania programu pod obciążeniem. Przeprowadzenie takiego testu pozwala na znalezienie tzw. "Wąskich gardeł" programu czyli ścieżek logicznych, które najbardziej obciążają działająca aplikację. Dzięki analizie takich testów możemy odpowiednio nadać wagę zadaniom optymalizacyjnym, żeby poprawić odbiór aplikacji poprzez końcowego użytkownika. Testy wydajnościowe to również testy długoterminowe, dzięki nim można zrozumieć jak aplikacja zachowuje się z długotrwałym obciążeniem i poznać jak reaguje na nagłe skoki obciążenia w różnych momentach czasu działania programu.
+
+Do przeprowadzenia testów wydajnościowych użyty został darmowy program \textbf{ddosify} - jego prosta obsługa oraz konfiguracja, pozwoliła na szybkie jego wdrożenie, a przejrzysty raport wykonania testu na sprawną analizę wydajności programu. 
 
 \subsubsection{Cel testów wydajnościowych}
 Celem testów wydajnościowych było:
@@ -46,117 +33,98 @@ Celem testów wydajnościowych było:
     \item Pomiar czasu odpowiedzi kluczowych endpointów,
     \item Weryfikacja stabilności systemu podczas długotrwałego obciążenia,
     \item Identyfikacja potencjalnych wąskich gardeł aplikacji.
+    \item Zweryfikowanie czy w aplikacji nie występują wycieki pamięci podczas długotrwałcyh testów.
 \end{itemize}
 
-\subsubsection{Metodyka testów}
-Testy wydajnościowe przeprowadzono przy użyciu Locust, który pozwala na definiowanie scenariuszy użytkowników wykonujących określone operacje. Wykorzystano następujące kroki:
-\begin{enumerate}
-    \item Zalogowanie użytkownika i uzyskanie tokena JWT,
-    \item Wykonywanie żądań do kluczowych endpointów API (zarządzanie usługami, monitorowanie systemu, operacje administracyjne),
-    \item Pomiar czasu odpowiedzi serwera i obciążenia systemu,
-    \item Skalowanie liczby użytkowników w celu oceny zachowania systemu pod rosnącym obciążeniem.
-\end{enumerate}
+\subsubsection{Metodyka i analiza testów wydajnościowych}
 
-\subsubsection{Zakres testów}
-W ramach testów wydajnościowych poddano analizie następujące funkcjonalności:
+Testy wydajnościowe zostały przeprowadzone w celu oceny stabilności oraz czasu reakcji systemu backendowego pod rosnącym obciążeniem. Do realizacji testów wykorzystano narzędzie \textbf{Ddosify}, które umożliwia generowanie ruchu HTTP z określoną liczbą żądań oraz mierzenie parametrów takich jak średni czas odpowiedzi, liczba błędów oraz przepustowość systemu. Narzędzie to zostało wybrane ze względu na łatwość integracji oraz możliwość uruchamiania testów z poziomu skryptów bashowych.
+
+Celem testów było:
 \begin{itemize}
-    \item \textbf{Autoryzacja i uwierzytelnianie} – logowanie użytkowników i uzyskiwanie tokenów JWT,
-    \item \textbf{Zarządzanie usługami} – pobieranie listy uruchomionych usług, monitorowanie ich stanu oraz restartowanie usług w złym stanie,
-    \item \textbf{Monitorowanie systemu} – pobieranie danych dotyczących zużycia CPU, pamięci RAM oraz listy aktywnych kontenerów Docker,
-    \item \textbf{Zarządzanie użytkownikami} – dodawanie i listowanie użytkowników.
+    \item Określenie, jak system reaguje na wzrastające obciążenie,
+    \item Pomiar średniego czasu odpowiedzi dla różnych poziomów liczby zapytań,
+    \item Weryfikacja stabilności systemu i pojawiających się błędów przy dużym ruchu,
+    \item Wskazanie potencjalnych miejsc wymagających optymalizacji.
 \end{itemize}
 
-\subsubsection{Wyniki testów}
-Po przeprowadzeniu testów otrzymano następujące wyniki:
+W ramach testu wykonano serię zapytań do jednego z endpointów API, zwiększając liczbę żądań w krokach od 50 do 500. Dla każdego poziomu obciążenia zarejestrowano średni czas odpowiedzi. Dane zostały zapisane i zwizualizowane w postaci wykresu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapters/assets/wykres czasu odpowiedzi.png}
+    \caption{Średni czas odpowiedzi API w zależności od liczby żądań}
+\end{figure}
+
+Na powyższym wykresie zauważalna jest względna stabilność średniego czasu odpowiedzi dla zakresu od 50 do około 300 zapytań. W tym przedziale wartości oscylowały wokół 0.18-0.22 ms. Po przekroczeniu 300 żądań widoczny jest wyraźny wzrost opóźnień, a największy skok nastąpił przy 450 żądaniach, gdzie średni czas odpowiedzi osiągnął ponad 0.75 ms. W ostatniej próbie (500 żądań) wszystkie zapytania zakończyły się błędem (500/500 błędów), co skutkowało średnim czasem odpowiedzi równym 0 ms, gdyż odpowiedzi nie zostały zwrócone w ogóle lub zakończyły się błędami.
+
+Za główną przyczynę wystąpienia błędów uznano ograniczenia wydajnościowe bazy danych SQLite, która nie jest przystosowana do obsługi wielu równoczesnych zapytań w środowiskach wysokiego obciążenia. W szczególności brak wsparcia dla wielu jednoczesnych zapisów prowadził do blokowania operacji i przekroczenia limitów czasu odpowiedzi. Dodatkowym czynnikiem była ograniczona liczba zasobów przydzielona aplikacji w środowisku testowym.
+
+\textbf{Wnioski:}
 \begin{itemize}
-    \item Średni czas odpowiedzi API dla standardowych żądań wynosił poniżej 70 ms (lokalne środowisko - w tej samej sieci),
-    \item Przy zwiększeniu liczby jednocześnie aktywnych użytkowników do 1000 system nadal utrzymywał stabilność, przy wzroście czasu odpowiedzi do około 190 ms,
-    \item Największe obciążenie dotyczyło operacji związanych z monitorowaniem systemu, co wynika z konieczności pobierania danych o stanie zasobów w czasie rzeczywistym - wskazuje to na konieczność zastosowania cachowania danych dotyczących stanu systemu celem uniknięcia ataktu DDoS,
-    \item Endpointy administracyjne, takie jak restart serwera czy autoryzacja w Tailscale, działały poprawnie, lecz wymagają dodatkowych zabezpieczeń przed wielokrotnym wywołaniem w krótkim czasie.
+    \item Aplikacja działa stabilnie przy niskim i umiarkowanym obciążeniu (do 300 równoczesnych zapytań),
+    \item Wzrost liczby równoczesnych żądań znacząco wpływa na opóźnienia odpowiedzi, co wskazuje na konieczność optymalizacji backendu,
+    \item Wystąpienie 100\% błędów przy maksymalnym obciążeniu (500 zapytań) wskazuje na poważne ograniczenie w warstwie komunikacji z bazą danych.
 \end{itemize}
 
-\subsubsection{Wnioski i optymalizacje}
-Na podstawie przeprowadzonych testów wydajnościowych zaproponowano następujące optymalizacje:
+\textbf{Rekomendowane działania optymalizacyjne:}
 \begin{itemize}
-    \item Implementacja mechanizmu cache'owania dla danych monitorowania systemu w celu zmniejszenia liczby odczytów zasobów,
-    \item Ograniczenie liczby jednoczesnych zapytań do endpointów administracyjnych,
-    \item Optymalizacja zapytań do bazy danych poprzez indeksowanie często wyszukiwanych pól.
+    \item Zastosowanie mechanizmu \textit{connection poolingu} oraz zwiększenie maksymalnej liczby jednoczesnych połączeń do bazy danych,
+    \item Wprowadzenie cache'owania odpowiedzi API dla często wywoływanych zapytań,
+    \item Refaktoryzacja zapytań do bazy danych - redukcja złożoności oraz optymalizacja indeksów,
+    \item Przeprowadzenie testów w środowisku zbliżonym do produkcyjnego z większą wydajnością I/O bazy danych.
 \end{itemize}
 
-Testy wykazały, że system jest w stanie obsłużyć duże obciążenie i zachowuje stabilność przy wysokiej liczbie równoczesnych użytkowników, co potwierdza jego gotowość do wdrożenia w środowisku produkcyjnym.
+\noindent
+Należy zaznaczyć, że testy wydajnościowe w przedstawionej formie przypominają bardziej atak typu DDoS niż rzeczywiste wykorzystanie systemu przez użytkowników. Mimo to są one niezwykle przydatne w procesie optymalizacji aplikacji - pozwalają zidentyfikować komponenty wymagające poprawy wydajnościowej. Nawet jeśli dana optymalizacja może wydawać się zbędna na etapie prototypowania, warto mieć na uwadze, że zoptymalizowany kod zużywa mniej zasobów systemowych i lepiej skaluje się w środowiskach produkcyjnych.
 
 \subsection{Testowanie bezpieczeństwa aplikacji}
 
-Bezpieczeństwo aplikacji webowych jest kluczowym aspektem zapewnienia poufności, integralności i dostępności danych. Testowanie bezpieczeństwa ma na celu identyfikację potencjalnych luk oraz podatności, które mogą zostać wykorzystane przez nieautoryzowanych użytkowników lub atakujących.
+Bezpieczeństwo aplikacji webowych jest jednym z kluczowych aspektów projektowania i wdrażania nowoczesnych systemów. W kontekście niniejszego projektu, który zakłada zarządzanie usługami i użytkownikami, istotne jest zapewnienie odpowiedniego poziomu zabezpieczeń, aby zapobiec nieautoryzowanemu dostępowi, manipulacji danymi oraz wyciekom informacji.
 
-\textbf{Należy zaznaczyć, że w ramach niniejszej pracy magisterskiej testy bezpieczeństwa nie zostały przeprowadzone. Poniższy rozdział ma charakter teoretyczny i przedstawia ogólne zasady oraz metody stosowane w testowaniu bezpieczeństwa aplikacji webowych.}
+\subsubsection{Zakres testów bezpieczeństwa}
 
-\subsubsection{Metodyka testowania bezpieczeństwa}
-Testowanie bezpieczeństwa można podzielić na kilka kluczowych etapów:
-\begin{itemize}
-    \item \textbf{Analiza architektury} – Przegląd struktury aplikacji, mechanizmów autoryzacji i uwierzytelniania,
-    \item \textbf{Testy penetracyjne} – Symulowane ataki w celu sprawdzenia odporności na znane zagrożenia,
-    \item \textbf{Analiza kodu źródłowego} – Poszukiwanie błędów bezpieczeństwa w implementacji aplikacji,
-    \item \textbf{Fuzzing} – Automatyczne generowanie losowych danych wejściowych w celu wykrycia awarii,
-    \item \textbf{Skany podatności} – Wykorzystanie narzędzi do identyfikacji znanych luk w zabezpieczeniach.
-\end{itemize}
-
-\subsubsection{Obszary testowania bezpieczeństwa}
-Testowanie bezpieczeństwa aplikacji obejmuje następujące obszary:
+Testowanie bezpieczeństwa przeprowadzono w ograniczonym zakresie, skupiając się na ręcznej weryfikacji najczęściej występujących zagrożeń w aplikacjach webowych, zgodnie z zestawieniem OWASP Top 10. Weryfikacji poddano następujące obszary:
 
 \paragraph{1. Uwierzytelnianie i autoryzacja}
-Mechanizmy uwierzytelniania powinny być odporne na ataki brute-force oraz przechowywać hasła w bezpieczny sposób. Kluczowe testy obejmują:
+System wykorzystuje tokeny JWT jako mechanizm autoryzacji. W ramach testów:
 \begin{itemize}
-    \item Testowanie siły haseł i polityki logowania,
-    \item Próby ataków brute-force na endpointy logowania,
-    \item Weryfikacja poprawności implementacji JWT i zarządzania sesjami,
-    \item Sprawdzenie uprawnień użytkowników do zasobów.
+    \item Sprawdzono odporność logowania na ataki brute-force – nie wykryto możliwości obejścia zabezpieczeń, jednak brak limitu prób logowania może stanowić potencjalne ryzyko.
+    \item Zweryfikowano, że po wygaśnięciu tokena nie jest on akceptowany przez serwer.
+    \item Potwierdzono, że użytkownicy nieautoryzowani nie mają dostępu do zasobów innych użytkowników.
 \end{itemize}
 
-\paragraph{2. Zarządzanie danymi i ochrona przed SQL Injection}
-Baza danych powinna być zabezpieczona przed atakami wstrzykiwania SQL. Weryfikacja obejmuje:
-\begin{itemize}
-    \item Testy podatności na SQL Injection przy użyciu specjalnie spreparowanych zapytań,
-    \item Sprawdzenie, czy aplikacja korzysta z mechanizmów ORM i zapytań parametryzowanych,
-    \item Ograniczenie uprawnień użytkowników bazy danych.
-\end{itemize}
+\paragraph{2. Odporność na SQL Injection}
+Wszystkie zapytania do bazy danych wykonywane są za pomocą ORM (GORM), co zapewnia parametryzację i zmniejsza ryzyko podatności na SQL Injection. Próby wstrzyknięcia kodu SQL w pola formularzy zakończyły się niepowodzeniem – aplikacja poprawnie odrzucała nieprawidłowe dane wejściowe.
 
-\paragraph{3. Ochrona przed atakami XSS i CSRF}
-Ataki Cross-Site Scripting (XSS) i Cross-Site Request Forgery (CSRF) mogą prowadzić do przejęcia sesji użytkownika lub wykonania nieautoryzowanych operacji. Testy obejmują:
+\paragraph{3. Odporność na XSS i CSRF}
 \begin{itemize}
-    \item Wstrzykiwanie skryptów JavaScript w formularzach i żądaniach API,
-    \item Weryfikację nagłówków zabezpieczających (Content Security Policy, SameSite Cookies),
-    \item Sprawdzenie zabezpieczeń przed atakami CSRF poprzez implementację tokenów anty-CSRF.
+    \item Testy XSS (reflected i stored) nie przyniosły rezultatów – aplikacja nie wstrzykuje niezweryfikowanych danych wejściowych do HTML.
+    \item Aplikacja wykorzystuje token JWT w nagłówkach, co redukuje ryzyko CSRF, ponieważ brak ciasteczek sesyjnych eliminuje możliwość automatycznego przesyłania uwierzytelnienia.
 \end{itemize}
 
 \paragraph{4. Bezpieczeństwo API}
-Bezpieczeństwo API jest kluczowe dla ochrony danych przesyłanych pomiędzy klientem a serwerem. Testowanie obejmuje:
+Przeprowadzono testy zabezpieczeń API:
 \begin{itemize}
-    \item Sprawdzenie poprawności nagłówków autoryzacyjnych,
-    \item Testy na ataki replay (ponowne wykorzystanie żądań API),
-    \item Weryfikację mechanizmów rate-limiting (ograniczenie liczby żądań w czasie),
-    \item Ochronę przed atakami Man-in-the-Middle (MITM) poprzez wymuszanie HTTPS.
+    \item Wszystkie endpointy wymagające autoryzacji poprawnie zwracały kod 401 w przypadku braku lub niewłaściwego tokena.
+    \item System nie pozwalał na wykonanie operacji z tokenem innego użytkownika.
+    \item Weryfikowano także poprawność nagłówków CORS oraz odpowiedzi serwera na próby nieautoryzowanego dostępu.
 \end{itemize}
 
-\paragraph{5. Odporność na ataki DoS/DDoS}
-Ataki Denial of Service (DoS) mogą doprowadzić do przeciążenia aplikacji i uniemożliwienia jej działania. Testy obejmują:
+\paragraph{5. Odporność na przeciążenie (DoS)}
+W ramach testów wydajnościowych przeprowadzono symulację ataku DoS:
 \begin{itemize}
-    \item Symulację dużej liczby jednoczesnych żądań,
-    \item Weryfikację mechanizmów ograniczających dostępność zasobów,
-    \item Sprawdzenie konfiguracji serwera pod kątem ochrony przed atakami DDoS.
+    \item Wysyłano dużą liczbę zapytań w krótkim czasie – powyżej 400 jednoczesnych zapytań powodowało błędy odpowiedzi serwera.
+    \item Błędy te były spowodowane ograniczeniami bazy SQLite, która nie wspiera wielu równoczesnych zapisów.
 \end{itemize}
 
-\subsubsection{Narzędzia do testowania bezpieczeństwa}
-Do testowania bezpieczeństwa wykorzystuje się różne narzędzia, m.in.:
+\subsubsection{Rekomendacje i dalsze działania}
+Choć aplikacja wykazała odporność na najczęstsze zagrożenia, zaleca się:
 \begin{itemize}
-    \item \textbf{OWASP ZAP} – Automatyczne skanowanie podatności aplikacji webowych,
-    \item \textbf{Burp Suite} – Analiza i przechwytywanie ruchu HTTP/HTTPS,
-    \item \textbf{sqlmap} – Automatyczne wykrywanie podatności na SQL Injection,
-    \item \textbf{Metasploit} – Wykonywanie testów penetracyjnych,
-    \item \textbf{Fail2Ban} – Ochrona przed atakami brute-force poprzez blokowanie adresów IP.
+    \item Dodanie limitu prób logowania i mechanizmu blokowania IP,
+    \item Wdrożenie pełnych testów penetracyjnych (np. z użyciem Burp Suite \cite{BurpSuite} lub OWASP ZAP\cite{ZAP}),
+    \item Monitorowanie logów bezpieczeństwa i integracja z systemem alertów,
+    \item Przejście na bardziej wydajną bazę danych, wspierającą konkurencyjne zapisy (np. PostgreSQL) w przypadku planowanej produkcyjnej eksploatacji systemu.
 \end{itemize}
 
-\subsubsection{Podsumowanie}
-Testowanie bezpieczeństwa aplikacji webowych jest kluczowym elementem zapewnienia ochrony danych i usług. Wykorzystanie kompleksowego podejścia, obejmującego testy penetracyjne, analizę kodu oraz automatyczne skanowanie podatności, pozwala na wczesne wykrycie zagrożeń i skuteczne zabezpieczenie systemu przed atakami. Regularne testy i aktualizacje mechanizmów bezpieczeństwa są niezbędne do utrzymania wysokiego poziomu ochrony aplikacji.
-
-\textbf{Podkreśla się, że powyższe informacje mają charakter teoretyczny i w ramach niniejszej pracy magisterskiej nie przeprowadzono rzeczywistych testów bezpieczeństwa aplikacji.}
+\textbf{Podsumowanie:} Przeprowadzone testy bezpieczeństwa potwierdzają, że aplikacja w obecnym stanie spełnia podstawowe wymogi bezpieczeństwa, w tym poprawną autoryzację, separację danych użytkowników oraz odporność na podstawowe ataki webowe, takie jak XSS, CSRF czy SQL Injection. Skuteczna implementacja mechanizmu JWT, ochrona endpointów oraz brak dostępu do zasobów bez ważnego tokena świadczą o przemyślanej strukturze kontroli dostępu. Niemniej jednak, dalszy rozwój aplikacji - zwłaszcza w kontekście wdrożenia produkcyjnego - powinien uwzględniać wdrażanie zaawansowanych technik testowania i obrony, takich jak automatyczne testy penetracyjne, analiza statyczna kodu źródłowego, monitorowanie logów pod kątem prób ataków oraz integracja z systemami SIEM (Security Information and Event Management). Rekomendowane jest również regularne wykonywanie audytów bezpieczeństwa oraz testów regresyjnych po każdej większej zmianie kodu lub zależności. Tylko takie podejście pozwoli zapewnić długofalowe bezpieczeństwo systemu oraz ochronę danych użytkowników.

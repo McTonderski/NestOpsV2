@@ -2,41 +2,56 @@
 
 \section{Podsumowanie pracy}
 
-W niniejszej pracy magisterskiej przedstawiono projekt, implementację oraz analizę systemu zarządzania usługami i monitorowania serwera, bazującego na technologii FastAPI. Celem pracy było stworzenie wydajnej i bezpiecznej aplikacji umożliwiającej administratorom zarządzanie usługami systemowymi, monitorowanie wykorzystania zasobów oraz przeprowadzanie operacji administracyjnych na serwerze.
+W niniejszej pracy magisterskiej przedstawiono projekt, implementację oraz analizę systemu zarządzania usługami i monitorowania serwera, napisanego w języku Go. System składa się z backendu (API) stworzonego w Go oraz frontendowej części zbudowanej w oparciu o szablon TailAdmin. Celem pracy było stworzenie wydajnej i bezpiecznej aplikacji umożliwiającej administratorom zarządzanie usługami systemowymi, monitorowanie wykorzystania zasobów oraz przeprowadzanie operacji administracyjnych na serwerze.
 
-W trakcie realizacji projektu skupiono się na kilku kluczowych aspektach, w tym projektowaniu interfejsu użytkownika, implementacji API, zarządzaniu użytkownikami, optymalizacji wydajności oraz aspektach teoretycznych związanych z bezpieczeństwem aplikacji webowych. Każdy z tych elementów został szczegółowo opisany i przeanalizowany, co pozwoliło na wyciągnięcie cennych wniosków dotyczących zarówno samej technologii FastAPI, jak i szeroko pojętego zarządzania infrastrukturą IT.
+W trakcie realizacji projektu skupiono się na kilku kluczowych aspektach, w tym implementacji API w Go, integracji z interfejsem użytkownika TailAdmin, zarządzaniu użytkownikami, optymalizacji wydajności oraz aspektach związanych z bezpieczeństwem aplikacji webowych. Każdy z tych elementów został szczegółowo opisany i przeanalizowany, co pozwoliło na wyciągnięcie cennych wniosków dotyczących zarówno języka Go, jak i nowoczesnych narzędzi frontendowych i backendowych stosowanych w zarządzaniu infrastrukturą IT.
+
+Instrukcja instalacji oraz uruchomienia aplikacji została zamieszczona w pliku \texttt{README.md} w repozytorium projektu na platformie GitHub\cite{NestOpsV2}.
+
 
 \subsection{Osiągnięcia i rezultaty pracy}
 
-W ramach realizacji pracy osiągnięto następujące kluczowe rezultaty:
+W ramach realizacji pracy magisterskiej osiągnięto szereg istotnych rezultatów, które potwierdzają praktyczną użyteczność oraz skalowalność zaprojektowanego systemu. Najważniejsze z nich to:
+
 \begin{itemize}
-    \item Zaprojektowano i wdrożono interfejs użytkownika przy użyciu platformy no-code Appsmith, co umożliwiło szybkie tworzenie funkcjonalnego panelu administracyjnego bez konieczności implementacji kodu frontendowego,
-    \item Stworzono API oparte na FastAPI, pozwalające na zarządzanie użytkownikami, usługami oraz monitorowanie zasobów systemowych w sposób wydajny i skalowalny,
-    \item Zaimplementowano mechanizmy uwierzytelniania i autoryzacji użytkowników oparte na JWT, co zapewnia bezpieczeństwo dostępu do systemu oraz możliwość nadawania różnych ról użytkownikom,
-    \item Wdrożono funkcje zarządzania użytkownikami, obejmujące rejestrację, edycję, listowanie oraz usuwanie użytkowników – dostępne wyłącznie dla administratorów,
-    \item Dodano możliwość zarządzania usługami systemowymi, co pozwala administratorom na rejestrowanie, uruchamianie, zatrzymywanie oraz monitorowanie stanu usług w systemie,
-    \item Przeprowadzono testy wydajnościowe z wykorzystaniem Locust, które wykazały, że system jest w stanie obsłużyć duże obciążenie i działa stabilnie nawet przy dużej liczbie równoczesnych użytkowników,
-    \item Omówiono teoretyczne aspekty związane z testowaniem bezpieczeństwa aplikacji, prezentując najlepsze praktyki i narzędzia stosowane w celu identyfikacji oraz eliminacji potencjalnych podatności systemu.
+    \item Zaprojektowano oraz zaimplementowano backend systemu przy użyciu języka Go. Dzięki zastosowaniu tej technologii aplikacja cechuje się wysoką wydajnością, prostotą dystrybucji oraz łatwością utrzymania.
+    \item Opracowano nowoczesny, responsywny interfejs użytkownika wykorzystując szablon TailAdmin. Interfejs ten umożliwia intuicyjne zarządzanie usługami systemowymi i użytkownikami, a także prezentuje dane o stanie systemu w przejrzystej formie.
+    \item Stworzono kompletne REST API umożliwiające zarządzanie użytkownikami, usługami oraz monitorowanie parametrów systemowych. API zostało zaprojektowane w sposób modularny i rozszerzalny.
+    \item Wdrożono mechanizmy uwierzytelniania i autoryzacji użytkowników z wykorzystaniem JWT. System obsługuje różne poziomy uprawnień oraz zabezpiecza dostęp do krytycznych funkcjonalności.
+    \item Zaimplementowano funkcjonalności administracyjne obejmujące dodawanie, edytowanie, usuwanie i przeglądanie użytkowników z poziomu panelu administratora.
+    \item Umożliwiono rejestrowanie i zarządzanie usługami systemowymi – uruchamianie, zatrzymywanie oraz monitorowanie ich stanu w czasie rzeczywistym.
+    \item Zintegrowano backend z systemem operacyjnym w zakresie kontroli nad aktywnymi usługami systemowymi i dostępem do danych o zużyciu zasobów (RAM, CPU, dysk).
+    \item Przeprowadzono testy wydajnościowe z użyciem narzędzia Ddosify, które wykazały odporność aplikacji na duże obciążenia oraz pomogły zidentyfikować krytyczne momenty wymagające optymalizacji.
+    \item Zrealizowano testy bezpieczeństwa, w tym odporności na ataki typu brute-force, dostęp nieautoryzowany, SQL Injection oraz Cross-Site Scripting, potwierdzając bezpieczeństwo podstawowych mechanizmów aplikacji.
+    \item Opracowano system budowania i pakowania aplikacji za pomocą Makefile, umożliwiający łatwą kompilację na wiele platform oraz automatyczne tworzenie paczek instalacyjnych.
+    \item Udokumentowano projekt w postaci pliku \texttt{README.md} na GitHubie, w którym zawarto instrukcję instalacji, konfiguracji i uruchomienia systemu zarówno na lokalnych maszynach, jak i w środowiskach produkcyjnych.
 \end{itemize}
 
-System opracowany w ramach pracy magisterskiej został zaprojektowany w sposób modularny i elastyczny, co pozwala na jego dalszą rozbudowę. Obecna wersja aplikacji spełnia założenia funkcjonalne, umożliwiając administratorom efektywne zarządzanie systemem w sposób zautomatyzowany oraz intuicyjny.
+System powstały w wyniku realizacji pracy magisterskiej został zaprojektowany zgodnie z zasadami czystej architektury i modularności, co pozwala na jego dalsze rozwijanie i dostosowywanie do indywidualnych potrzeb użytkowników oraz specyfiki środowiska produkcyjnego. Aktualna wersja spełnia wszystkie założenia funkcjonalne, stanowiąc stabilną podstawę dla rzeczywistego wdrożenia.
 
 \subsection{Wnioski i przyszłe kierunki rozwoju}
 
-Na podstawie przeprowadzonych analiz i testów można stwierdzić, że zastosowanie technologii FastAPI w połączeniu z podejściem no-code do budowy interfejsu użytkownika pozwala na szybkie wdrażanie funkcjonalnych i wydajnych aplikacji webowych. System zaprezentowany w niniejszej pracy wykazuje wysoką skalowalność i jest przystosowany do dalszego rozwoju.
+Na podstawie przeprowadzonych badań, testów oraz implementacji można sformułować następujące wnioski:
 
-Jednym z istotnych wniosków płynących z tej pracy jest znaczenie testowania wydajności i optymalizacji aplikacji webowych. Wyniki testów wydajnościowych wykazały, że system działa efektywnie pod dużym obciążeniem, jednak istnieją obszary, które mogą zostać zoptymalizowane w przyszłości, takie jak:
 \begin{itemize}
-    \item Implementacja mechanizmu cache’owania wyników zapytań dotyczących monitorowania systemu w celu redukcji liczby żądań do zasobów,
-    \item Wdrożenie dodatkowych zabezpieczeń przed atakami DoS poprzez ograniczenie liczby żądań w krótkim czasie,
-    \item Rozszerzenie API o dodatkowe metody pozwalające na integrację systemu z innymi narzędziami do zarządzania infrastrukturą IT,
-    \item Automatyczne generowanie raportów dotyczących stanu systemu i jego wydajności,
-    \item Integracja z systemami SIEM (Security Information and Event Management) w celu zwiększenia poziomu monitorowania i analizy bezpieczeństwa.
+    \item Połączenie języka Go w warstwie backendu oraz szablonu TailAdmin w warstwie frontendowej pozwala na szybkie tworzenie aplikacji o wysokiej wydajności i przejrzystym interfejsie użytkownika.
+    \item Architektura systemu została zaprojektowana w sposób umożliwiający jego łatwą rozbudowę – zarówno poprzez dodawanie nowych endpointów API, jak i integrację z zewnętrznymi usługami.
+    \item Testy wydajnościowe ujawniły, że system dobrze radzi sobie z typowym obciążeniem, jednak należy zwrócić uwagę na ograniczenia wynikające z zastosowania SQLite, szczególnie przy dużej liczbie jednoczesnych operacji zapisu.
+    \item Mechanizmy bezpieczeństwa wdrożone w systemie (autoryzacja JWT, kontrola ról, odporność na podstawowe ataki webowe) są wystarczające na etapie prototypowania, jednak wymagają dalszej rozbudowy przed wdrożeniem produkcyjnym.
 \end{itemize}
 
-Kolejnym krokiem w rozwoju systemu mogłoby być także wdrożenie mechanizmu kolejkowania zadań (np. przy użyciu Celery lub Redis) w celu lepszego zarządzania operacjami wymagającymi intensywnego przetwarzania. Ponadto możliwe jest wprowadzenie bardziej zaawansowanych metod autoryzacji, takich jak uwierzytelnianie wieloskładnikowe (MFA) lub integracja z systemami LDAP w celu centralnego zarządzania dostępem użytkowników.
+W przyszłości system może zostać rozszerzony o:
 
-Podsumowując, niniejsza praca magisterska dostarcza kompleksowego rozwiązania umożliwiającego zarządzanie usługami i monitorowanie zasobów systemowych w sposób efektywny, skalowalny i zgodny z najlepszymi praktykami inżynierii oprogramowania. Opracowany system stanowi solidną podstawę do dalszego rozwoju oraz może być wykorzystywany w rzeczywistych scenariuszach administracji systemami informatycznymi.
+\begin{itemize}
+    \item Wdrożenie kolejki zadań (np. z użyciem Redis lub RabbitMQ) w celu obsługi operacji asynchronicznych oraz przetwarzania zadań wymagających więcej czasu.
+    \item Rozszerzenie API o nowe funkcjonalności, takie jak integracja z narzędziami CI/CD, mechanizmy webhooków, czy eksport danych do zewnętrznych systemów.
+    \item Zastosowanie bazy danych wspierającej jednoczesne zapisy (np. PostgreSQL) dla zwiększenia skalowalności.
+    \item Integrację z narzędziami monitorującymi (np. Prometheus, Grafana) i systemami SIEM w celu zwiększenia widoczności operacyjnej i poziomu bezpieczeństwa.
+    \item Wprowadzenie funkcjonalności cache’owania danych, aby zmniejszyć obciążenie backendu i przyspieszyć odpowiedzi aplikacji.
+    \item Wdrożenie mechanizmów uwierzytelniania wieloskładnikowego (MFA) oraz integrację z zewnętrznymi systemami tożsamości (np. LDAP, OAuth).
+\end{itemize}
+
+Podsumowując, opracowana aplikacja stanowi solidne i nowoczesne rozwiązanie, które może być wykorzystane zarówno w małych środowiskach serwerowych, jak i jako baza pod rozbudowane systemy administracji IT. Projekt może zostać rozwinięty o nowe funkcje i zintegrowany z narzędziami stosowanymi w profesjonalnym zarządzaniu infrastrukturą informatyczną.
 
 
 \section{Możliwości dalszego rozwoju systemu}
@@ -92,4 +107,4 @@ W celu zwiększenia użyteczności systemu warto rozważyć jego integrację z i
 \end{itemize}
 
 \subsection{Podsumowanie}
-Proponowane kierunki rozwoju pokazują szerokie możliwości dalszej rozbudowy systemu. Obecna wersja stanowi solidną bazę do wprowadzania nowych funkcjonalności, zarówno pod kątem optymalizacji działania, jak i zwiększenia bezpieczeństwa oraz zakresu zastosowań. W przyszłości system może ewoluować w kierunku kompleksowego narzędzia do zarządzania infrastrukturą IT, łącząc aspekty monitorowania, automatyzacji i bezpieczeństwa w jednym rozwiązaniu. Dzięki elastycznej architekturze opartej na FastAPI, aplikacja jest gotowa na integrację z innymi systemami i dalszy rozwój w zależności od potrzeb użytkowników.
+Proponowane kierunki rozwoju pokazują szerokie możliwości dalszej rozbudowy systemu. Obecna wersja stanowi solidną bazę do wprowadzania nowych funkcjonalności, zarówno pod kątem optymalizacji działania, jak i zwiększenia bezpieczeństwa oraz zakresu zastosowań. W przyszłości system może ewoluować w kierunku kompleksowego narzędzia do zarządzania infrastrukturą IT, łącząc aspekty monitorowania, automatyzacji i bezpieczeństwa w jednym rozwiązaniu. Dzięki elastycznej architekturze opartej na API wykonanym w GO GIN oraz szablonu frontendu TailAdmin, aplikacja jest gotowa na integrację z innymi systemami i dalszy rozwój w zależności od potrzeb użytkowników.

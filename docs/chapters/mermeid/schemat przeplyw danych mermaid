@@ -1,0 +1,30 @@
+flowchart TD
+    subgraph UI
+        A[Użytkownik] --> B["Frontend (TailAdmin)"]
+    end
+
+    subgraph API
+        B --> C["Backend API (Go / Gin)"]
+    end
+
+    subgraph Host
+        C --> D["System operacyjny<br/>(CPU, RAM, dysk, sieć)"]
+        C --> E["Docker Engine<br/>(kontenery)"]
+        C --> F["Zarządzanie użytkownikami<br/>(baza danych)"]
+        C --> G["Test prędkości łącza<br/>(speedtest CLI)"]
+        C --> H["SQLite DB<br/>(statystyki, logi)"]
+    end
+
+    %% Opisy interakcji
+    A -->|Otwiera dashboard| B
+    B -->|GET /api/stats| C
+    B -->|POST /api/containers/toggle| C
+    B -->|POST /api/users| C
+    B -->|GET /api/history| C
+
+    C -->|df / free / top| D
+    C -->|docker CLI / socket| E
+    C -->|Operacje CRUD| F
+    C -->|Uruchamia test CLI| G
+    C -->|Zapis danych pomiarowych| H
+    C -->|Odczyt historii/statystyk| H

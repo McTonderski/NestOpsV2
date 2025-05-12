@@ -19,31 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{AppSmith}{online}{}
+    \entry{TailAdmin}{online}{}
       \name{author}{1}{}{%
-        {{hash=8a3de076f9813807f8f27ce56df60bd5}{%
-           family={AppSmith},
-           familyi={A\bibinitperiod}}}%
+        {{hash=94de4c84ad49683669303f2c50044ccb}{%
+           family={Admin},
+           familyi={A\bibinitperiod},
+           given={Tail},
+           giveni={T\bibinitperiod}}}%
       }
-      \strng{namehash}{8a3de076f9813807f8f27ce56df60bd5}
-      \strng{fullhash}{8a3de076f9813807f8f27ce56df60bd5}
-      \strng{bibnamehash}{8a3de076f9813807f8f27ce56df60bd5}
-      \strng{authorbibnamehash}{8a3de076f9813807f8f27ce56df60bd5}
-      \strng{authornamehash}{8a3de076f9813807f8f27ce56df60bd5}
-      \strng{authorfullhash}{8a3de076f9813807f8f27ce56df60bd5}
+      \strng{namehash}{94de4c84ad49683669303f2c50044ccb}
+      \strng{fullhash}{94de4c84ad49683669303f2c50044ccb}
+      \strng{bibnamehash}{94de4c84ad49683669303f2c50044ccb}
+      \strng{authorbibnamehash}{94de4c84ad49683669303f2c50044ccb}
+      \strng{authornamehash}{94de4c84ad49683669303f2c50044ccb}
+      \strng{authorfullhash}{94de4c84ad49683669303f2c50044ccb}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
-      \field{title}{AppSmith Docs}
+      \field{addendum}{(accessed: 10.05.2025)}
+      \field{title}{Tail Admin Docs}
       \verb{urlraw}
-      \verb https://docs.appsmith.com
+      \verb https://tailadmin.com/docs
       \endverb
       \verb{url}
-      \verb https://docs.appsmith.com
+      \verb https://tailadmin.com/docs
       \endverb
-      \keyw{nocode,appsmith,ui,ux,frontend}
+      \keyw{tailadmin,admin,dashboard,frontend}
     \endentry
     \entry{Docker}{online}{}
       \name{author}{1}{}{%
@@ -71,31 +73,33 @@
       \endverb
       \keyw{docker,containers,devops}
     \endentry
-    \entry{SelfHostRunner}{online}{}
+    \entry{RaspberryPiPowerConsumption}{online}{}
       \name{author}{1}{}{%
-        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
-           family={GitHub},
-           familyi={G\bibinitperiod}}}%
+        {{hash=8ac07e4aad351bcba23914e8d7051859}{%
+           family={Forum},
+           familyi={F\bibinitperiod},
+           given={Home-Assistant},
+           giveni={H\bibinithyphendelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \strng{namehash}{8ac07e4aad351bcba23914e8d7051859}
+      \strng{fullhash}{8ac07e4aad351bcba23914e8d7051859}
+      \strng{bibnamehash}{8ac07e4aad351bcba23914e8d7051859}
+      \strng{authorbibnamehash}{8ac07e4aad351bcba23914e8d7051859}
+      \strng{authornamehash}{8ac07e4aad351bcba23914e8d7051859}
+      \strng{authorfullhash}{8ac07e4aad351bcba23914e8d7051859}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
-      \field{title}{GitHub Docs}
+      \field{addendum}{(accessed: 11.05.2025)}
+      \field{title}{Zużycie prądu przez urządzenie Raspberry Pi 5}
       \verb{urlraw}
-      \verb https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners
+      \verb https://community.home-assistant.io/t/raspberry-pi-5/619702/26?page=2
       \endverb
       \verb{url}
-      \verb https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners
+      \verb https://community.home-assistant.io/t/raspberry-pi-5/619702/26?page=2
       \endverb
-      \keyw{runner,ci,cd,github,actions}
+      \keyw{rpi,rpi5,raspberry Pi,power}
     \endentry
     \entry{Kubernetes}{online}{}
       \name{author}{1}{}{%
@@ -122,32 +126,6 @@
       \verb https://kubernetes.io/docs/
       \endverb
       \keyw{kubernetes,orchestration,containers}
-    \endentry
-    \entry{MongoDB}{online}{}
-      \name{author}{1}{}{%
-        {{hash=206e3718af092fd1d12f80cae771ccac}{%
-           family={MongoDB},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{206e3718af092fd1d12f80cae771ccac}
-      \strng{fullhash}{206e3718af092fd1d12f80cae771ccac}
-      \strng{bibnamehash}{206e3718af092fd1d12f80cae771ccac}
-      \strng{authorbibnamehash}{206e3718af092fd1d12f80cae771ccac}
-      \strng{authornamehash}{206e3718af092fd1d12f80cae771ccac}
-      \strng{authorfullhash}{206e3718af092fd1d12f80cae771ccac}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
-      \field{title}{MongoDB Docs}
-      \verb{urlraw}
-      \verb https://www.mongodb.com/docs
-      \endverb
-      \verb{url}
-      \verb https://www.mongodb.com/docs
-      \endverb
-      \keyw{python,mongodb,database}
     \endentry
     \entry{NTFY}{online}{}
       \name{author}{1}{}{%
@@ -200,6 +178,58 @@
       \verb https://docs.openstack.org
       \endverb
       \keyw{openstack,cloud,virtualization}
+    \endentry
+    \entry{ZAP}{online}{}
+      \name{author}{1}{}{%
+        {{hash=24b95a7fdad5a850196cd87546dcc70b}{%
+           family={OWASP},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{fullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{bibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorbibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authornamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorfullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 10.05.2025)}
+      \field{title}{OWASP ZAP Documentation}
+      \verb{urlraw}
+      \verb https://www.zaproxy.org
+      \endverb
+      \verb{url}
+      \verb https://www.zaproxy.org
+      \endverb
+      \keyw{zap,security,testing}
+    \endentry
+    \entry{BurpSuite}{online}{}
+      \name{author}{1}{}{%
+        {{hash=495b697d9e0c431cc2da3f751e17be24}{%
+           family={PortSwigger},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{495b697d9e0c431cc2da3f751e17be24}
+      \strng{fullhash}{495b697d9e0c431cc2da3f751e17be24}
+      \strng{bibnamehash}{495b697d9e0c431cc2da3f751e17be24}
+      \strng{authorbibnamehash}{495b697d9e0c431cc2da3f751e17be24}
+      \strng{authornamehash}{495b697d9e0c431cc2da3f751e17be24}
+      \strng{authorfullhash}{495b697d9e0c431cc2da3f751e17be24}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 10.05.2025)}
+      \field{title}{Burp Suite Documentation}
+      \verb{urlraw}
+      \verb https://portswigger.net/burp
+      \endverb
+      \verb{url}
+      \verb https://portswigger.net/burp
+      \endverb
+      \keyw{burpsuite,security,testing}
     \endentry
     \entry{Proxmox}{online}{}
       \name{author}{1}{}{%
@@ -279,31 +309,33 @@
       \endverb
       \keyw{telegram,messaging,bot}
     \endentry
-    \entry{FastAPI}{online}{}
+    \entry{NestOpsV2}{online}{}
       \name{author}{1}{}{%
-        {{hash=7c19402052f081965a748ba7cd7d0685}{%
-           family={Tiangolo},
-           familyi={T\bibinitperiod}}}%
+        {{hash=cbe4d73e1526f1436234872a7a20b5d6}{%
+           family={Tonderski},
+           familyi={T\bibinitperiod},
+           given={Maciej},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{7c19402052f081965a748ba7cd7d0685}
-      \strng{fullhash}{7c19402052f081965a748ba7cd7d0685}
-      \strng{bibnamehash}{7c19402052f081965a748ba7cd7d0685}
-      \strng{authorbibnamehash}{7c19402052f081965a748ba7cd7d0685}
-      \strng{authornamehash}{7c19402052f081965a748ba7cd7d0685}
-      \strng{authorfullhash}{7c19402052f081965a748ba7cd7d0685}
+      \strng{namehash}{cbe4d73e1526f1436234872a7a20b5d6}
+      \strng{fullhash}{cbe4d73e1526f1436234872a7a20b5d6}
+      \strng{bibnamehash}{cbe4d73e1526f1436234872a7a20b5d6}
+      \strng{authorbibnamehash}{cbe4d73e1526f1436234872a7a20b5d6}
+      \strng{authornamehash}{cbe4d73e1526f1436234872a7a20b5d6}
+      \strng{authorfullhash}{cbe4d73e1526f1436234872a7a20b5d6}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
-      \field{title}{FastAPI}
+      \field{addendum}{(accessed: 11.05.2025)}
+      \field{title}{NestOpsV2}
       \verb{urlraw}
-      \verb https://fastapi.tiangolo.com
+      \verb https://github.com/McTonderski/NestOpsV2
       \endverb
       \verb{url}
-      \verb https://fastapi.tiangolo.com
+      \verb https://github.com/McTonderski/NestOpsV2
       \endverb
-      \keyw{python,fastapi,api}
+      \keyw{nestopsv2,automation,homelab}
     \endentry
     \entry{TrueNAS}{online}{}
       \name{author}{1}{}{%
@@ -358,6 +390,7 @@
       \keyw{unraid,nas,virtualization}
     \endentry
   \enddatalist
+  \missing{CasaOS}
 \endrefsection
 \endinput
 

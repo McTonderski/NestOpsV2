@@ -13,38 +13,170 @@ HomeLaby znajdują zastosowanie w wielu obszarach, w tym:
     \item uniezależnienie się od komercyjnych dostawców chmury w celu zwiększenia kontroli nad własnymi danymi.
 \end{itemize}
 
+\subsection{Ewolucja HomeLabów}
+Historia HomeLabów sięga czasów, gdy entuzjaści IT zaczynali od prostych zestawów serwerów fizycznych w domach, często z pojedynczymi maszynami do nauki i testów. Początkowo były to głównie serwery oparte na systemach Linux lub Windows Server, służące do eksperymentów z sieciami, usługami plików czy prostymi aplikacjami. Wraz z rozwojem technologii wirtualizacji, takich jak VMware czy Hyper-V, HomeLaby zaczęły ewoluować, umożliwiając uruchamianie wielu maszyn wirtualnych na jednym fizycznym serwerze, co znacznie zwiększyło możliwości testowe i oszczędność zasobów.
+
+Kolejnym etapem było pojawienie się konteneryzacji, przede wszystkim dzięki Dockerowi, która pozwoliła na lekkie i szybkie uruchamianie aplikacji w izolowanych środowiskach.
+
+Docker został zaprezentowany w 2013 roku jako projekt firmy dotCloud, która później zmieniła nazwę na Docker Inc. Technologia ta wywodzi się z systemu konteneryzacji opierającego się na mechanizmach LXC (Linux Containers), które były dostępne w jądrze Linuxa już wcześniej, ale trudne w użyciu. Docker wprowadził prosty interfejs do tworzenia, uruchamiania i zarządzania kontenerami, co zrewolucjonizowało sposób dystrybucji i uruchamiania aplikacji. W kolejnych latach Docker zyskał ogromną popularność, stając się de facto standardem w konteneryzacji, a jego rozwój obejmował m.in. wprowadzenie Docker Swarm (2015) – własnego systemu orkiestracji, integrację z chmurami publicznymi oraz rozwój narzędzi do zarządzania cyklem życia kontenerów. W 2017 roku Docker przekazał część swojej technologii do fundacji CNCF w postaci silnika kontenerowego containerd, a sam projekt coraz częściej był wykorzystywany w połączeniu z Kubernetesem, który stał się dominującym rozwiązaniem orkiestracyjnym.
+
+Wprowadzenie orkiestratorów kontenerów, takich jak Kubernetes, umożliwiło zarządzanie złożonymi systemami rozproszonymi nawet w domowym środowisku. Obecnie HomeLaby coraz częściej korzystają z podejścia cloud-native, integrując narzędzia infrastruktury jako kod (IaC), takie jak Terraform czy Ansible, oraz praktyki GitOps, gdzie konfiguracje i wdrożenia są zarządzane poprzez repozytoria Git, co zwiększa powtarzalność i automatyzację.
+
+Ta ewolucja spowodowała, że dzisiejsze HomeLaby to nie tylko miejsca do nauki, ale pełnoprawne środowiska produkcyjne, które mogą obsługiwać usługi multimedialne, automatyzację domową, a nawet prywatne chmury danych i aplikacji.
+
 \section{Technologie wykorzystywane w HomeLabach}
+
+W niniejszej sekcji przedstawiono wybrane technologie i rozwiązania wykorzystywane w środowiskach typu HomeLab. Należy jednak zaznaczyć, że poniższy przegląd ma charakter poglądowy i służy jedynie przedstawieniu gotowych rozwiązań dostępnych na rynku. Opisane narzędzia i systemy mają na celu pogłębienie wiedzy czytelnika w zakresie możliwości technologicznych, ale w większości nie zostały wykorzystane bezpośrednio w implementacji systemu zaprojektowanego w ramach niniejszej pracy.
+
 HomeLab może składać się z różnych komponentów, od dedykowanych serwerów fizycznych po rozwiązania chmurowe i kontenerowe. Kluczowe technologie wykorzystywane w HomeLabach obejmują:
 
 \subsection{Wirtualizacja i konteneryzacja}
 \begin{itemize}
-    \item Proxmox VE – platforma do zarządzania maszynami wirtualnymi i kontenerami.
-    \item VMware ESXi – profesjonalne narzędzie do wirtualizacji serwerów.
-    \item Hyper-V – narzędzie do wirtualizacji dostarczane przez Microsoft wraz z systemem Windows.
-    \item Docker i Kubernetes – technologie konteneryzacji, pozwalające na elastyczne zarządzanie aplikacjami i zasobami.
+    \item \textbf{Proxmox VE} - platforma do zarządzania maszynami wirtualnymi i kontenerami.
+    
+    Przykład tworzenia maszyny wirtualnej za pomocą CLI Proxmox:
+    \begin{verbatim}
+    qm create 100 --memory 2048 --net0 virtio,bridge=vmbr0 --cdrom /var/lib/vz/template/iso/ubuntu.iso
+    qm start 100
+    \end{verbatim}
+
+    \item \textbf{VMware ESXi} - profesjonalne narzędzie do wirtualizacji serwerów.
+    
+    Przykład automatycznego wdrożenia VM z wykorzystaniem PowerCLI:
+    \begin{verbatim}
+    New-VM -Name "TestVM" -ResourcePool "Resources" -Datastore "Datastore1" -MemoryGB 4 -NumCPU 2
+    \end{verbatim}
+
+    \item \textbf{Hyper-V} - narzędzie do wirtualizacji dostarczane przez Microsoft wraz z systemem Windows.
+    
+    Przykład tworzenia maszyny wirtualnej PowerShell:
+    \begin{verbatim}
+    New-VM -Name "LabVM" -MemoryStartupBytes 2GB -Generation 2 -NewVHDPath "C:\VMs\LabVM.vhdx" -NewVHDSizeBytes 40GB
+    \end{verbatim}
+
+    \item \textbf{Docker i Kubernetes} - technologie konteneryzacji, pozwalające na elastyczne zarządzanie aplikacjami i zasobami.
+    
+    Przykład prostego pliku \texttt{docker-compose.yaml}:
+    \begin{verbatim}
+    version: '3'
+    services:
+      web:
+        image: nginx:latest
+        ports:
+          - "80:80"
+    \end{verbatim}
+    
+    Przykład uruchomienia playbooka Kubernetes:
+    \begin{verbatim}
+    kubectl apply -f deployment.yaml
+    \end{verbatim}
 \end{itemize}
 
 \subsection{Automatyzacja i zarządzanie konfiguracją}
 \begin{itemize}
-    \item Ansible, Terraform, Puppet, Chef – narzędzia do automatyzacji wdrażania i zarządzania infrastrukturą.
+    \item \textbf{Ansible, Terraform, Puppet, Chef} – narzędzia do automatyzacji wdrażania i zarządzania infrastrukturą.
+
+    Przykład użycia Ansible do instalacji Nginx:
+    \begin{verbatim}
+    - hosts: homelab_servers
+      become: yes
+      tasks:
+        - name: Install Nginx
+          apt:
+            name: nginx
+            state: present
+    \end{verbatim}
+
+    Przykład Terraform do stworzenia maszyny wirtualnej na Proxmox:
+    \begin{verbatim}
+    resource "proxmox_vm_qemu" "vm1" {
+      name   = "homelab-vm"
+      memory = 2048
+      cores  = 2
+      disk {
+        size = "20G"
+      }
+    }
+    \end{verbatim}
 \end{itemize}
 
 \subsection{Monitoring i analiza}
 \begin{itemize}
-    \item Prometheus i Grafana – rozwiązania do monitorowania wydajności i wizualizacji danych.
-    \item Zabbix – platforma do monitorowania infrastruktury IT.
+    \item \textbf{Prometheus i Grafana} – rozwiązania do monitorowania wydajności i wizualizacji danych.
+    
+    Przykład konfiguracji Prometheus scrape config:
+    \begin{verbatim}
+    scrape_configs:
+      - job_name: 'node_exporter'
+        static_configs:
+          - targets: ['localhost:9100']
+    \end{verbatim}
+    
+    \item \textbf{Zabbix} – platforma do monitorowania infrastruktury IT.
+    
+    Przykład prostego szablonu Zabbix do monitorowania serwera:
+    \begin{verbatim}
+    Hostname: homelab-server
+    Items:
+      - CPU load
+      - Memory usage
+      - Disk space
+    \end{verbatim}
+\end{itemize}
+
+\subsection{Bezpieczeństwo i ochrona danych}
+Bezpieczeństwo jest kluczowym aspektem każdego HomeLaba, zwłaszcza gdy przechowywane są dane prywatne. Wśród najważniejszych technologii i praktyk znajdują się:
+
+\begin{itemize}
+    \item \textbf{VPN} – umożliwia bezpieczne połączenie z domową siecią z dowolnego miejsca. Popularne rozwiązania to OpenVPN, WireGuard.
+    
+    Przykład podstawowej konfiguracji WireGuard:
+    \begin{verbatim}
+    [Interface]
+    PrivateKey = <private_key>
+    Address = 10.0.0.1/24
+
+    [Peer]
+    PublicKey = <peer_public_key>
+    AllowedIPs = 10.0.0.2/32
+    \end{verbatim}
+
+    \item \textbf{Zapory sieciowe (firewalle)} – kontrolują ruch sieciowy, chroniąc przed nieautoryzowanym dostępem. Można używać iptables, ufw lub dedykowanych urządzeń.
+
+    Przykład reguły ufw zezwalającej na ruch SSH:
+    \begin{verbatim}
+    sudo ufw allow ssh
+    sudo ufw enable
+    \end{verbatim}
+
+    \item \textbf{Strategie backupu} – regularne tworzenie kopii zapasowych danych i konfiguracji, np. za pomocą rsync, BorgBackup, czy dedykowanych narzędzi chmurowych.
+
+    Przykład backupu katalogu za pomocą rsync:
+    \begin{verbatim}
+    rsync -av --delete /home/user/data /mnt/backup/
+    \end{verbatim}
+
+    \item \textbf{Szyfrowanie danych} – zarówno na poziomie dysków (LUKS, BitLocker), jak i podczas transmisji (TLS).
+
+    Przykład szyfrowania dysku z LUKS:
+    \begin{verbatim}
+    cryptsetup luksFormat /dev/sdX
+    cryptsetup open /dev/sdX encrypted_disk
+    \end{verbatim}
 \end{itemize}
 
 \section{Analiza istniejących systemów do zarządzania homelabem}
 \subsection{Przegląd dostępnych rozwiązań}
-Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najpopularniejszych nalezą:
+Na rynku istnieje kilka systemów umożliwiających zarządzanie homelabem. Do najpopularniejszych należą:
 \begin{itemize}
-    \item Proxmox VE \cite{Proxmox} - rozbudowany, open-source rozwiązanie do zarządzania maszynami wirtualnymi i kontenerami, oferujące intrgeację z Ceph i wysoką dostępność.
+    \item Proxmox VE \cite{Proxmox} - rozbudowane, open-source rozwiązanie do zarządzania maszynami wirtualnymi i kontenerami, oferujące integrację z Ceph i wysoką dostępność.
     \item Unraid \cite{Unraid} - popularne rozwiązanie NAS z obsługą wirtualizacji i kontenerów, cenione za łatwość obsługi ale ograniczone zastosowanie korporacyjne.
-    \item OpenStack \cite{OpenStack} - potęzna platforma chmurowa, która moze być uzywana do zarządzania homelabem, ale jej skomplikowana konfiguracja sprawia, ze nie jest przyjazna dla poczatkujacych uzytkowników.
-    \item TrueNAS \cite{TrueNAS} - rozbudowane oprogramowanie do zarządzania przestrzenią dyskową, które umozliwa tworzenie prywatnych chmur danych
-    \item Docker \cite{Docker} + Kubernetes \cite{Kubernetes} - stosowane w bardziej zaawansowanych wdrozeniach do zarzadzania kontenerami, ale wymagające większej wiedzy technicznej.
+    \item OpenStack \cite{OpenStack} - potężna platforma chmurowa, która może być używana do zarządzania homelabem, ale jej skomplikowana konfiguracja sprawia, że nie jest przyjazna dla początkujących użytkowników.
+    \item TrueNAS \cite{TrueNAS} - rozbudowane oprogramowanie do zarządzania przestrzenią dyskową, które umożliwia tworzenie prywatnych chmur danych.
+    \item Docker \cite{Docker} + Kubernetes \cite{Kubernetes} - stosowane w bardziej zaawansowanych wdrożeniach do zarządzania kontenerami, ale wymagające większej wiedzy technicznej.
+    \item CasaOS \cite{CasaOS} - nowoczesny, łatwy w obsłudze system do zarządzania usługami domowymi i multimedialnymi, skierowany do użytkowników z mniejszym doświadczeniem technicznym.
 \end{itemize}
+
 \subsection{Zalety i ograniczenia konkurencyjnych systemów}
 
 \subsubsection{Proxmox VE \cite{Proxmox}}
@@ -53,14 +185,16 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     \begin{itemize}
         \item Darmowa wersja open-source.
         \item Wsparcie dla maszyn wirtualnych (KVM) i kontenerów (LXC).
-        \item Mozliwość tworzenia klastrów wysokiej dostępności.
+        \item Możliwość tworzenia klastrów wysokiej dostępności.
+        \item Przykład zastosowania: idealny do środowisk testowych oraz małych firm wymagających elastycznej wirtualizacji.
     \end{itemize}
 \end{minipage}\hfil
 \begin{minipage}{0.45\textwidth}
     Wady
     \begin{itemize}
-        \item Brak pełnej automatyzacji wdrozeń.
-        \item Stosunkowo wysoki próg wejścia dla początkujących uzytkowników.
+        \item Brak pełnej automatyzacji wdrożeń.
+        \item Stosunkowo wysoki próg wejścia dla początkujących użytkowników.
+        \item Przykład ograniczenia: mniej przyjazny dla użytkowników nieznających CLI lub skryptów.
     \end{itemize}
 \end{minipage}
 
@@ -68,8 +202,9 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
 \begin{minipage}{0.45\textwidth}
     Zalety
     \begin{itemize}
-        \item Intuicyjny interfejs uzytkownika.
+        \item Intuicyjny interfejs użytkownika.
         \item Łatwa obsługa pamięci masowej i kontrolerów.
+        \item Przykład zastosowania: idealne do mediów domowych i prostych rozwiązań NAS.
     \end{itemize}
 \end{minipage}\hfil
 \begin{minipage}{0.45\textwidth}
@@ -77,6 +212,7 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     \begin{itemize}
         \item Model licencyjny oparty na opłacie jednorazowej.
         \item Ograniczona integracja z systemami chmurowymi.
+        \item Przykład ograniczenia: mniej elastyczny w środowiskach korporacyjnych.
     \end{itemize}
 \end{minipage}
 
@@ -86,13 +222,15 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     \begin{itemize}
         \item Zaawansowane funkcje chmurowe.
         \item Skalowalność i modularność.
+        \item Przykład zastosowania: odpowiedni dla dużych środowisk testowych i produkcyjnych.
     \end{itemize}
 \end{minipage}\hfil
 \begin{minipage}{0.45\textwidth}
     Wady
     \begin{itemize}
-        \item Bardzo wysoka trudność wdrozenia.
-        \item Wymaga duzej ilości zasobów sprzętowych.
+        \item Bardzo wysoka trudność wdrożenia.
+        \item Wymaga dużej ilości zasobów sprzętowych.
+        \item Przykład ograniczenia: niepraktyczny dla małych i średnich HomeLabów.
     \end{itemize}
 \end{minipage}
 
@@ -101,7 +239,8 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     Zalety
     \begin{itemize}
         \item Silne wsparcie dla przechowywania danych.
-        \item Wbudowana replikacja i ochrona RAID
+        \item Wbudowana replikacja i ochrona RAID.
+        \item Przykład zastosowania: idealny do przechowywania dużych zbiorów danych i backupów.
     \end{itemize}
 \end{minipage}\hfil
 \begin{minipage}{0.45\textwidth}
@@ -109,9 +248,9 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     \begin{itemize}
         \item Skupione głównie na funkcjach NAS.
         \item Brak natywnego wsparcia dla maszyn wirtualnych.
+        \item Przykład ograniczenia: ograniczona funkcjonalność w zakresie wirtualizacji.
     \end{itemize}
 \end{minipage}
-
 
 \subsubsection{Docker \cite{Docker} + Kubernetes \cite{Kubernetes}}
 \begin{minipage}{0.45\textwidth}
@@ -119,16 +258,36 @@ Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najp
     \begin{itemize}
         \item Elastyczność w zarządzaniu aplikacjami kontenerowymi.
         \item Łatwe skalowanie infrastruktury.
+        \item Przykład zastosowania: idealne dla deweloperów aplikacji mikroserwisowych.
     \end{itemize}
 \end{minipage}\hfil
 \begin{minipage}{0.45\textwidth}
     Wady
     \begin{itemize}
-        \item Wymaga duzej wiedzy technicznej.
+        \item Wymaga dużej wiedzy technicznej.
         \item Brak wsparcia dla maszyn wirtualnych.
+        \item Przykład ograniczenia: nieodpowiednie dla użytkowników początkujących.
     \end{itemize}
 \end{minipage}
 
+\subsubsection{CasaOS \cite{CasaOS}}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Bardzo prosty, intuicyjny interfejs użytkownika.
+        \item Łatwa instalacja i konfiguracja.
+        \item Skupienie na usługach multimedialnych i domowych.
+        \item Przykład zastosowania: idealne dla użytkowników domowych chcących zarządzać multimediami i prostymi usługami.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Ograniczona skalowalność i funkcjonalność w porównaniu do rozwiązań enterprise.
+        \item Brak zaawansowanych funkcji automatyzacji i integracji.
+        \item Przykład ograniczenia: nie nadaje się do rozbudowanych środowisk IT.
+    \end{itemize}
+\end{minipage}
 
 \subsection{Identyfikacja luki technologicznej}
 Analiza powyższego porównania dostępnych systemów pokazuje, że żadne z obecnych rozwiązań nie zapewnia jednocześnie:
@@ -140,3 +299,8 @@ Analiza powyższego porównania dostępnych systemów pokazuje, że żadne z obe
 \end{itemize}
 
 Proponowany system HomeLab ma na celu uzupełnienie tej luki poprzez stworzenie intuicyjnego narzędzia do zarządzania domową infrastrukturą IT, które zapewni łatwość obsługi, pełną automatyzację oraz zwiększoną prywatność użytkowników.
+
+\subsection{Podsumowanie rozdziału}
+W niniejszym rozdziale przedstawiono definicję HomeLaba, jego znaczenie oraz ewolucję od prostych serwerów fizycznych do nowoczesnych, zautomatyzowanych i cloud-native środowisk. Omówiono kluczowe technologie wykorzystywane w HomeLabach, w tym wirtualizację, konteneryzację, automatyzację, monitoring oraz aspekty bezpieczeństwa. Analiza istniejących systemów do zarządzania HomeLabem wykazała, że chociaż dostępne rozwiązania oferują szeroki zakres funkcji, żadne z nich nie łączy kompleksowo prostoty obsługi, pełnej integracji oraz automatyzacji, jednocześnie dbając o bezpieczeństwo i prywatność użytkowników.
+
+W związku z tym istnieje wyraźna luka technologiczna, którą proponowany system HomeLab ma wypełnić. Nowa platforma ma za zadanie dostarczyć użytkownikom narzędzie łatwe w obsłudze, pozwalające na kompleksowe zarządzanie infrastrukturą – od maszyn wirtualnych, przez kontenery, po przestrzeń dyskową – z automatyzacją wdrożeń i wbudowanymi mechanizmami bezpieczeństwa. Takie podejście umożliwi zarówno początkującym, jak i zaawansowanym użytkownikom efektywne korzystanie z domowej infrastruktury IT, zwiększając jednocześnie kontrolę nad danymi i minimalizując ryzyko związane z ich przechowywaniem w chmurze komercyjnej.

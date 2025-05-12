@@ -1,98 +1,106 @@
 \contentsline {chapter}{\numberline {1}Wprowadzenie}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Cel pracy}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Zakres pracy}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.1}Cel pracy}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Zakres pracy}{5}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Czym jest HomeLab oraz analiza istniejących rozwiązań}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Definicja HomeLab oraz znaczenie}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Technologie wykorzystywane w HomeLabach}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Wirtualizacja i konteneryzacja}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Automatyzacja i zarządzanie konfiguracją}{7}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Monitoring i analiza}{7}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Analiza istniejących systemów do zarządzania homelabem}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Przegląd dostępnych rozwiązań}{7}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Zalety i ograniczenia konkurencyjnych systemów}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{Proxmox VE \blx@tocontentsinit {0}\cite {Proxmox}}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{Unraid \blx@tocontentsinit {0}\cite {Unraid}}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{OpenStack \blx@tocontentsinit {0}\cite {OpenStack}}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{TrueNAS \blx@tocontentsinit {0}\cite {TrueNAS}}{8}{subsection.2.3.2}%
-\contentsline {subsubsection}{Docker \blx@tocontentsinit {0}\cite {Docker} + Kubernetes \blx@tocontentsinit {0}\cite {Kubernetes}}{9}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Identyfikacja luki technologicznej}{9}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}Projekt Systemy Homelab}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne i niefunkcjonalne}{10}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Wymagania funkcjonalne}{10}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Wymagania niefunkcjonalne}{11}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Architektura systemu}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Backend (FastAPI + MongoDB)}{12}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Frontend (AppSmith)}{12}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Warstwa sieciowa}{12}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Środowisko kontenerowe}{12}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Automatyzacja CI/CD}{12}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Urządzenie docelowe}{12}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Technologie i narzędzia uzyte w systemie}{12}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Backend}{13}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Frontend}{13}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Warstwa Sieciowa}{13}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Środowisko uruchomieniowe}{13}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Automatyzacja CI/CD}{14}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Implementacja systemu}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Backend - API do zarządzania systemem}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Struktura API i kluczowe endpointy}{15}{subsection.4.1.1}%
-\contentsline {subsubsection}{Architektura API}{15}{subsection.4.1.1}%
-\contentsline {subsubsection}{Autoryzacja użytkowników}{15}{subsection.4.1.1}%
-\contentsline {subsubsection}{Zarządzanie użytkownikami (Admin Only)}{16}{subsection.4.1.1}%
-\contentsline {subsubsection}{Zarządzanie usługami}{16}{subsection.4.1.1}%
-\contentsline {subsubsection}{Monitorowanie systemu}{16}{subsection.4.1.1}%
-\contentsline {subsubsection}{Zarządzanie serwerem (Admin Only)}{17}{subsection.4.1.1}%
-\contentsline {subsubsection}{Podsumowanie}{17}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Obsługa uwierzytelniania i autoryzacji}{17}{subsection.4.1.2}%
-\contentsline {subsubsection}{Proces uwierzytelniania}{17}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Frontend - Interfejs uzytkownika}{18}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Projekt UI/UX}{18}{subsection.4.2.1}%
-\contentsline {subsubsection}{Założenia projektowe}{18}{subsection.4.2.1}%
-\contentsline {subsubsection}{Struktura interfejsu}{19}{subsection.4.2.1}%
-\contentsline {subsubsection}{Kolorystyka i typografia}{19}{subsection.4.2.1}%
-\contentsline {subsubsection}{Intuicyjność i użyteczność}{19}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Implementacja interfejsu użytkownika z wykorzystaniem podejścia no-code w Appsmith}{19}{subsection.4.2.2}%
-\contentsline {subsubsection}{Proces implementacji}{20}{subsection.4.2.2}%
-\contentsline {subsubsection}{Zalety zastosowania Appsmith}{20}{Item.25}%
-\contentsline {section}{\numberline {4.3}Automatyzacja Konfiguracji i wdrozenie}{20}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Instalacja rozwiązania}{20}{subsection.4.3.1}%
-\contentsline {paragraph}{Opis programu instalacyjnego}{21}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Integracja z narzędziami CI/CD}{22}{subsection.4.3.2}%
-\contentsline {subsubsection}{Zastosowanie self-hosted runnera \blx@tocontentsinit {0}\cite {SelfHostRunner}}{22}{subsection.4.3.2}%
-\contentsline {subsubsection}{Workflow GitHub Actions dla testowania}{22}{subsection.4.3.2}%
-\contentsline {subsubsection}{Workflow GitHub Actions dla budowania i wersjonowania obrazów Docker}{23}{subsection.4.3.2}%
-\contentsline {subsubsection}{Korzyści z bezpośredniego pushowania obrazu do registry}{24}{subsection.4.3.2}%
-\contentsline {subsubsection}{Publikacja obrazu do lokalnego registry}{24}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Testowanie i analiza systemu}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Testy jednostkowe i integracyjne}{26}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Testy jednostkowe}{26}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Testy integracyjne}{26}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Podsumowanie testów}{27}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Testy wydajnościowe i bezpieczeństwa}{27}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Testowanie wydajności systemu}{27}{subsection.5.2.1}%
-\contentsline {subsubsection}{Cel testów wydajnościowych}{27}{subsection.5.2.1}%
-\contentsline {subsubsection}{Metodyka testów}{27}{subsection.5.2.1}%
-\contentsline {subsubsection}{Zakres testów}{28}{Item.29}%
-\contentsline {subsubsection}{Wyniki testów}{28}{Item.29}%
-\contentsline {subsubsection}{Wnioski i optymalizacje}{29}{Item.29}%
-\contentsline {subsection}{\numberline {5.2.2}Testowanie bezpieczeństwa aplikacji}{29}{subsection.5.2.2}%
-\contentsline {subsubsection}{Metodyka testowania bezpieczeństwa}{29}{subsection.5.2.2}%
-\contentsline {subsubsection}{Obszary testowania bezpieczeństwa}{30}{subsection.5.2.2}%
-\contentsline {paragraph}{1. Uwierzytelnianie i autoryzacja}{30}{subsection.5.2.2}%
-\contentsline {paragraph}{2. Zarządzanie danymi i ochrona przed SQL Injection}{30}{subsection.5.2.2}%
-\contentsline {paragraph}{3. Ochrona przed atakami XSS i CSRF}{30}{subsection.5.2.2}%
-\contentsline {paragraph}{4. Bezpieczeństwo API}{30}{subsection.5.2.2}%
-\contentsline {paragraph}{5. Odporność na ataki DoS/DDoS}{31}{subsection.5.2.2}%
-\contentsline {subsubsection}{Narzędzia do testowania bezpieczeństwa}{31}{subsection.5.2.2}%
-\contentsline {subsubsection}{Podsumowanie}{31}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Podsumowanie i wnioski}{32}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Podsumowanie pracy}{32}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Osiągnięcia i rezultaty pracy}{32}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Wnioski i przyszłe kierunki rozwoju}{33}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Możliwości dalszego rozwoju systemu}{34}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Rozszerzenie funkcjonalności zarządzania usługami}{34}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Zaawansowane mechanizmy monitorowania}{35}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Optymalizacja wydajności systemu}{35}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Zaawansowane mechanizmy bezpieczeństwa}{35}{subsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.2.5}Integracja z innymi systemami}{36}{subsection.6.2.5}%
-\contentsline {subsection}{\numberline {6.2.6}Podsumowanie}{36}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {2.1.1}Ewolucja HomeLabów}{6}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Technologie wykorzystywane w HomeLabach}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Wirtualizacja i konteneryzacja}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Automatyzacja i zarządzanie konfiguracją}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Monitoring i analiza}{9}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Bezpieczeństwo i ochrona danych}{10}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Analiza istniejących systemów do zarządzania homelabem}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Przegląd dostępnych rozwiązań}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Zalety i ograniczenia konkurencyjnych systemów}{12}{subsection.2.3.2}%
+\contentsline {subsubsection}{Proxmox VE \blx@tocontentsinit {0}\cite {Proxmox}}{12}{subsection.2.3.2}%
+\contentsline {subsubsection}{Unraid \blx@tocontentsinit {0}\cite {Unraid}}{12}{subsection.2.3.2}%
+\contentsline {subsubsection}{OpenStack \blx@tocontentsinit {0}\cite {OpenStack}}{12}{subsection.2.3.2}%
+\contentsline {subsubsection}{TrueNAS \blx@tocontentsinit {0}\cite {TrueNAS}}{13}{subsection.2.3.2}%
+\contentsline {subsubsection}{Docker \blx@tocontentsinit {0}\cite {Docker} + Kubernetes \blx@tocontentsinit {0}\cite {Kubernetes}}{13}{subsection.2.3.2}%
+\contentsline {subsubsection}{CasaOS \blx@tocontentsinit {0}\cite {CasaOS}}{13}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Identyfikacja luki technologicznej}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Podsumowanie rozdziału}{14}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}Projekt Systemu Homelab}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne i niefunkcjonalne}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Wymagania funkcjonalne}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Wymagania niefunkcjonalne}{16}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Architektura systemu}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Diagram przepływu danych}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Backend (Go + SQLite)}{20}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Frontend (TailAdmin)}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Warstwa sieciowa}{22}{subsection.3.2.4}%
+\contentsline {subsubsection}{Topologia sieci HomeLaba}{22}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Środowisko kontenerowe}{23}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Automatyzacja CI/CD}{24}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Wizualizacja procesu CI/CD}{25}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Urządzenie docelowe}{26}{subsection.3.2.8}%
+\contentsline {section}{\numberline {3.3}Technologie i narzędzia uzyte w systemie}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Backend}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Frontend}{27}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Warstwa Sieciowa}{27}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Środowisko uruchomieniowe}{27}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Automatyzacja CI/CD}{27}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Podsumowanie rozdziału}{28}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Implementacja systemu}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Backend - API do zarządzania systemem}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Struktura API i kluczowe endpointy}{29}{subsection.4.1.1}%
+\contentsline {subsubsection}{Autoryzacja i uwierzytelnianie}{29}{figure.4.1}%
+\contentsline {subsubsection}{Zarządzanie usługami}{30}{figure.4.1}%
+\contentsline {subsubsection}{Monitorowanie systemu}{30}{figure.4.1}%
+\contentsline {subsubsection}{Zarządzanie użytkownikami}{30}{figure.4.1}%
+\contentsline {subsubsection}{Dashboard i dokumentacja}{30}{figure.4.1}%
+\contentsline {subsubsection}{Podsumowanie}{30}{figure.4.1}%
+\contentsline {subsection}{\numberline {4.1.2}Obsługa uwierzytelniania i autoryzacji}{31}{subsection.4.1.2}%
+\contentsline {subsubsection}{Proces uwierzytelniania}{31}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Frontend - Interfejs uzytkownika}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Projekt UI/UX}{32}{subsection.4.2.1}%
+\contentsline {subsubsection}{Założenia projektowe}{32}{subsection.4.2.1}%
+\contentsline {subsubsection}{Struktura interfejsu}{32}{subsection.4.2.1}%
+\contentsline {paragraph}{Strona Główna}{32}{subsection.4.2.1}%
+\contentsline {paragraph}{Strona Logowania oraz Rejestracji}{33}{figure.4.2}%
+\contentsline {paragraph}{Strona przedstawienia oraz integracji Serwisów}{35}{figure.4.4}%
+\contentsline {paragraph}{Strona profilu użytkownika}{35}{figure.4.5}%
+\contentsline {paragraph}{Strona zarządzania serwerem}{36}{figure.4.6}%
+\contentsline {subsubsection}{Kolorystyka i typografia}{37}{figure.4.7}%
+\contentsline {paragraph}{Korzyści wynikające z obsługi dwóch motywów kolorystycznych}{38}{figure.4.7}%
+\contentsline {subsection}{\numberline {4.2.2}Implementacja interfejsu użytkownika}{39}{subsection.4.2.2}%
+\contentsline {subsubsection}{Proces dostosowania szablonu}{39}{subsection.4.2.2}%
+\contentsline {subsubsection}{Zalety podejścia opartego na gotowym szablonie}{39}{Item.26}%
+\contentsline {subsubsection}{Wyzwania podczas adaptacji szablonu}{40}{Item.26}%
+\contentsline {section}{\numberline {4.3}Automatyzacja Konfiguracji i wdrozenie}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Instalacja rozwiązania}{40}{subsection.4.3.1}%
+\contentsline {paragraph}{Program instalacyjny}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Integracja z narzędziami CI/CD}{41}{subsection.4.3.2}%
+\contentsline {subsubsection}{Schemat działania}{41}{subsection.4.3.2}%
+\contentsline {subsubsection}{Pipeline testujący}{41}{Item.33}%
+\contentsline {subsubsection}{Pipeline release’owy}{42}{Item.33}%
+\contentsline {subsubsection}{Przykładowy workflow GitHub Actions}{42}{Item.33}%
+\contentsline {subsubsection}{Strategia wersjonowania}{44}{Item.33}%
+\contentsline {subsubsection}{Weryfikacja aktualności aplikacji}{44}{Item.33}%
+\contentsline {subsubsection}{Korzyści z automatyzacji CI/CD}{44}{Item.33}%
+\contentsline {chapter}{\numberline {5}Testowanie i analiza systemu}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Testy jednostkowe i integracyjne}{45}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Testy jednostkowe}{45}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Testy wydajnościowe i bezpieczeństwa}{46}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Testowanie wydajności systemu}{46}{subsection.5.2.1}%
+\contentsline {subsubsection}{Cel testów wydajnościowych}{46}{subsection.5.2.1}%
+\contentsline {subsubsection}{Metodyka i analiza testów wydajnościowych}{46}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Testowanie bezpieczeństwa aplikacji}{48}{subsection.5.2.2}%
+\contentsline {subsubsection}{Zakres testów bezpieczeństwa}{49}{subsection.5.2.2}%
+\contentsline {paragraph}{1. Uwierzytelnianie i autoryzacja}{49}{subsection.5.2.2}%
+\contentsline {paragraph}{2. Odporność na SQL Injection}{49}{subsection.5.2.2}%
+\contentsline {paragraph}{3. Odporność na XSS i CSRF}{49}{subsection.5.2.2}%
+\contentsline {paragraph}{4. Bezpieczeństwo API}{49}{subsection.5.2.2}%
+\contentsline {paragraph}{5. Odporność na przeciążenie (DoS)}{50}{subsection.5.2.2}%
+\contentsline {subsubsection}{Rekomendacje i dalsze działania}{50}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Podsumowanie i wnioski}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Podsumowanie pracy}{51}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Osiągnięcia i rezultaty pracy}{51}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Wnioski i przyszłe kierunki rozwoju}{52}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Możliwości dalszego rozwoju systemu}{54}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Rozszerzenie funkcjonalności zarządzania usługami}{54}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Zaawansowane mechanizmy monitorowania}{54}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Optymalizacja wydajności systemu}{55}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Zaawansowane mechanizmy bezpieczeństwa}{55}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Integracja z innymi systemami}{55}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}Podsumowanie}{56}{subsection.6.2.6}%

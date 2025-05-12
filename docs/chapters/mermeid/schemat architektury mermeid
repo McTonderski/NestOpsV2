@@ -1,27 +1,45 @@
 graph TD;
-    subgraph User Access
-        User[Użytkownik] -->|Logowanie| AppSmith
+title[<u>Schemat Architektury</u>]
+title-->Dostęp
+style title fill:#FFF,stroke:#FFF
+linkStyle 0 stroke:#FFF,stroke-width:0;
+
+    %% Sekcja: Dostęp
+    subgraph Dostęp
+        User[Użytkownik]
+        Frontend[(Next.js / TailAdmin)]
+        User -->|"Logowanie do interfejsu"| Frontend
     end
 
-    subgraph Application Layer
-        AppSmith -->|API Calls| FastAPI
+    %% Sekcja: Warstwa aplikacji
+    subgraph Warstwa aplikacji
+        Backend[(Backend - Go)]
+        Frontend -->|"Żądania HTTP do API"| Backend
     end
 
-    subgraph Backend
-            FastAPI -->|Read/Write| MongoDB
+    %% Sekcja: Backend
+    subgraph Backend - logika
+        SQLite[(SQLite)]
+        System["System operacyjny<br/>(restart, aktualizacja)"]
+        Backend -->|"Operacje CRUD"| SQLite
+        Backend -->|"Zarządza systemem"| System
     end
 
-    subgraph Network Configuration
-        FastAPI -->|DuckDNS & VPN| Internet
-        Internet -.->|Remote Access| User
+    %% Sekcja: "Sieć i dostęp"
+    subgraph "Sieć i dostęp"
+        DuckDNS[DuckDNS]
+        Tailscale[Tailscale]
+        Backend -->|"Dostęp przez DNS"| DuckDNS
+        DuckDNS -->|"VPN"| Tailscale
+        Tailscale -->|"Zdalny dostęp"| User
     end
 
-    subgraph Deployment & Infrastructure
-        FastAPI & MongoDB & AppSmith -->|Containers| Docker
-        Docker -->|Managed by| RaspberryPi5
-        GitHubActions -->|CI/CD| Docker
-    end
-
-    subgraph Secure Connection
-        RaspberryPi5 -->|Tailscale VPN| Internet
+    %% Sekcja: Infrastruktura
+    subgraph Infrastruktura
+        Docker[Docker]
+        RaspberryPi5[RaspberryPi 5]
+        Backend -->|"Kontenery"| Docker
+        Frontend -->|"Kontenery"| Docker
+        SQLite -->|"Kontenery"| Docker
+        Docker -->|"Sprzęt"| RaspberryPi5
     end

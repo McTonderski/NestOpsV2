@@ -1,0 +1,36 @@
+graph TD
+  root["/api/ (Dashboard)"]
+  docs["/api/docs/*any (Swagger docs)"]
+
+  root --> docs
+
+  subgraph Autoryzacja
+    auth_login["POST /api/auth/login"]
+    auth_register["POST /api/auth/register"]
+    auth_refresh["POST /api/auth/refresh"]
+  end
+
+  subgraph Usługi
+    services_list["GET /api/services"]
+    services_add["POST /api/services/add"]
+    services_toggle["POST /api/services/:name"]
+  end
+
+  subgraph Monitorowanie
+    stats["GET /api/system/stats"]
+    speedtest["GET /api/system/speedtest"]
+    metrics["GET /api/metrics/api-calls"]
+  end
+
+  subgraph Użytkownicy
+    users_list["GET /api/users"]
+    user_me["GET /api/users/me"]
+    user_update["PUT /api/users/me/details"]
+    user_photo_get["GET /api/users/me/photo"]
+    user_photo_post["POST /api/users/me/photo"]
+  end
+
+  docs --> auth_login
+  auth_login --> services_list
+  services_toggle --> stats
+  stats --> users_list

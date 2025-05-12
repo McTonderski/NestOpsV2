@@ -1,47 +1,25 @@
 W ramach tworzenia rozwiązania powstał również program instalacyjny, który zostanie umieszczony na stronie internetowej rozwiązania umożliwiając pobranie przez zainteresowane korzystaniem z rozwiązania osoby.
-\paragraph{Opis programu instalacyjnego}
+\paragraph{Program instalacyjny}\mbox{}\\
 
-\begin{lstlisting}
-package main
+W celu ułatwienia instalacji aplikacji na systemach użytkowników końcowych przygotowano dedykowany program instalacyjny napisany w języku Go. Aplikacja ta jest odpowiedzialna za:
 
-import (
-	"archive/zip"
-	"fmt"
-	"io"
-	"net/http"
-	"os"
-	"os/exec"
-	"path/filepath"
-	"runtime"
-)
+\begin{itemize}
+    \item Weryfikację obecności Dockera w systemie,
+    \item Automatyczną instalację Dockera w systemach Linux (w pozostałych przypadkach użytkownik zostaje poinformowany o konieczności ręcznej instalacji),
+    \item Pobranie najnowszej wersji aplikacji HomeNest z repozytorium GitHub,
+    \item Rozpakowanie archiwum ZIP zawierającego aplikację do wskazanego katalogu,
+    \item Nadanie odpowiednich uprawnień do uruchomienia aplikacji oraz jej uruchomienie.
+\end{itemize}
 
-const (
-	releaseURL = "https://github.com/youruser/homelab/releases/latest/download/homelab.zip"
-	installDir = "./homelab" // Można zmienić na /opt/homelab lub %ProgramFiles%
-)
+Program wykorzystuje standardowe biblioteki Go do obsługi pobierania plików (\texttt{net/http}), rozpakowywania archiwów ZIP (\texttt{archive/zip}) oraz uruchamiania procesów lokalnych (\texttt{os/exec}). Dzięki temu działa w pełni samodzielnie, bez konieczności instalowania zewnętrznych zależności.
 
-func main() {
-	fmt.Println("🔍 Sprawdzanie Docker...")
+Logika działania programu obejmuje:
+\begin{enumerate}
+    \item Sprawdzenie czy polecenie \texttt{docker} znajduje się w ścieżce systemowej.
+    \item Jeżeli Docker nie jest zainstalowany — uruchomienie skryptu instalacyjnego (tylko w systemach Linux).
+    \item Pobranie pliku ZIP z GitHub Releases.
+    \item Rozpakowanie pliku do katalogu roboczego.
+    \item Uruchomienie pliku binarnego aplikacji.
+\end{enumerate}
 
-	if !isDockerInstalled() {
-		fmt.Println("🚧 Docker nie znaleziony. Instaluję...")
-		if err := installDocker(); err != nil {
-			fmt.Fprintf(os.Stderr, "❌ Błąd instalacji Dockera: %v\n", err)
-			return
-		}
-	} else {
-		fmt.Println("✅ Docker jest już zainstalowany.")
-	}
-
-	fmt.Println("📦 Pobieranie aplikacji...")
-	if err := downloadAndExtract(releaseURL, installDir); err != nil {
-		fmt.Fprintf(os.Stderr, "❌ Błąd podczas pobierania/rozpakowywania: %v\n", err)
-		return
-	}
-
-	fmt.Println("🚀 Uruchamianie aplikacji...")
-	if err := runApp(installDir); err != nil {
-		fmt.Fprintf(os.Stderr, "❌ Nie udało się uruchomić aplikacji: %v\n", err)
-	}
-}
-\end{lstlisting}
+Instalator został zaprojektowany z myślą o prostocie użytkowania oraz możliwości łatwego wdrożenia aplikacji przez osoby nietechniczne. Wersje programu można przygotować na platformy Linux, Windows i macOS z wykorzystaniem narzędzia \texttt{GOOS/GOARCH}, umożliwiającego cross-kompilację.

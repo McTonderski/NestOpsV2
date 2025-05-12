@@ -3,67 +3,52 @@
 \section{Backend - API do zarządzania systemem}
 
 \subsection{Struktura API i kluczowe endpointy}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/mermeid/schemat api.png}
+  \caption{Schemat architektury API aplikacji HomeNest.}
+  \label{fig:api_schema}
+\end{figure}
+System został zaprojektowany jako aplikacja webowa z backendem opartym na języku Go, wykorzystującym framework Gin, zapewniającym wysoką wydajność oraz możliwość łatwego definiowania tras i obsługi żądań HTTP. API udostępnia szereg endpointów pozwalających na zarządzanie użytkownikami, usługami, monitorowanie systemu oraz uwierzytelnianie.
 
-System został zaprojektowany jako aplikacja webowa z backendem opartym na FastAPI\cite{FastAPI}, zapewniającym bezpieczne i efektywne zarządzanie użytkownikami, usługami oraz monitorowanie zasobów systemowych. W niniejszym rozdziale opisano strukturę API oraz kluczowe endpointy wykorzystywane w systemie.
-
-\subsubsection{Architektura API}
-Backend aplikacji został zaimplementowany z wykorzystaniem FastAPI \cite{FastAPI}, co zapewnia wysoką wydajność oraz łatwość definiowania i dokumentowania endpointów. API składa się z następujących głównych komponentów:
+\subsubsection{Autoryzacja i uwierzytelnianie}
 \begin{itemize}
-    \item Autoryzacja użytkowników z wykorzystaniem JWT,
-    \item Zarządzanie użytkownikami (dodawanie, edycja, listowanie, usuwanie),
-    \item Zarządzanie usługami (rejestracja, uruchamianie, zatrzymywanie, monitorowanie),
-    \item Monitorowanie zasobów systemowych (CPU, RAM, kontenery Docker),
-    \item Zarządzanie serwerem (aktualizacja, restart, autoryzacja Tailscale, wyłączenie systemu).
-\end{itemize}
-
-Każdy z tych komponentów posiada dedykowane endpointy REST API, które są opisane w kolejnych sekcjach.
-
-\subsubsection{Autoryzacja użytkowników}
-Autoryzacja odbywa się poprzez mechanizm JWT (JSON Web Token). Kluczowe endpointy:
-\begin{itemize}
-    \item \textbf{POST /api/register} – Rejestracja nowego użytkownika,
-    \item \textbf{POST /api/login} – Logowanie użytkownika i zwrócenie tokena JWT,
-    \item \textbf{POST /api/role} – Zmiana roli użytkownika.
-\end{itemize}
-
-\subsubsection{Zarządzanie użytkownikami (Admin Only)}
-Funkcje zarządzania użytkownikami są dostępne tylko dla administratorów. Kluczowe endpointy:
-\begin{itemize}
-    \item \textbf{POST /api/users/add} – Dodanie nowego użytkownika,
-    \item \textbf{PUT /api/users/edit/\{username\}} – Edycja danych użytkownika,
-    \item \textbf{GET /api/users/list} – Pobranie listy wszystkich użytkowników,
-    \item \textbf{DELETE /api/users/delete/\{username\}} – Usunięcie użytkownika.
+    \item \textbf{POST /api/auth/login} - logowanie użytkownika i zwrócenie tokena JWT,
+    \item \textbf{POST /api/auth/register} - rejestracja nowego użytkownika,
+    \item \textbf{POST /api/auth/refresh} - odświeżenie tokena JWT.
 \end{itemize}
 
 \subsubsection{Zarządzanie usługami}
-Moduł zarządzania usługami pozwala administratorowi na kontrolowanie działania systemowych procesów. Kluczowe endpointy:
 \begin{itemize}
-    \item \textbf{POST /api/services/register} – Rejestracja nowej usługi,
-    \item \textbf{POST /api/services/start/\{service\_name\}} – Uruchomienie usługi,
-    \item \textbf{POST /api/services/stop/\{service\_name\}} – Zatrzymanie usługi,
-    \item \textbf{GET /api/services/list} – Pobranie listy aktywnych usług,
-    \item \textbf{GET /api/services/health/\{service\_name\}} – Sprawdzenie statusu pojedynczej usługi,
-    \item \textbf{GET /api/services/health/all} – Sprawdzenie statusu wszystkich usług,
-    \item \textbf{POST /api/services/restart\_unhealthy} – Restartowanie usług w złym stanie.
+    \item \textbf{GET /api/services} - pobranie listy aktualnie zarejestrowanych usług,
+    \item \textbf{POST /api/services/add} - dodanie nowej usługi do systemu,
+    \item \textbf{POST /api/services/:name} - przełączenie (uruchomienie/zatrzymanie) wybranej usługi według nazwy.
 \end{itemize}
 
 \subsubsection{Monitorowanie systemu}
-System umożliwia monitorowanie zasobów serwera oraz uruchomionych kontenerów Docker. Kluczowy endpoint:
 \begin{itemize}
-    \item \textbf{GET /api/instance/details} – Pobranie szczegółów dotyczących zużycia CPU, RAM oraz listy uruchomionych kontenerów Docker.
+    \item \textbf{GET /api/system/stats} - pobranie statystyk systemowych, takich jak zużycie CPU, RAM, przestrzeń dyskowa,
+    \item \textbf{GET /api/system/speedtest} - pobranie wyników testu prędkości połączenia internetowego,
+    \item \textbf{GET /api/metrics/api-calls} - pobranie liczby zapytań API z ostatnich dni.
 \end{itemize}
 
-\subsubsection{Zarządzanie serwerem (Admin Only)}
-Administratorzy mogą wykonywać kluczowe operacje na serwerze, takie jak aktualizacje, restart systemu oraz autoryzacja Tailscale. Kluczowe endpointy:
+\subsubsection{Zarządzanie użytkownikami}
 \begin{itemize}
-    \item \textbf{POST /api/server/update} – Aktualizacja systemu,
-    \item \textbf{POST /api/server/reboot} – Restart serwera,
-    \item \textbf{POST /api/server/tailscale-auth} – Autoryzacja Tailscale,
-    \item \textbf{POST /api/server/poweroff} – Wyłączenie serwera.
+    \item \textbf{GET /api/users} - lista użytkowników (dostępna tylko dla administratora),
+    \item \textbf{GET /api/users/me} - pobranie danych zalogowanego użytkownika,
+    \item \textbf{PUT /api/users/me/details} - aktualizacja danych zalogowanego użytkownika,
+    \item \textbf{POST /api/users/me/photo} - przesłanie zdjęcia profilowego,
+    \item \textbf{GET /api/users/me/photo} - pobranie zdjęcia profilowego użytkownika.
+\end{itemize}
+
+\subsubsection{Dashboard i dokumentacja}
+\begin{itemize}
+    \item \textbf{GET /api/} - główny endpoint dashboardu aplikacji,
+    \item \textbf{GET /api/docs/*any} - dokumentacja API generowana automatycznie przy użyciu narzędzia Swagger.
 \end{itemize}
 
 \subsubsection{Podsumowanie}
-Struktura API została zaprojektowana z myślą o modularności oraz łatwości rozszerzania funkcjonalności. Wykorzystanie FastAPI zapewnia wysoką wydajność oraz wbudowaną dokumentację, co ułatwia integrację z innymi systemami. Mechanizm autoryzacji JWT zapewnia bezpieczeństwo operacji, a administratorzy mogą w prosty sposób zarządzać użytkownikami, usługami oraz operacjami serwera poprzez intuicyjne i dobrze udokumentowane endpointy.
+Zaprojektowane API jest modularne, bezpieczne i łatwe do rozszerzenia. Struktura endpointów została opracowana w sposób zgodny z dobrymi praktykami REST, umożliwiając wygodne zarządzanie zasobami systemowymi i użytkownikami, a dzięki wykorzystaniu frameworka Gin osiągnięto wysoką wydajność obsługi żądań. Endpointy są chronione przez mechanizmy JWT i w zależności od kontekstu użytkownika odpowiednio ograniczają dostęp do operacji administracyjnych.
 
 
 \subsection{Obsługa uwierzytelniania i autoryzacji}
@@ -78,71 +63,147 @@ Kluczowe endpointy:
     \item \textbf{POST /api/register} – Rejestracja nowego użytkownika,
     \item \textbf{POST /api/login} – Logowanie użytkownika i zwrócenie tokena JWT.
 \end{itemize}
-
+\newpage
 \section{Frontend - Interfejs uzytkownika}
-\includegraphics[width=1\textwidth]{./chapters/assets/user_interface.png}
+
 \subsection{Projekt UI/UX}
 
-Projektowanie interfejsu użytkownika (UI) oraz doświadczenia użytkownika (UX) odgrywa kluczową rolę w zapewnieniu funkcjonalności i intuicyjności systemu. W niniejszym rozdziale omówiono zasady projektowania UI/UX zastosowane w opracowanym interfejsie, bazując na dołączonym projekcie graficznym.
-
+Z założenia interfejs użytkownika powinien być jak najprostszy oraz jak najbardziej ułatwiać użytkownikowi korzystanie z systemu. Powininen on umożliwiać użytkownikowi korzystanie z systemu w sposób zamierzony oraz uniemożliwiać korzystanie z systemu w sposób niezgodny z przeznaczeniem.
 \subsubsection{Założenia projektowe}
 Podstawowe cele projektowe interfejsu obejmowały:
 \begin{itemize}
-    \item Czytelność i prostotę obsługi,
-    \item Spójność wizualną oraz intuicyjną nawigację,
-    \item Minimalizację liczby kliknięć wymaganych do wykonania operacji,
-    \item Odpowiednią organizację informacji w oparciu o hierarchię wizualną.
+    \item Czytelność i prostota obsługi,
+    \item Spójność wizualną oraz intuicyjna nawigacja,
+    \item Minimalizacja liczby kliknięć wymaganych do wykonania operacji,
+    \item Odpowiednia organizacja informacji w oparciu o hierarchię wizualną.
 \end{itemize}
 
 \subsubsection{Struktura interfejsu}
-Projekt składa się z kilku głównych obszarów:
+Projekt składa się z kilku widoków które zostaną opisane poniżej:
+\paragraph{Strona Główna} - Strona przedstawia statystyki wykorzystania systemu oraz podstawowe informacje dotyczące środowiska uruchomieniowego.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/UI_HomePage.png}
+  \caption{Strona główna aplikacji Homelab.}
+  \label{fig:ui_homepage}
+\end{figure}
 \begin{itemize}
-    \item \textbf{Panel informacyjny} – zawierający dane dotyczące użycia zasobów systemowych (CPU, RAM, liczba usług).
-    \item \textbf{Sekcja zarządzania usługami} – prezentująca status poszczególnych usług (uruchomione, zatrzymane, błędy) w formie wykresu kołowego.
-    \item \textbf{Obszar użytkownika} – umożliwiający zarządzanie użytkownikami systemu (dodawanie, usuwanie, edycja).
-    \item \textbf{Obszar serwera} – obejmujący podstawowe operacje administracyjne, takie jak aktualizacja systemu, restart oraz autoryzacja w Tailscale.
-    \item \textbf{Lista usług} – wyświetlająca poszczególne aplikacje (np. HomeAssistant, Mealie, Paperless, Portainer) z możliwością zarządzania ich statusem poprzez przełączniki.
+    \item \textbf{Panel Informacyjny - wykorzystanie CPU} - Zawiera procentową wartość użycia procesora.
+    \item \textbf{Panel Informacyjny - wykorzystanie RAM} - Zawiera informację ile GB pamięci RAM jest obecnie w użyciu oraz dostępną ilość pamięci RAM.
+    \item \textbf{Wykres - Wykorzystanie Dysku} - Zawiera informację o wykorzystaniu dysku - ilość zajętej oraz dostępnej przestrzeni dyskowej.
+    \item \textbf{Wykres - Ilość zapytań API apilikacji w ostatnich 14 dniach} - Pokazuje ile zapytań do aplikacji API zostało wykonanych w ostatnich 14 danich. Jeżeli aplikacja nie wykonywała zapytań do bazy przez ostatnie 14 dni codziennie umieszczne jest ostatnie 14 wpisów z bazy danych.
+    \item \textbf{Wykres - Prędkość internetu} - System zgodnie z harmonogramem sprawdza prędkość podłączonego łącza internetowego i wyświetla je w formie tabeli w tym miejscu.
 \end{itemize}
+
+\paragraph{Strona Logowania oraz Rejestracji} - Strona umożliwa użytkownikowi wprowadzenie danych niezbęnych do umożliwienia korzystania z systemu. Użytkownik może się zalogować lub zarejestrować.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/login_page.png}
+  \caption{Strona logowania do serwisu wyświetlająca logo oraz pola do wprowadzenia danych logowania}
+  \label{fig:ui_login}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/signup_page.png}
+  \caption{Strona Rejestracji do serwisu wyświetlająca logo oraz pola do wprowadzenia danych rejestracji}
+  \label{fig:ui_signup}
+\end{figure}
+Użytkownik może się w tym miejscu zalogować lub zarejestrować przy pomocy adresu email oraz hasła. Rejestracja wymaga podania również swojego imienia i nazwiska oraz zaakceptowania polityk korzystania z serwisu, które będą dodane w późniejszym etapie rozwoju aplikacji.
+Możliwa jest również zmiana kolorystyki poprzez naciśnięcie przycisku w prawym dolnym rogu ekranu, co spowoduje zmianę motywu z jasnego na ciemny lub przeciwnie.
+
+\paragraph{Strona przedstawienia oraz integracji Serwisów} - Strona pokazuje obecnie dodane serwisy dostępne w systemie. Umożliwia dodanie własnego serwisu, uruchomienie lub zatrzymanie go oraz przejście do strony HTTP serwisu.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/services_page.png}
+  \caption{Podstrona aplikacji odpowiedzialna za wyświetlanie stanu obecnie uruchomionych aplikacji, pozwalająca na ich zarządzanie oraz przekierowująca użytkownika do serwisu.}
+  \label{fig:ui_servicespage}
+\end{figure}
+
+\paragraph{Strona profilu użytkownika}\mbox{}\\
+Strona przedstawia dane użytkownika oraz umożliwia ich edycję. Użytkownik może zmienić swoje imię, nazwisko oraz zdjęcie profilowe. Możliwe jest również wylogowanie się z systemu.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/profile_page.png}
+  \caption{Podstrona aplikacji odpowiedzialna za wyświetlanie stanu obecnie uruchomionych aplikacji, pozwalająca na ich zarządzanie oraz przekierowująca użytkownika do serwisu.}
+  \label{fig:ui_profile_page}
+\end{figure}
+
+\paragraph{Strona zarządzania serwerem}\mbox{}\\
+
+Strona została zaprojektowana z myślą o administratorach systemu, zapewniając im intuicyjne komendy zarządzania serwerem oraz monitorowania jego wydajności i stabilności.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{./chapters/assets/server_page.png}
+  \caption{Podstrona wyświetlająca informacje o stanie serwera, jego zasobach oraz umożliwiająca zarządzanie nimi.}
+  \label{fig:ui_server_page}
+\end{figure}
 
 \subsubsection{Kolorystyka i typografia}
-Projekt wykorzystuje nowoczesną, stonowaną kolorystykę z przewagą bieli i odcieni fioletu. Przyciski akcji są wyraźnie zaznaczone za pomocą intensywnych kolorów, co zwiększa ich widoczność. Tekst jest wyraźny, a hierarchia informacji zapewnia odpowiednią czytelność.
+Projekt interfejsu użytkownika aplikacji HomeNest wykorzystuje nowoczesną i spójną kolorystykę opartą na jasnym tle oraz delikatnych akcentach kolorystycznych. Dominującą barwą tła jest biel (\#ffffff), która nadaje przejrzystości oraz zapewnia wysoki kontrast względem elementów graficznych i tekstu.
 
-\subsubsection{Intuicyjność i użyteczność}
-Projekt został zaprojektowany zgodnie z zasadami użyteczności:
+Główne akcenty kolorystyczne w interfejsie stanowią odcienie niebieskiego (\#465fff, \#0ba5ec) wykorzystywane m.in. w wykresach, przyciskach akcji oraz wskaźnikach postępu. Barwy te pełnią funkcję informacyjną i nawigacyjną, kierując uwagę użytkownika na istotne elementy interfejsu. Kolorystyka została dodatkowo uzupełniona o neutralne odcienie szarości (\#667085, \#344054), które służą jako tło dla ikon, ramek i tekstów pomocniczych, umożliwiając ich subtelne wydzielenie bez nadmiernego rozpraszania użytkownika.
+
+Zastosowana typografia oparta jest na nowoczesnym, bezszeryfowym kroju pisma, takim jak Outfit, który zapewnia wysoką czytelność niezależnie od rozdzielczości ekranu. Teksty nagłówków oraz wartości liczbowych zostały wyróżnione większym rozmiarem i wzmocnioną wagą fontu (font-medium, font-bold), co wspiera hierarchizację treści. Z kolei opisy pomocnicze oraz etykiety elementów interfejsu zostały zaprezentowane mniejszym rozmiarem i lżejszą barwą, dzięki czemu nie dominują wizualnie nad informacjami kluczowymi.
+
+Zarówno kolorystyka, jak i typografia wspólnie tworzą minimalistyczny, intuicyjny interfejs, dostosowany do długotrwałego użytkowania oraz zgodny z aktualnymi standardami projektowania systemów zarządzania.
+
+Aplikacja HomeNest wspiera również ciemny motyw interfejsu, co zostało zaprezentowane na rysunku poniżej. W tym trybie dominującym kolorem tła jest głęboka barwa granatowo-grafitowa (\#0c111d do \#1d2939), która w połączeniu z jasnymi akcentami (np. odcienie niebieskiego i bieli) zapewnia wysoki kontrast oraz elegancki, nowoczesny wygląd interfejsu.
+
+Elementy interaktywne, jak przyciski czy wykresy, zachowują swoją kolorystykę, jednak są odpowiednio dostosowane do ciemnego tła - np. niebieskie słupki w wykresie API Calls, czy wskaźnik użycia dysku są wyraźnie widoczne również w warunkach ograniczonego oświetlenia.
+
+Typografia w trybie ciemnym pozostaje spójna — fonty bezszeryfowe o wysokiej czytelności są renderowane z jasnymi odcieniami (\#ffffff, \#98a2b3), co sprzyja redukcji zmęczenia wzroku podczas pracy wieczorowej lub w zaciemnionym otoczeniu.
+
+\paragraph{Korzyści wynikające z obsługi dwóch motywów kolorystycznych}\mbox{}\\
+
+Zaprojektowanie interfejsu w dwóch wersjach — jasnej i ciemnej — jest coraz częściej stosowaną praktyką w nowoczesnych aplikacjach webowych i mobilnych. Taka decyzja projektowa niesie ze sobą szereg korzyści:
 \begin{itemize}
-    \item Przejrzysta organizacja treści,
-    \item Spójność w rozmieszczeniu elementów interfejsu,
-    \item Minimalizacja zbędnych interakcji,
-    \item Responsywność, umożliwiająca korzystanie na różnych urządzeniach.
+  \item Dostosowanie do preferencji użytkownika
+  Użytkownicy mają różne preferencje dotyczące komfortu pracy z interfejsem. Niektórzy wolą jasne motywy, które przypominają papier i są czytelne w jasnym otoczeniu. Inni preferują ciemne tryby, szczególnie wieczorem, gdy ograniczają zmęczenie wzroku i minimalizują emisję światła niebieskiego.
+  \item Lepsze doświadczenie w różnych warunkach oświetleniowych
+  Tryb jasny jest bardziej funkcjonalny w warunkach dziennego oświetlenia, natomiast tryb ciemny sprawdza się lepiej przy słabym świetle, np. podczas pracy nocą lub w pomieszczeniach bez dostępu do światła dziennego.
+  \item Efektywność energetyczna (w przypadku ekranów OLED)
+  W urządzeniach z ekranami OLED tryb ciemny może realnie wpłynąć na oszczędność energii, gdyż piksele wyświetlające kolor czarny są całkowicie wyłączone.
+  \item Nowoczesny wygląd aplikacji
+  Obsługa trybu ciemnego jest standardem UX w aplikacjach klasy premium i znacząco wpływa na odbiór estetyczny systemu, co może mieć pozytywne znaczenie marketingowe i wizerunkowe.
 \end{itemize}
 
-Dzięki tym rozwiązaniom interfejs jest łatwy w obsłudze i spełnia wymagania użytkowników końcowych.
 
+\subsection{Implementacja interfejsu użytkownika}
 
-\subsection{Implementacja interfejsu użytkownika z wykorzystaniem podejścia no-code w Appsmith}
+Interfejs użytkownika aplikacji HomeNest został zaimplementowany w oparciu o gotowy szablon \textbf{TailAdmin}, który dostępny jest publicznie na licencji \textbf{MIT}. TailAdmin to nowoczesny szablon frontendowy oparty na technologii \textbf{React.js}, zbudowany przy użyciu frameworka \textbf{Next.js} oraz systemu stylów \textbf{Tailwind CSS}. Dzięki otwartej licencji możliwe było swobodne dostosowanie szablonu do potrzeb aplikacji oraz jego dalszy rozwój.
 
-W celu usprawnienia procesu tworzenia interfejsu użytkownika wykorzystano platformę no-code Appsmith \cite{AppSmith}, która umożliwia szybkie budowanie aplikacji webowych za pomocą gotowych komponentów. 
-
-\subsubsection{Proces implementacji}
-Implementacja interfejsu przebiegała w kilku etapach:
+\subsubsection{Proces dostosowania szablonu}
+W ramach prac wdrożeniowych wykonano następujące kroki:
 \begin{enumerate}
-    \item \textbf{Tworzenie struktury aplikacji} – W Appsmith utworzono nowy projekt, w którym zdefiniowano podstawowe widoki, takie jak pulpit nawigacyjny, sekcja zarządzania użytkownikami oraz obszar monitorowania usług.
-    \item \textbf{Dodawanie komponentów UI} – Wykorzystano gotowe komponenty Appsmith, takie jak przyciski, tabele, wykresy i przełączniki do interakcji z użytkownikiem.
-    \item \textbf{Konfiguracja źródeł danych} – Interfejs został połączony z backendem poprzez API, co pozwoliło na dynamiczne pobieranie informacji o stanie systemu i usług.
-    \item \textbf{Logika aplikacji} – Za pomocą wbudowanego edytora JavaScript skonfigurowano interakcje użytkownika, m.in. obsługę formularzy, wywołania API oraz automatyczne odświeżanie danych.
-    \item \textbf{Testowanie i optymalizacja} – Po wdrożeniu interfejsu przeprowadzono testy użyteczności, aby zapewnić płynne działanie aplikacji i zoptymalizować jej wydajność.
+    \item \textbf{Pobranie i uruchomienie szablonu} - Skonfigurowano środowisko developerskie oraz uruchomiono projekt TailAdmin w trybie deweloperskim.
+    \item \textbf{Dostosowanie struktury aplikacji} - Zmodyfikowano układ nawigacji, menu, system routingu oraz strukturę stron zgodnie z architekturą systemu HomeNest.
+    \item \textbf{Implementacja nowych widoków} - Zbudowano dedykowane widoki i komponenty, takie jak: panel główny, zarządzanie usługami, profil użytkownika oraz sekcja administracyjna serwera.
+    \item \textbf{Integracja z API backendu} - Komponenty frontendowe zostały zintegrowane z API stworzonym w technologii Go. Dostosowanie szablonu TailAdmin do współpracy z tym API było zadaniem stosunkowo prostym, lecz wymagającym głębszej analizy w celu zoptymalizowania liczby zapytań wykonywanych do backendu oraz zapewnienia wydajnej komunikacji między warstwami systemu.
+    \item \textbf{Wprowadzenie trybu ciemnego i jasnego} - Rozbudowano system motywów o możliwość przełączania pomiędzy trybem jasnym i ciemnym, z uwzględnieniem pełnej zgodności stylistycznej.
+    \item \textbf{Refaktoryzacja i optymalizacja} - Usunięto zbędne fragmenty kodu, zoptymalizowano komponenty oraz uproszczono logikę interfejsu.
 \end{enumerate}
 
-\subsubsection{Zalety zastosowania Appsmith}
-Wykorzystanie Appsmith przyniosło szereg korzyści w kontekście tworzenia interfejsu użytkownika:
+\subsubsection{Zalety podejścia opartego na gotowym szablonie}
 \begin{itemize}
-    \item Skrócenie czasu implementacji dzięki gotowym komponentom,
-    \item Łatwa integracja z backendem poprzez API,
-    \item Możliwość dynamicznej edycji logiki aplikacji bez konieczności pisania pełnego kodu frontendu,
-    \item Prosty interfejs edytora umożliwiający szybkie wprowadzanie zmian i testowanie.
+    \item Znacząco skrócony czas implementacji frontendowej,
+    \item Wysoka jakość kodu źródłowego i zgodność ze standardami branżowymi,
+    \item Responsywne komponenty i nowoczesny design,
+    \item Możliwość pełnej modyfikacji dzięki licencji MIT,
+    \item Spójność wizualna i łatwość integracji z backendem.
 \end{itemize}
 
-Zastosowanie podejścia no-code pozwoliło na efektywne wdrożenie interfejsu użytkownika bez konieczności zaawansowanego programowania, co znacząco przyspieszyło proces tworzenia systemu.
+\subsubsection{Wyzwania podczas adaptacji szablonu}
+\begin{itemize}
+    \item Konieczność analizy i zrozumienia istniejącej struktury projektu TailAdmin,
+    \item Ręczne usuwanie niepotrzebnych widoków i kodu demonstracyjnego,
+    \item Potrzeba dostosowania gotowych komponentów do wymagań aplikacji HomeNest,
+    \item Zachowanie spójności wizualnej po wprowadzeniu nowych funkcjonalności.
+\end{itemize}
+
+Podsumowując, wykorzystanie TailAdmin jako szablonu bazowego pozwoliło na szybkie uruchomienie estetycznego i funkcjonalnego interfejsu użytkownika, a dzięki jego modularności i elastyczności możliwe było skuteczne dostosowanie go do specyfiki systemu HomeNest.
 
 
 \section{Automatyzacja Konfiguracji i wdrozenie}
@@ -153,113 +214,127 @@ Zastosowanie podejścia no-code pozwoliło na efektywne wdrożenie interfejsu u�
 \subsection{Integracja z narzędziami CI/CD}
 \label{sec:integracja_ci_cd}
 
-Współczesne systemy informatyczne wymagają nie tylko solidnej implementacji, ale również efektywnego zarządzania cyklem życia oprogramowania. W tym kontekście, integracja narzędzi CI/CD (Continuous Integration / Continuous Deployment) odgrywa kluczową rolę w automatyzacji procesów budowania, testowania i wdrażania aplikacji.
+System HomeNest wykorzystuje mechanizmy CI/CD oparte na GitHub Actions w celu automatyzacji kluczowych procesów programistycznych — testowania, budowania, wersjonowania i publikacji aplikacji. Dzięki integracji z CI/CD możliwe jest zapewnienie ciągłości rozwoju i wysokiej jakości kodu bez potrzeby ręcznego wykonywania zadań wdrożeniowych.
 
-\subsubsection{Zastosowanie self-hosted runnera \cite{SelfHostRunner}}
+\subsubsection{Schemat działania}
 
-W celu zapewnienia kompatybilności architektury uruchomieniowej systemu, zdecydowano się na użycie **self-hosted runnera** zamiast domyślnych runnerów GitHub Actions. Domyślne maszyny CI/CD oferowane przez GitHub działają wyłącznie na **architekturze x86**, co ogranicza możliwość testowania i wdrażania aplikacji na innych platformach, takich jak **ARM** (np. Raspberry Pi, serwery oparte na ARM64). 
+Po każdej zmianie wprowadzonej do głównej gałęzi \texttt{main}, automatycznie uruchamiane są dwa niezależne pipeline'y GitHub Actions:
 
-Zastosowanie własnego runnera pozwala na:
+\begin{enumerate}
+    \item \textbf{Pipeline testujący} — weryfikuje jakość i poprawność kodu,
+    \item \textbf{Pipeline release’owy} — buduje artefakty i tworzy release.
+\end{enumerate}
+
+\subsubsection{Pipeline testujący}
+
+Pipeline testujący pełni funkcję strażnika jakości kodu. W jego ramach uruchamiane są:
+
 \begin{itemize}
-    \item Uruchamianie testów i budowanie obrazów Docker na architekturze zgodnej z docelowym środowiskiem produkcyjnym.
-    \item Pełną kontrolę nad zasobami sprzętowymi wykorzystywanymi w procesie CI/CD.
-    \item Możliwość integracji z lokalnym registry dla przechowywania obrazów Docker.
+    \item \textbf{Linter} — analizuje kod źródłowy pod kątem zgodności ze standardami formatowania i stylu,
+    \item \textbf{Testy jednostkowe backendu} — realizowane za pomocą \texttt{go test}.
 \end{itemize}
 
-\subsubsection{Workflow GitHub Actions dla testowania}
+Dzięki automatycznemu uruchamianiu testów możliwe jest wykrycie regresji i błędów już na etapie developmentu, zanim zostaną wprowadzone do środowiska produkcyjnego.
+
+\subsubsection{Pipeline release’owy}
+
+Po pozytywnym zakończeniu testów uruchamiany jest pipeline odpowiedzialny za zbudowanie artefaktów aplikacji oraz ich publikację jako nowego release'u na GitHubie. Proces ten jest realizowany przy pomocy pliku Makefile, który automatyzuje cały proces budowania i pakowania aplikacji. Makefile definiuje następujące cele:
+
+\begin{itemize}
+    \item \textbf{build-frontend} – instalacja zależności npm oraz zbudowanie aplikacji frontendowej; pliki wynikowe umieszczane są w katalogu \texttt{backend/static},
+    \item \textbf{build-backend} – kompilacja aplikacji backendowej w Go z ustawieniem zmiennych środowiskowych \texttt{GOOS=linux} i \texttt{GOARCH=amd64}; wynikowy binarny plik jest zapisywany w katalogu \texttt{dist},
+    \item \textbf{package} – kopiowanie plików frontendowych do katalogu dystrybucji oraz utworzenie archiwum \texttt{homelab.tar.gz},
+    \item \textbf{clean} – usunięcie katalogów zbudowanych artefaktów i archiwum,
+    \item \textbf{all} – domyślna akcja wykonująca czyszczenie, budowę frontendu i backendu oraz pakowanie.
+\end{itemize}
+
+Pipeline GitHub Actions wywołuje polecenie \texttt{make all}, co zapewnia spójność budowy na każdym etapie. Dzięki temu proces tworzenia release’u jest w pełni zautomatyzowany, powtarzalny i prosty do uruchomienia lokalnie.
+
+\subsubsection{Przykładowy workflow GitHub Actions}
+
+W poniższym przykładzie przedstawiono uproszczony workflow GitHub Actions, który wykorzystuje Makefile do budowania wszystkich komponentów systemu — frontend, backend oraz instalator:
 
 \begin{verbatim}
-name: Run Tests
+name: Release Build
 
 on:
   push:
-    branches:
-      - main
-      - dev
-  pull_request:
+    branches: [main]
 
 jobs:
-  test:
-    runs-on: self-hosted
-
-    services:
-      mongo:
-        image: mongo:latest
-        ports:
-          - 27017:27017
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.13"
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest pytest-asyncio httpx
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Run Pytest
-        run: pytest -v
+    - name: Install frontend dependencies
+      run: cd frontend && npm ci
+
+    - name: Build all components using Makefile
+      run: make all
+
+    - name: Build installer binaries
+      run: |
+        cd instalator
+        make prepare
+        make all
+
+    - name: Archive release artifacts
+      run: |
+        mkdir release
+        cp dist/homelab release/
+        cp -r dist/static release/static
+        cp instalator/build/* release/
+        tar -czf release.tar.gz -C release .
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ github.run_number }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      files: |
+        release.tar.gz
 \end{verbatim}
 
-\subsubsection{Workflow GitHub Actions dla budowania i wersjonowania obrazów Docker}
+\subsubsection{Strategia wersjonowania}
 
-Po przejściu testów jednostkowych obraz Docker jest budowany i pushowany do lokalnego rejestru uruchomionego na **localhost:5000**.
+Każdy release oznaczany jest automatycznie na podstawie numeru buildu. W przyszłości możliwe będzie również wdrożenie semantycznego wersjonowania (SemVer) w oparciu o analizę commitów.
 
-\begin{verbatim}
-name: Build and Push Docker Image
+\subsubsection{Weryfikacja aktualności aplikacji}
 
-on:
-    push:
-      branches:
-        - main
-        - dev
-    pull_request:
-        branches: [dev, main]
+W przyszłości system zostanie rozszerzony o mechanizm, który cyklicznie będzie odpytywał GitHub API w celu sprawdzenia dostępności nowego release’u. Porównując aktualnie zainstalowaną wersję z najnowszym tagiem, system będzie w stanie:
 
-jobs:
-  build_and_push:
-    runs-on: self-hosted
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Extract Version
-        run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-
-      - name: Build Docker Image
-        run: |
-          docker build -t localhost:5000/myapp:${{ env.VERSION }} .
-          docker tag localhost:5000/myapp:${{ env.VERSION }} localhost:5000/myapp:latest
-
-      - name: Push Docker Image to Local Registry
-        run: |
-          docker push localhost:5000/myapp:${{ env.VERSION }}
-          docker push localhost:5000/myapp:latest
-\end{verbatim}
-
-\subsubsection{Korzyści z bezpośredniego pushowania obrazu do registry}
-
-W przeciwieństwie do wcześniejszej konfiguracji, w której obraz był zapisywany lokalnie za pomocą \texttt{docker save}, obecnie jest on od razu przesyłany do prywatnego rejestru. Takie podejście:
 \begin{itemize}
-    \item Umożliwia natychmiastowe wykorzystanie obrazu w środowisku produkcyjnym bez potrzeby ręcznego jego ładowania.
-    \item Pozwala na prostsze zarządzanie wersjami obrazów w registry.
-    \item Minimalizuje czas między budowaniem a wdrożeniem.
+    \item Powiadomić użytkownika o dostępnej aktualizacji,
+    \item Wyświetlić changelog (opis zmian z release notes),
+    \item Zaproponować pobranie i automatyczne wdrożenie nowej wersji.
 \end{itemize}
 
-\subsubsection{Publikacja obrazu do lokalnego registry}
+Taka funkcjonalność przyczyni się do utrzymania systemu w najnowszej, stabilnej wersji bez potrzeby ręcznej ingerencji.
 
-Wszystkie wersje aplikacji są automatycznie przechowywane w lokalnym rejestrze **Docker Registry**, a najnowsza wersja jest oznaczana jako \texttt{latest}. Dzięki temu wdrożenie nowej wersji sprowadza się do uruchomienia nowego kontenera:
+\subsubsection{Korzyści z automatyzacji CI/CD}
 
-\begin{verbatim}
-docker pull localhost:5000/myapp:latest
-docker run -d --name myapp localhost:5000/myapp:latest
-\end{verbatim}
+Integracja GitHub Actions pozwala na:
 
-Dzięki temu każda wersja aplikacji jest jednoznacznie identyfikowana, a \texttt{latest} wskazuje na najnowszą stabilną wersję.
+\begin{itemize}
+    \item Skrócenie czasu wdrożeń,
+    \item Unifikację procesu testowania i publikacji,
+    \item Eliminację błędów ludzkich,
+    \item Wzrost zaufania do jakości aplikacji,
+    \item Łatwą replikację procesu na nowych środowiskach (np. staging, produkcja).
+\end{itemize}
+
+Dzięki powyższym cechom proces CI/CD jest nieodzownym elementem systemu HomeNest i fundamentem jego dalszego skalowania.

@@ -1,0 +1,18 @@
+flowchart TD
+    subgraph CI/CD Workflow
+
+        code[Źródło w GitHub] --> lint[Linter & Unit Tests]
+        lint --> build[Budowanie aplikacji]
+        
+        build --> build_frontend[Build Frontend]
+        build --> build_backend[Build Backend]
+        build --> build_installer[Build Installer]
+
+        build_installer --> package[Pakowanie instalatora]
+        package --> release[Utworzenie GitHub Release]
+    end
+
+    subgraph Urządzenie użytkownika
+        release --> download_installer[Instalator: Pobranie z GitHub]
+        download_installer --> install[Instalator: Instalacja Frontendu i Backendu]
+    end

@@ -17,7 +17,34 @@
 \renewcommand{\cftchapfont}{\bfseries}
 \renewcommand{\cftsecfont}{\normalfont}
 \renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand*{\figurename}{Rys.}
+\renewcommand*{\tablename}{Tab.}
 \setlength{\cftbeforechapskip}{1em}
 
 % Packages
 \usepackage{listings}
+\usepackage{xcolor}
+\lstdefinelanguage{Go}{
+  morekeywords={break,case,chan,const,continue,default,defer,else,fallthrough,
+    for,func,go,goto,if,import,interface,map,package,range,return,select,
+    struct,switch,type,var},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+}
+\lstset{
+  language=Go,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{teal},
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  tabsize=2,
+  captionpos=b
+}
+
+% images to stay in place text not to appear in between 
+\usepackage{float}

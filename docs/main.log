@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  10 MAY 2025 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  12 MAY 2025 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -460,7 +460,7 @@ Package `listing', V1.2, <1999/05/25>
 \c@listing=\count407
 ) (./preamble.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 14.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count408
 \lst@gtempboxa=\box53
 \lst@token=\toks22
@@ -484,10 +484,33 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-\@quotelevel=\count416
-\@quotereset=\count417
-
-No file main.aux.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count416
+\float@exts=\toks23
+\float@box=\box55
+\@float@everytoks=\toks24
+\@floatcapt=\box56
+)
+\@quotelevel=\count417
+\@quotereset=\count418
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -508,6 +531,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -544,30 +568,25 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count418
+\scratchcounter=\count419
 \scratchdimen=\dimen164
-\scratchbox=\box55
-\nofMPsegments=\count419
-\nofMParguments=\count420
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count421
+\scratchbox=\box57
+\nofMPsegments=\count420
+\nofMParguments=\count421
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count422
 \MPscratchDim=\dimen165
-\MPnumerator=\count422
-\makeMPintoPDFobject=\count423
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count423
+\makeMPintoPDFobject=\count424
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+))
 Package hyperref Info: Link coloring ON on input line 18.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -583,12 +602,20 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                CasaOS
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 18.
 Package biblatex Info: Reference segment=0 on input line 18.
-\c@lstlisting=\count424
+\c@lstlisting=\count425
  (./chapters/stronatytulowa.tex
-<images/logo.jpg, id=4, 911.405pt x 224.84pt>
+<images/logo.jpg, id=92, 911.405pt x 224.84pt>
 File: images/logo.jpg Graphic file (type jpg)
 <use images/logo.jpg>
 Package pdftex.def Info: images/logo.jpg  used on input line 5.
@@ -615,875 +642,537 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.43 \newpage
-              [1{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-No file main.toc.
+              [1{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-[2] (./chapters/chapter1.tex
+ [2] (./chapters/chapter1.tex
 Chapter 1.
 
-Overfull \hbox (8.04942pt too wide) in paragraph at lines 5--6
-\T1/cmr/m/n/12 trum danych, umoªli-wia-j°cego prze-chowywanie plikÛw, hos-towanie ap-likacji czy zarz°dzanie
+Overfull \hbox (8.898pt too wide) in paragraph at lines 7--8
+\T1/cmr/m/n/12 w ktÛrym moªna bez ryzyka testowa¢ nowe narz¶dzia, tech-nolo-gie oraz sce-nar-iusze awaryjne.
+ []
+
+
+Overfull \hbox (4.44496pt too wide) in paragraph at lines 13--14
+\T1/cmr/m/n/12 oraz zmin-i-mal-i-zowanie ryzyka b™¶dÛw kon-fig-u-ra-cyjnych. Au-tomatyza-cja umoªli-wia rÛwnieª
  []
 
 [3
 
-]
-Overfull \hbox (0.7428pt too wide) in paragraph at lines 17--18
-[]\T1/cmr/m/n/12 Automatyzacj¶ pro-cesÛw ad-min-is-tra-cyjnych, ta-kich jak ak-tu-al-iza-cje sys-temÛw, back-
- []
-
-
-Overfull \hbox (19.99931pt too wide) in paragraph at lines 18--19
-[]\T1/cmr/m/n/12 Zapewnienie mech-a-nizmÛw bez-piecze´stwa chroni°-cych za-soby przed nieau-to-ry-zowanym
- []
-
-
-Overfull \hbox (24.36986pt too wide) in paragraph at lines 31--32
-[]\T1/cmr/m/n/12 Projektowanie i im-ple-men-tacj¶ in-ter-fe-jsu uªytkown-ika umoªli-wia-j°cego ™atwe zarz°dzanie
- []
-
-[4]) (./chapters/chapter2.tex [5]
+] [4]) (./chapters/chapter2.tex [5]
 Chapter 2.
 [6
 
 ]
-Overfull \hbox (20.091pt too wide) in paragraph at lines 24--25
-[]\T1/cmr/m/n/12 Docker i Ku-ber-netes ^^U tech-nolo-gie kon-teneryza-cji, pozwala-j°ce na elasty-czne zarz°dzanie
+Overfull \hbox (11.37576pt too wide) in paragraph at lines 19--20
+[]\T1/cmr/m/n/12 Kolejnym etapem by™o po-jaw-ie-nie si¶ kon-teneryza-cji, przede wszys-tkim dz-i¶ki Dockerowi,
  []
 
 
-Overfull \hbox (4.55873pt too wide) in paragraph at lines 29--30
-[]\T1/cmr/m/n/12 Ansible, Ter-raform, Pup-pet, Chef ^^U narz¶dzia do au-tomatyza-cji wdraªa-nia i zarz°dza-
- []
-
-
-Overfull \hbox (7.86945pt too wide) in paragraph at lines 38--38
-|[]\T1/cmr/bx/n/17.28 Analiza ist-niej°-cych sys-temÛw do zarz°dza-nia home-
+Overfull \hbox (13.69052pt too wide) in paragraph at lines 23--24
+[]\T1/cmr/m/n/12 Wprowadzenie orkies-tra-torÛw kon-tenerÛw, ta-kich jak Ku-ber-netes, umoªli-wi™o zarz°dzanie
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-[]\T1/cmr/m/n/12 Mozliwo±¢ tworzenia klas-trÛw
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 38.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Overfull \hbox (203.82681pt too wide) in paragraph at lines 41--41
+ []    \T1/cmtt/m/n/12 qm create 100 --memory 2048 --net0 virtio,bridge=vmbr0 --cdrom /var/lib/vz/template/iso/ubuntu.iso[] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 58.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 58.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 58.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Overfull \hbox (172.95935pt too wide) in paragraph at lines 48--48
+ []    \T1/cmtt/m/n/12 New-VM -Name "TestVM" -ResourcePool "Resources" -Datastore "Datastore1" -MemoryGB 4 -NumCPU 2[] 
+ []
+
+
+Overfull \hbox (290.2557pt too wide) in paragraph at lines 55--55
+ []    \T1/cmtt/m/n/12 New-VM -Name "LabVM" -MemoryStartupBytes 2GB -Generation 2 -NewVHDPath "C:\VMs\LabVM.vhdx" -NewVHDSizeBytes 40GB[] 
+ []
+
+[8] [9]
+Overfull \hbox (13.55586pt too wide) in paragraph at lines 128--129
+\T1/cmr/m/n/12 Bezpiecze´stwo jest kluc-zowym as-pek-tem kaªdego Home-Laba, zw™aszcza gdy prze-chowywane
+ []
+
+[10]
+Overfull \hbox (7.86945pt too wide) in paragraph at lines 168--168
+|[]\T1/cmr/bx/n/17.28 Analiza ist-niej°-cych sys-temÛw do zarz°dza-nia home-
+ []
+
+
+LaTeX Warning: Citation 'CasaOS' on page 11 undefined on input line 177.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+[]\T1/cmr/m/n/12 Moªliwo±¢ tworzenia klas-trÛw
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 189--190
+\T1/cmr/m/n/12 firm wyma-ga-j°-cych elasty-cznej
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 []\T1/cmr/m/n/12 Brak pe™nej au-tomatyza-cji
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 79--80
+Underfull \hbox (badness 7576) in paragraph at lines 197--198
+[]\T1/cmr/m/n/12 Przyk™ad ograniczenia: mniej
+ []
+
+[11]
+Underfull \hbox (badness 1540) in paragraph at lines 207--208
+[]\T1/cmr/m/n/12 Przyk™ad za-s-tosowa-nia: ide-alne
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 214--215
 []\T1/cmr/m/n/12 Ograniczona in-te-gracja z sys-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-[]\T1/cmr/m/n/12 Bardzo wysoka trud-no±¢
+Underfull \hbox (badness 7576) in paragraph at lines 215--216
+[]\T1/cmr/m/n/12 Przyk™ad ograniczenia: mniej
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 95--96
-[]\T1/cmr/m/n/12 Wymaga duzej ilo±ci za-sobÛw
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+[]\T1/cmr/m/n/12 Przyk™ad za-s-tosowa-nia:
  []
 
 
-Underfull \hbox (badness 2503) in paragraph at lines 110--111
+Underfull \hbox (badness 6775) in paragraph at lines 232--233
+[]\T1/cmr/m/n/12 Wymaga duªej ilo±ci za-sobÛw
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 243--244
+\T1/cmr/m/n/12 prze-chowywa-nia duªych zbiorÛw
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 249--250
 []\T1/cmr/m/n/12 Skupione g™Ûwnie na funkc-jach
  []
 
 
-Underfull \hbox (badness 6675) in paragraph at lines 111--112
+Underfull \hbox (badness 6675) in paragraph at lines 250--251
 []\T1/cmr/m/n/12 Brak naty-wnego ws-par-cia dla
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 120--121
+Underfull \hbox (badness 2189) in paragraph at lines 251--252
+\T1/cmr/m/n/12 zona funkcjon-al-no±¢ w za-kre-sie
+ []
+
+[12]
+Underfull \hbox (badness 1168) in paragraph at lines 259--260
 []\T1/cmr/m/n/12 Elastyczno±¢ w zarz°dza-niu ap-
  []
 
-[8]
-Overfull \hbox (18.26782pt too wide) in paragraph at lines 137--138
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+[]\T1/cmr/m/n/12 Przyk™ad za-s-tosowa-nia: ide-
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 261--262
+\T1/cmr/m/n/12 alne dla dewelop-erÛw ap-likacji
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 269--270
+[]\T1/cmr/m/n/12 Przyk™ad ograniczenia: nieod-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+\T1/cmr/m/n/12 powied-nie dla uªytkown-ikÛw
+ []
+
+
+LaTeX Warning: Citation 'CasaOS' on page 13 undefined on input line 273.
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 280--281
+[]\T1/cmr/m/n/12 Przyk™ad za-s-tosowa-nia: ide-alne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+\T1/cmr/m/n/12 dla uªytkown-ikÛw do-mowych
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+[]\T1/cmr/m/n/12 Ograniczona skalowal-no±¢ i
+ []
+
+[13]
+Overfull \hbox (18.26782pt too wide) in paragraph at lines 296--297
 []\T1/cmr/m/n/12 Prostego i in-tu-icyjnego in-ter-fe-jsu dla uªytkown-ikÛw nieb¶d°-cych eksper-tami w zarz°dza-
  []
 
-) (./chapters/chapter3.tex [9]
+) (./chapters/chapter3.tex
+Overfull \hbox (5.97253pt too wide) in paragraph at lines 306--1
+\T1/cmr/m/n/12 Home-Lab ma wype™ni¢. Nowa plat-forma ma za zadanie dostar-czy¢ uªytkown-ikom narz¶dzie
+ []
+
+[14]
 Chapter 3.
 
-Overfull \hbox (16.3808pt too wide) in paragraph at lines 11--12
-[]\T1/cmr/bx/n/12 Bezpieczny dost¶p zdalny \T1/cmr/m/n/12 - in-te-gracja z Tailscale umo-zli-wa-ia-jca dost¶p z dowolonego
+Overfull \hbox (16.7071pt too wide) in paragraph at lines 11--12
+[]\T1/cmr/bx/n/12 Bezpieczny dost¶p zdalny \T1/cmr/m/n/12 - in-te-gracja z Tailscale umoªli-wia-j°ca dost¶p z dowolonego
  []
 
 
 Overfull \hbox (9.23824pt too wide) in paragraph at lines 13--14
-[]\T1/cmr/bx/n/12 Obs™uga domeny \T1/cmr/m/n/12 - in-te-gracja z DuckDNS w celu dy-nam-icznego zarz°dza-nia domen°. 
- []
-
-[10
-
-] [11]
-<./chapters/mermeid/schemat_architektury.png, id=119, 2089.8075pt x 1323.94624pt>
-File: ./chapters/mermeid/schemat_architektury.png Graphic file (type png)
-<use ./chapters/mermeid/schemat_architektury.png>
-Package pdftex.def Info: ./chapters/mermeid/schemat_architektury.png  used on input line 78.
-(pdftex.def)             Requested size: 409.71692pt x 259.55229pt.
- [12] [13 <./chapters/mermeid/schemat_architektury.png>]) (./chapters/chapter4.tex [14]
-Chapter 4.
-
-Overfull \hbox (5.72028pt too wide) in paragraph at lines 7--8
-\T1/cmr/m/n/12 System zosta™ za-pro-jek-towany jako ap-likacja we-bowa z back-en-dem opar-tym na FastAPI[[][]11[][]],
+[]\T1/cmr/bx/n/12 Obs™uga domeny \T1/cmr/m/n/12 - in-te-gracja z DuckDNS w celu dy-nam-icznego zarz°dza-nia domen°,
  []
 
 [15
 
 ]
-Overfull \hbox (6.29564pt too wide) in paragraph at lines 45--46
-[]\T1/cmr/bx/n/12 GET /api/ser-vices/health/{service_name} \T1/cmr/m/n/12 ^^U Sprawdze-nie sta-tusu po-je-dynczej
+Overfull \hbox (56.15434pt too wide) in paragraph at lines 25--26
+\T1/cmr/m/n/12 nowego wyda-nia, uªytkownik zostanie poin-for-mowany oraz otrzyma moªli-wo±¢ przeprowadzenia
  []
 
 
-Overfull \hbox (6.18755pt too wide) in paragraph at lines 51--52
-\T1/cmr/m/n/12 System umoªli-wia mon-i-torowanie za-sobÛw ser-w-era oraz uru-chomionych kon-tenerÛw Docker.
- []
-
-[16]
-<./chapters/assets/user_interface.png, id=165, 1300.86pt x 924.45375pt>
-File: ./chapters/assets/user_interface.png Graphic file (type png)
-<use ./chapters/assets/user_interface.png>
-Package pdftex.def Info: ./chapters/assets/user_interface.png  used on input line 83.
-(pdftex.def)             Requested size: 455.24411pt x 323.52133pt.
- [17] [18 <./chapters/assets/user_interface.png>]
-Overfull \hbox (4.07068pt too wide) in paragraph at lines 119--120
-[]\T1/cmr/m/n/12 Dzi¶ki tym rozwi°zan-iom in-ter-fejs jest ™atwy w ob-s™udze i spe™-nia wyma-gania uªytkown-
+Overfull \hbox (2.6446pt too wide) in paragraph at lines 26--27
+[]\T1/cmr/bx/n/12 Skalowalno±¢ \T1/cmr/m/n/12 - Sys-tem wspiera rÛwnieª moªli-wo±¢ do-dawa-nia nowych us™ug poprzez
  []
 
 
-Overfull \hbox (20.32187pt too wide) in paragraph at lines 122--122
-|[]\T1/cmr/bx/n/14.4 Implementacja in-ter-fe-jsu uªytkown-ika z wyko-rzys-taniem pode-
+Overfull \hbox (0.57307pt too wide) in paragraph at lines 26--27
+\T1/cmr/m/n/12 au-tomaty-cznie zainicjuje i uru-chomi kon-tenery na jego pod-stawie. Obec-nie funkcjon-
  []
 
-[19]
-Overfull \hbox (0.25494pt too wide) in paragraph at lines 145--146
-[]\T1/cmr/m/n/12 Zastosowanie pode-j±-cia no-code poz-woli™o na efek-ty-wne wdroªe-nie in-ter-fe-jsu uªytkown-
+[16] [17]
+<./chapters/mermeid/schemat_architektury_updated.png, id=253, 681.54625pt x 864.22874pt>
+File: ./chapters/mermeid/schemat_architektury_updated.png Graphic file (type png)
+<use ./chapters/mermeid/schemat_architektury_updated.png>
+Package pdftex.def Info: ./chapters/mermeid/schemat_architektury_updated.png  used on input line 44.
+(pdftex.def)             Requested size: 455.24411pt x 577.27637pt.
+ [18]
+<./chapters/mermeid/schemat przep≈Çyw danych.png, id=260, 1155.31625pt x 513.92pt>
+File: ./chapters/mermeid/schemat przep≈Çyw danych.png Graphic file (type png)
+<use ./chapters/mermeid/schemat przep≈Çyw danych.png>
+Package pdftex.def Info: ./chapters/mermeid/schemat przep≈Çyw danych.png  used on input line 53.
+(pdftex.def)             Requested size: 409.71692pt x 182.25075pt.
+ [19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.56 \end{figure}
+                  <./chapters/mermeid/schemat_architektury_updated.png>] [20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 \end{verbatim}
+                    <./chapters/mermeid/schemat przep≈Çyw danych.png>]
+Overfull \hbox (7.76782pt too wide) in paragraph at lines 90--90
+[]        \T1/cmtt/m/n/12 return fmt.Errorf("failed to start container: %s, %v", output, err)[] 
  []
-
-(./chapters/installationInstruction.tex [20]
-Overfull \hbox (214.34818pt too wide) in paragraph at lines 19--20
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:20: LaTeX Error: Invalid UTF-8 byte sequence (≈\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 	installDir = "./homelab" // Mo≈ºna 
-                                         zmieniƒá na /opt/homelab lub %Progr...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:20: LaTeX Error: Invalid UTF-8 byte "BC.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 	installDir = "./homelab" // Mo≈ºna 
-                                         zmieniƒá na /opt/homelab lub %Progr...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:20: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 	installDir = "./homelab" // Mo≈ºna zmieniƒá 
-                                                  na /opt/homelab lub %Progr...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:20: LaTeX Error: Invalid UTF-8 byte "87.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 	installDir = "./homelab" // Mo≈ºna zmieniƒá 
-                                                  na /opt/homelab lub %Progr...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (150.91312pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:24: LaTeX Error: Invalid UTF-8 byte sequence (\lst@FillFixed@\lst@ECü\lst@ECî).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 	fmt.Println("üîç 
-                        Sprawdzanie Docker...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:24: LaTeX Error: Invalid UTF-8 byte "8D.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 	fmt.Println("üîç 
-                        Sprawdzanie Docker...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:27: LaTeX Error: Invalid UTF-8 byte sequence (\lst@FillFixed@\lst@ECü\lst@ECö).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 		fmt.Println("üöß 
-                         Docker nie znaleziony. Instalujƒô...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:27: LaTeX Error: Invalid UTF-8 byte "A7.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 		fmt.Println("üöß 
-                         Docker nie znaleziony. Instalujƒô...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:27: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 ...n("üöß Docker nie znaleziony. Instalujƒô.
-                                                  ..")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:27: LaTeX Error: Invalid UTF-8 byte "99.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 ...n("üöß Docker nie znaleziony. Instalujƒô.
-                                                  ..")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (52.23636pt too wide) in paragraph at lines 27--28
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@FillFixed@\lst@ECù).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå 
-                                    B≈ÇƒÖd instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte "8C.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå 
-                                    B≈ÇƒÖd instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte sequence (≈\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                           instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte "82.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                           instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                           instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:29: LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 			fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                           instalacji Dockera: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (179.10648pt too wide) in paragraph at lines 29--30
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:33: LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@FillFixed@\lst@ECú).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 		fmt.Println("‚úÖ 
-                        Docker jest ju≈º zainstalowany.")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:33: LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 		fmt.Println("‚úÖ 
-                        Docker jest ju≈º zainstalowany.")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:33: LaTeX Error: Invalid UTF-8 byte sequence (≈\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 		fmt.Println("‚úÖ Docker jest ju≈º 
-                                         zainstalowany.")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:33: LaTeX Error: Invalid UTF-8 byte "BC.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 		fmt.Println("‚úÖ Docker jest ju≈º 
-                                         zainstalowany.")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (9.94632pt too wide) in paragraph at lines 33--34
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:36: LaTeX Error: Invalid UTF-8 byte sequence (\lst@FillFixed@\lst@ECü\lst@ECì).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 	fmt.Println("üì¶ 
-                        Pobieranie aplikacji...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:36: LaTeX Error: Invalid UTF-8 byte "A6.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 	fmt.Println("üì¶ 
-                        Pobieranie aplikacji...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (66.33304pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@FillFixed@\lst@ECù).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå 
-                                   B≈ÇƒÖd podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte "8C.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå 
-                                   B≈ÇƒÖd podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte sequence (≈\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                          podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte "82.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                          podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                          podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:38: LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 		fmt.Fprintf(os.Stderr, "‚ùå B≈ÇƒÖd 
-                                          podczas pobierania/rozpakowywania:...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (228.44485pt too wide) in paragraph at lines 38--39
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-./chapters/installationInstruction.tex:42: LaTeX Error: Invalid UTF-8 byte sequence (\lst@FillFixed@\lst@ECü\lst@ECö).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 	fmt.Println("üöÄ 
-                        Uruchamianie aplikacji...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:42: LaTeX Error: Invalid UTF-8 byte "80.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 	fmt.Println("üöÄ 
-                        Uruchamianie aplikacji...")
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
 
 [21]
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@FillFixed@\lst@ECù).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 		fmt.Fprintf(os.Stderr, "‚ùå 
-                                   Nie uda≈Ço siƒô uruchomiƒá aplikacji: %v\...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte "8C.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 		fmt.Fprintf(os.Stderr, "‚ùå 
-                                   Nie uda≈Ço siƒô uruchomiƒá aplikacji: %v\...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte sequence (≈\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 		fmt.Fprintf(os.Stderr, "‚ùå Nie uda≈Ço 
-                                              siƒô uruchomiƒá aplikacji: %v\...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte "82.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 		fmt.Fprintf(os.Stderr, "‚ùå Nie uda≈Ço 
-                                              siƒô uruchomiƒá aplikacji: %v\...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...t.Fprintf(os.Stderr, "‚ùå Nie uda≈Ço siƒô 
-                                                  uruchomiƒá aplikacji: %v\n...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte "99.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...t.Fprintf(os.Stderr, "‚ùå Nie uda≈Ço siƒô 
-                                                  uruchomiƒá aplikacji: %v\n...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte sequence (ƒ\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...s.Stderr, "‚ùå Nie uda≈Ço siƒô uruchomiƒá 
-                                                  aplikacji: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-./chapters/installationInstruction.tex:44: LaTeX Error: Invalid UTF-8 byte "87.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...s.Stderr, "‚ùå Nie uda≈Ço siƒô uruchomiƒá 
-                                                  aplikacji: %v\n", err)
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-Overfull \hbox (200.2515pt too wide) in paragraph at lines 44--45
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+<./chapters/mermeid/schemat sieci homelab.png, id=280, 1069.9975pt x 458.71375pt>
+File: ./chapters/mermeid/schemat sieci homelab.png Graphic file (type png)
+<use ./chapters/mermeid/schemat sieci homelab.png>
+Package pdftex.def Info: ./chapters/mermeid/schemat sieci homelab.png  used on input line 139.
+(pdftex.def)             Requested size: 432.48051pt x 185.40707pt.
+ [22]
+Overfull \hbox (1.31578pt too wide) in paragraph at lines 156--157
+[]\T1/cmr/m/n/12 Konfiguracja umoªli-wia urz°dze-niu au-tomaty-czne po™°cze-nie si¶ z sieci° VPN Tailscale,
  []
 
-)
-Overfull \hbox (0.73471pt too wide) in paragraph at lines 160--161
-\T1/cmr/m/n/12 W celu za-pewnienia kom-paty-bil-no±ci ar-chitek-tury uru-chomieniowej sys-temu, zde-cy-dowano
+[23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.168     \item P
+                 o pomy≈õlnym przej≈õciu test√≥w generowana jest nowa wersja... <./chapters/mermeid/schemat sieci homelab.png>]
+Overfull \hbox (10.72797pt too wide) in paragraph at lines 170--171
+[]\T1/cmr/m/n/12 Nie do-chodzi do au-tomaty-cznego wdroªe-nia na urz°dze-niu pro-duk-cyjnym - uªytkownik
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 171.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [22] [23]
-Overfull \hbox (100.37021pt too wide) in paragraph at lines 245--245
-[]        \T1/cmtt/m/n/12 run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV[] 
+[24]
+<./chapters/mermeid/schematcicd.png, id=300, 810.02625pt x 929.4725pt>
+File: ./chapters/mermeid/schematcicd.png Graphic file (type png)
+<use ./chapters/mermeid/schematcicd.png>
+Package pdftex.def Info: ./chapters/mermeid/schematcicd.png  used on input line 224.
+(pdftex.def)             Requested size: 432.48051pt x 496.26302pt.
+ [25]
+Overfull \hbox (8.56754pt too wide) in paragraph at lines 231--232
+\T1/cmr/m/n/12 System do-celowo uruchami-any jest na urz°dze-niu Rasp-berry Pi 5, ktÛre za-pew-nia odpowied-
  []
 
-
-Overfull \hbox (88.02322pt too wide) in paragraph at lines 245--245
-[]          \T1/cmtt/m/n/12 docker tag localhost:5000/myapp:${{ env.VERSION }} localhost:5000/myapp:latest[] 
- []
-
-
-Overfull \hbox (1.74548pt too wide) in paragraph at lines 258--259
-\T1/cmr/m/n/12 Wszystkie wer-sje ap-likacji s° au-tomaty-cznie prze-chowywane w lokalnym re-jestrze **Docker
- []
-
-[24]) (./chapters/chapter5.tex
-Overfull \hbox (6.29439pt too wide) in paragraph at lines 265--1
-[]\T1/cmr/m/n/12 Dzi¶ki temu kaªda wer-sja ap-likacji jest jed-noz-nacznie iden-ty-fikowana, a \T1/cmtt/m/n/12 latest \T1/cmr/m/n/12 wskazuje
- []
-
-[25]
-Chapter 5.
 [26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.237 \subsection{Backend}
+                           <./chapters/mermeid/schematcicd.png>]) (./chapters/chapter4.tex [27] [28]
+Chapter 4.
+<./chapters/mermeid/schemat api.png, id=326, 1569.865pt x 676.5275pt>
+File: ./chapters/mermeid/schemat api.png Graphic file (type png)
+<use ./chapters/mermeid/schemat api.png>
+Package pdftex.def Info: ./chapters/mermeid/schemat api.png  used on input line 8.
+(pdftex.def)             Requested size: 455.24411pt x 196.17761pt.
+[29
 
-] [27] [28]
-Overfull \hbox (2.70776pt too wide) in paragraph at lines 100--101
-[]\T1/cmr/bx/n/12 Fuzzing \T1/cmr/m/n/12 ^^U Au-tomaty-czne gen-erowanie losowych danych we-j±-ciowych w celu wykrycia
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.24     \item \textbf
+                      {POST /api/services/add} - dodanie nowej us≈Çugi do sy... <./chapters/mermeid/schemat api.png>]
+Overfull \hbox (0.8949pt too wide) in paragraph at lines 25--26
+[]\T1/cmr/bx/n/12 POST /api/ser-vices/:name \T1/cmr/m/n/12 - prze™°cze-nie (uru-chomie-nie/za-trzy-manie) wybranej
  []
 
-[29]
-Overfull \hbox (9.60327pt too wide) in paragraph at lines 108--109
-[] []\T1/cmr/bx/n/12 1. Uwierzytel-ni-anie i au-to-ryza-cja[] \T1/cmr/m/n/12 Mech-a-nizmy uwierzytel-ni-a-nia powinny by¢ odporne
+[30] [31]
+Overfull \hbox (8.04823pt too wide) in paragraph at lines 71--72
+\T1/cmr/m/n/12 Z za-™oªe-nia in-ter-fejs uªytkown-ika powinien by¢ jak na-jprost-szy oraz jak na-jbardziej u™atwia¢
+ []
+
+<./chapters/assets/UI_HomePage.png, id=344, 1691.31876pt x 915.42pt>
+File: ./chapters/assets/UI_HomePage.png Graphic file (type png)
+<use ./chapters/assets/UI_HomePage.png>
+Package pdftex.def Info: ./chapters/assets/UI_HomePage.png  used on input line 86.
+(pdftex.def)             Requested size: 455.24411pt x 246.39845pt.
+[32]
+<./chapters/assets/login_page.png, id=350, 1710.39pt x 918.43124pt>
+File: ./chapters/assets/login_page.png Graphic file (type png)
+<use ./chapters/assets/login_page.png>
+Package pdftex.def Info: ./chapters/assets/login_page.png  used on input line 101.
+(pdftex.def)             Requested size: 455.24411pt x 244.4482pt.
+ [33
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.105 
+       <./chapters/assets/UI_HomePage.png>]
+<./chapters/assets/signup_page.png, id=357, 1445.4pt x 856.19875pt>
+File: ./chapters/assets/signup_page.png Graphic file (type png)
+<use ./chapters/assets/signup_page.png>
+Package pdftex.def Info: ./chapters/assets/signup_page.png  used on input line 108.
+(pdftex.def)             Requested size: 455.24411pt x 269.66484pt.
+ [34
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.114 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.114 
+       <./chapters/assets/login_page.png> <./chapters/assets/signup_page.png>]
+<./chapters/assets/services_page.png, id=366, 1710.39pt x 628.3475pt>
+File: ./chapters/assets/services_page.png Graphic file (type png)
+<use ./chapters/assets/services_page.png>
+Package pdftex.def Info: ./chapters/assets/services_page.png  used on input line 118.
+(pdftex.def)             Requested size: 455.24411pt x 167.23996pt.
+<./chapters/assets/profile_page.png, id=367, 1715.40875pt x 917.4275pt>
+File: ./chapters/assets/profile_page.png Graphic file (type png)
+<use ./chapters/assets/profile_page.png>
+Package pdftex.def Info: ./chapters/assets/profile_page.png  used on input line 128.
+(pdftex.def)             Requested size: 455.24411pt x 243.4671pt.
+ [35
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.132 
+       <./chapters/assets/services_page.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+<./chapters/assets/server_page.png, id=374, 1710.39pt x 919.435pt>
+File: ./chapters/assets/server_page.png Graphic file (type png)
+<use ./chapters/assets/server_page.png>
+Package pdftex.def Info: ./chapters/assets/server_page.png  used on input line 139.
+(pdftex.def)             Requested size: 455.24411pt x 244.71535pt.
+[36
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.143 
+       <./chapters/assets/profile_page.png>]
+Overfull \hbox (3.04588pt too wide) in paragraph at lines 147--148
+\T1/cmr/m/n/12 #0ba5ec) wyko-rzysty-wane m.in. w wykre-sach, przy-ciskach akcji oraz wskaπnikach post¶pu.
+ []
+
+[37
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.152 
+       <./chapters/assets/server_page.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
  []
 
 
-Overfull \hbox (30.96829pt too wide) in paragraph at lines 133--134
-[] []\T1/cmr/bx/n/12 4. Bez-piecze´stwo API[] \T1/cmr/m/n/12 Bez-piecze´stwo API jest kluc-zowe dla ochrony danych przesy™anych
- []
-
-[30]
-Overfull \hbox (0.34862pt too wide) in paragraph at lines 160--161
-\T1/cmr/m/n/12 pen-e-tra-cyjne, anal-iz¶ kodu oraz au-tomaty-czne skanowanie po-dat-no±ci, pozwala na wczesne
+Overfull \hbox (6.21408pt too wide) in paragraph at lines 167--169
+[]\T1/cmr/m/n/12 Efektywno±¢ en-er-gety-czna (w przy-padku ekranÛw OLED) W urz°dzeni-ach z ekranami
  []
 
 
-Overfull \hbox (1.45808pt too wide) in paragraph at lines 160--161
-\T1/cmr/m/n/12 ak-tu-al-iza-cje mech-a-nizmÛw bez-piecze´stwa s° niezb¶dne do utrzy-ma-nia wysok-iego poziomu
+Overfull \hbox (22.27516pt too wide) in paragraph at lines 176--177
+\T1/cmr/m/n/12 sz-ablon \T1/cmr/bx/n/12 TailAd-min\T1/cmr/m/n/12 , ktÛry dost¶pny jest pub-licznie na li-cencji \T1/cmr/bx/n/12 MIT\T1/cmr/m/n/12 . TailAd-min to nowoczesny
  []
 
-) (./chapters/chapter6.tex [31]
+[38]
+Overfull \hbox (1.9082pt too wide) in paragraph at lines 184--185
+\T1/cmr/m/n/12 API stwor-zonym w tech-nologii Go. Dos-tosowanie sz-ablonu TailAd-min do wspÛ™pracy
+ []
+
+[39] (./chapters/installationInstruction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Overfull \hbox (22.08293pt too wide) in paragraph at lines 14--15
+[]\T1/cmr/m/n/12 Program wyko-rzys-tuje stan-dar-d-owe bib-lioteki Go do ob-s™ugi po-biera-nia plikÛw (\T1/cmtt/m/n/12 net/http\T1/cmr/m/n/12 ),
+ []
+
+
+Overfull \hbox (32.32503pt too wide) in paragraph at lines 14--15
+\T1/cmr/m/n/12 (\T1/cmtt/m/n/12 os/exec\T1/cmr/m/n/12 ). Dz-i¶ki temu dzi-a™a w pe™ni samodziel-nie, bez konieczno±ci in-stalowa-nia zewn¶trznych
+ []
+
+[40]) [41] [42] [43]) (./chapters/chapter5.tex [44]
+Chapter 5.
+
+Overfull \hbox (4.22206pt too wide) in paragraph at lines 20--21
+[]\T1/cmr/m/n/12 Przeprowadzenie testÛw jed-nos-tkowych umoªli-wi™o rozwÛj ser-wisu API bez konieczno±ci
+ []
+
+
+Overfull \hbox (22.92155pt too wide) in paragraph at lines 20--21
+\T1/cmr/m/n/12 testowym uzyski-wa¢ odpowiedzi HTTP poprzez zwracanie sta™ych odpowiedzi bez konieczno±ci
+ []
+
+[45
+
+] [46]
+<chapters/assets/wykres czasu odpowiedzi.png, id=444, 642.4pt x 481.8pt>
+File: chapters/assets/wykres czasu odpowiedzi.png Graphic file (type png)
+<use chapters/assets/wykres czasu odpowiedzi.png>
+Package pdftex.def Info: chapters/assets/wykres czasu odpowiedzi.png  used on input line 55.
+(pdftex.def)             Requested size: 409.71692pt x 307.2923pt.
+
+Overfull \hbox (8.24521pt too wide) in paragraph at lines 59--60
+[]\T1/cmr/m/n/12 Na powyªszym wykre-sie za-uwaªalna jest wzgl¶dna sta-bil-no±¢ ±red-niego czasu odpowiedzi
+ []
+
+[47
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 Z
+      a g≈Ç√≥wnƒÖ przyczynƒô wystƒÖpienia b≈Çƒôd√≥w uznano ograniczenia wyda... <./chapters/assets/wykres czasu odpowiedzi.png>]
+Overfull \hbox (20.2512pt too wide) in paragraph at lines 61--62
+\T1/cmr/m/n/12 Do-datkowym czyn-nikiem by™a ogranic-zona liczba za-sobÛw przy-dzielona ap-likacji w ±rodowisku
+ []
+
+
+Overfull \hbox (3.12488pt too wide) in paragraph at lines 65--66
+[]\T1/cmr/m/n/12 Aplikacja dzi-a™a sta-bil-nie przy niskim i umi-arkowanym ob-ci°ªe-niu (do 300 rÛwnoczes-
+ []
+
+
+Overfull \hbox (21.75447pt too wide) in paragraph at lines 83--84
+\T1/cmr/m/n/12 zabez-piecze´, aby za-po-biec nieau-to-ry-zowanemu dost¶powi, ma-nip-u-lacji danymi oraz wyciekom
+ []
+
+[48]
+Overfull \hbox (11.89095pt too wide) in paragraph at lines 103--104
+[]\T1/cmr/m/n/12 Aplikacja wyko-rzys-tuje to-ken JWT w nag™Ûwkach, co re-dukuje ryzyko CSRF, poniewaª
+ []
+
+
+Overfull \hbox (8.80685pt too wide) in paragraph at lines 103--104
+\T1/cmr/m/n/12 brak ciasteczek sesyjnych elimin-uje moªli-wo±¢ au-tomaty-cznego przesy™a-nia uwierzytel-
+ []
+
+
+Overfull \hbox (9.22433pt too wide) in paragraph at lines 115--116
+[] []\T1/cmr/bx/n/12 5. Odporno±¢ na prze-ci°ªe-nie (DoS)[] \T1/cmr/m/n/12 W ra-mach testÛw wyda-jno±-ciowych przeprowad-
+ []
+
+[49]
+Overfull \hbox (0.26277pt too wide) in paragraph at lines 125--126
+[]\T1/cmr/m/n/12 Wdroªenie pe™nych testÛw pen-e-tra-cyjnych (np. z uªy-ciem Burp Suite [[][]8[][]] lub OWASP
+ []
+
+) (./chapters/chapter6.tex [50]
 Chapter 6.
 
-Overfull \hbox (2.40709pt too wide) in paragraph at lines 13--14
-\T1/cmr/m/n/12 App-smith, co umoªli-wi™o szy-bkie tworze-nie funkcjon-al-nego pan-elu ad-min-is-tra-cyjnego
+Overfull \hbox (4.4274pt too wide) in paragraph at lines 5--6
+\T1/cmr/m/n/12 likacji umoªli-wia-j°cej ad-min-is-tra-torom zarz°dzanie us™ugami sys-te-mowymi, mon-i-torowanie
  []
 
-[32
+
+Overfull \hbox (10.12872pt too wide) in paragraph at lines 9--10
+[]\T1/cmr/m/n/12 Instrukcja in-sta-lacji oraz uru-chomienia ap-likacji zosta™a za-mieszc-zona w pliku \T1/cmtt/m/n/12 README.md
+ []
+
+
+Overfull \hbox (8.95287pt too wide) in paragraph at lines 19--20
+[]\T1/cmr/m/n/12 Stworzono kom-pletne REST API umoªli-wia-j°ce zarz°dzanie uªytkown-ikami, us™ugami
+ []
+
+
+Overfull \hbox (4.28134pt too wide) in paragraph at lines 19--20
+\T1/cmr/m/n/12 oraz mon-i-torowanie parametrÛw sys-te-mowych. API zosta™o za-pro-jek-towane w sposÛb
+ []
+
+[51
 
 ]
-Overfull \hbox (5.507pt too wide) in paragraph at lines 30--31
-[]\T1/cmr/m/n/12 Implementacja mech-a-nizmu cache'owania wynikÛw za-py-ta´ doty-cz°-cych mon-i-torowa-
+Overfull \hbox (1.46489pt too wide) in paragraph at lines 27--28
+\T1/cmr/m/n/12 warto in-strukcj¶ in-sta-lacji, kon-fig-u-racji i uru-chomienia sys-temu zarÛwno na lokalnych
  []
 
-
-Overfull \hbox (3.0563pt too wide) in paragraph at lines 31--32
-[]\T1/cmr/m/n/12 Wdroªenie do-datkowych zabez-piecze´ przed atakami DoS poprzez ogranicze-nie liczby
+[52]
+Overfull \hbox (3.61433pt too wide) in paragraph at lines 50--51
+[]\T1/cmr/m/n/12 Wprowadzenie funkcjon-al-no±ci cache'owania danych, aby zm-niejszy¢ ob-ci°ªe-nie back-
  []
 
-[33]
-Overfull \hbox (17.09024pt too wide) in paragraph at lines 39--40
-[]\T1/cmr/m/n/12 Podsumowuj°c, niniejsza praca mag-is-ter-ska dostar-cza kom-plek-sowego rozwi°za-nia umoªli-
- []
-
-
-Overfull \hbox (18.2192pt too wide) in paragraph at lines 50--51
+[53]
+Overfull \hbox (18.2192pt too wide) in paragraph at lines 65--66
 []\T1/cmr/bx/n/12 Harmonogramowanie zada´ \T1/cmr/m/n/12 ^^U funkcja umoªli-wia-j°ca ad-min-is-tra-torom za-planowanie
  []
 
-[34]
-Overfull \hbox (11.76945pt too wide) in paragraph at lines 77--78
+[54]
+Overfull \hbox (11.76945pt too wide) in paragraph at lines 92--93
 []\T1/cmr/bx/n/12 Wdroªenie uwierzytel-ni-a-nia wielosk™ad-nikowego (MFA) \T1/cmr/m/n/12 ^^U zwi¶k-sze-nie poziomu
  []
 
-[35]
-Overfull \hbox (4.12833pt too wide) in paragraph at lines 85--86
+
+Overfull \hbox (4.12833pt too wide) in paragraph at lines 100--101
 \T1/cmr/m/n/12 W celu zwi¶k-szenia uªyteczno±ci sys-temu warto rozwaªy¢ jego in-te-gracj¶ z in-nymi rozwi°za-
  []
 
-) [36]
-Overfull \hbox (18.35147pt too wide) in paragraph at lines 63--63
-[]\T1/cmr/m/n/12 AppSmith. \T1/cmr/m/it/12 App-Smith Docs\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / docs . appsmith . com$[][]\T1/cmr/m/n/12 . (ac-cessed: 02.02.2025). 
+[55]) [56]
+Overfull \hbox (0.18889pt too wide) in paragraph at lines 63--63
+[]\T1/cmr/m/n/12 Home-Assistant Fo-rum. \T1/cmr/m/it/12 Zuªy-cie pr°du przez urz°dze-nie Rasp-berry Pi 5\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
  []
 
 
@@ -1491,50 +1180,37 @@ Overfull \hbox (11.06296pt too wide) in paragraph at lines 63--63
 []\T1/cmr/m/n/12 NTFY. \T1/cmr/m/it/12 NTFY Doc-u-men-ta-tion\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / ntfy . sh / docs/$[][]\T1/cmr/m/n/12 . (ac-cessed: 02.02.2025). 
  []
 
-[37
+
+Overfull \hbox (7.78423pt too wide) in paragraph at lines 63--63
+[]\T1/cmr/m/n/12 Maciej Ton-der-ski. \T1/cmr/m/it/12 NestOpsV2\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / github . com / McTonderski / NestOpsV2$[][]\T1/cmr/m/n/12 .
+ []
+
+[57
 
 ] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7760CFC8F53367B58BD5949B32B51EA4;4452.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B7E173551E06718C3210A73310C21D48;4623.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19052 strings out of 474116
- 327181 string characters out of 5743682
- 1967187 words of memory out of 5000000
- 41022 multiletter control sequences out of 15000+600000
+ 19373 strings out of 474116
+ 335055 string characters out of 5743682
+ 1938187 words of memory out of 5000000
+ 41332 multiletter control sequences out of 15000+600000
  569766 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,81p,867b,1859s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,81p,1277b,1301s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (38 pages, 1232335 bytes).
+Output written on main.pdf (58 pages, 4424924 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 381 compressed objects within 4 object streams
- 184 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 510 compressed objects within 6 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
