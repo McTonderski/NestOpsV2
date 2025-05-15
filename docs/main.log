@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  12 MAY 2025 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  15 MAY 2025 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -458,27 +458,54 @@ Package: listing 1999/05/25
 
 Package `listing', V1.2, <1999/05/25>
 \c@listing=\count407
-) (./preamble.tex
-Package hyperref Info: Option `colorlinks' set `true' on input line 14.
+) (./preamble.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip109
+\f@nch@O@elh=\skip110
+\f@nch@O@erh=\skip111
+\f@nch@O@olh=\skip112
+\f@nch@O@orh=\skip113
+\f@nch@O@elf=\skip114
+\f@nch@O@erf=\skip115
+\f@nch@O@olf=\skip116
+\f@nch@O@orf=\skip117
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count408
+\U@D=\dimen160
+\l@unhyphenated=\language90
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count409
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/babel-polish/polish.ldf
+Language: polish 2022/03/12 1.3 Babel support for Polish
+Package babel Info: Making " an active character on input line 101.
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/pl/babel-polish.tex
+Package babel Info: Importing font and identification data for polish
+(babel)             from babel-pl.ini. Reported on input line 11.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count408
+\lst@mode=\count410
 \lst@gtempboxa=\box53
 \lst@token=\toks22
-\lst@length=\count409
-\lst@currlwidth=\dimen160
-\lst@column=\count410
-\lst@pos=\count411
-\lst@lostspace=\dimen161
-\lst@width=\dimen162
-\lst@newlines=\count412
-\lst@lineno=\count413
-\lst@maxwidth=\dimen163
+\lst@length=\count411
+\lst@currlwidth=\dimen161
+\lst@column=\count412
+\lst@pos=\count413
+\lst@lostspace=\dimen162
+\lst@width=\dimen163
+\lst@newlines=\count414
+\lst@lineno=\count415
+\lst@maxwidth=\dimen164
  (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
-\c@lstnumber=\count414
-\lst@skipnumbers=\count415
+\c@lstnumber=\count416
+\lst@skipnumbers=\count417
 \lst@framebox=\box54
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
@@ -500,17 +527,26 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count416
+\c@float@type=\count418
 \float@exts=\toks23
 \float@box=\box55
 \@float@everytoks=\toks24
 \@floatcapt=\box56
 )
-\@quotelevel=\count417
-\@quotereset=\count418
- (./main.aux)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count419
+\@quotereset=\count420
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 18.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -568,16 +604,16 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count419
-\scratchdimen=\dimen164
+\scratchcounter=\count421
+\scratchdimen=\dimen165
 \scratchbox=\box57
-\nofMPsegments=\count420
-\nofMParguments=\count421
+\nofMPsegments=\count422
+\nofMParguments=\count423
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count422
-\MPscratchDim=\dimen165
-\MPnumerator=\count423
-\makeMPintoPDFobject=\count424
+\MPscratchCnt=\count424
+\MPscratchDim=\dimen166
+\MPnumerator=\count425
+\makeMPintoPDFobject=\count426
 \everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -590,10 +626,10 @@ Package hyperref Info: Link coloring ON on input line 18.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'polish'...
+Package biblatex Info: ... file 'polish.lbx' found.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
+File: polish.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -602,18 +638,10 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                CasaOS
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 18.
 Package biblatex Info: Reference segment=0 on input line 18.
-\c@lstlisting=\count425
+\c@lstlisting=\count427
  (./chapters/stronatytulowa.tex
 <images/logo.jpg, id=92, 911.405pt x 224.84pt>
 File: images/logo.jpg Graphic file (type jpg)
@@ -622,311 +650,232 @@ Package pdftex.def Info: images/logo.jpg  used on input line 5.
 (pdftex.def)             Requested size: 455.24411pt x 112.30994pt.
  [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/logo.jpg>])
-Overfull \hbox (2.56752pt too wide) in paragraph at lines 28--29
-\T1/cmr/m/n/12 ograniczenia, co poz-woliªo na okre±le-nie luki tech-no-log-icznej, któr¡ uzu-peª-nia pro-ponowany
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc} <./images/logo.jpg>]) (./chapters/oswiadczenie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
  []
 
 
-Overfull \hbox (3.61162pt too wide) in paragraph at lines 30--31
-[]\T1/cmr/m/n/12 Kolejne rozdzi-aªy opisuj¡ szczegóªy tech-niczne doty-cz¡ce ar-chitek-tury sys-temu, sposobu
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
  []
 
-
-Overfull \hbox (26.29463pt too wide) in paragraph at lines 30--31
-\T1/cmr/m/n/12 im-ple-men-tacji oraz wyko-rzys-tanych tech-nologii. Gªówne el-e-menty skªada-j¡ce si¦ na rozwi¡zanie
- []
-
-
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 \newpage
-              [1{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./main.toc
+l.27 
+      [1]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 32.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [2] (./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
+(Font)              <6> on input line 2.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] (./chapters/chapter1.tex
-Chapter 1.
+ [3] (./chapters/chapter1.tex
+Rozdzia\l  1.
+[4
 
-Overfull \hbox (8.898pt too wide) in paragraph at lines 7--8
-\T1/cmr/m/n/12 w którym mo»na bez ryzyka testowa¢ nowe narz¦dzia, tech-nolo-gie oraz sce-nar-iusze awaryjne.
+
+] [5]
+Overfull \hbox (1.42212pt too wide) in paragraph at lines 44--45
+[]\T1/ptm/m/n/12 Implementacja in-ter-fejsu u»yt-kow-nika umo»-li-wia-j¡-cego zdalne za-rz¡-dza-nie Ho-me-La-bem, 
+ []
+
+) (./chapters/chapter2.tex [6]
+Rozdzia\l  2.
+[7
+
+
+] [8]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 38.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+[]\T1/ptm/m/n/12 Darmowa wer-sja open-source;
  []
 
 
-Overfull \hbox (4.44496pt too wide) in paragraph at lines 13--14
-\T1/cmr/m/n/12 oraz zmin-i-mal-i-zowanie ryzyka bª¦dów kon-fig-u-ra-cyjnych. Au-tomatyza-cja umo»li-wia równie»
- []
-
-[3
-
-] [4]) (./chapters/chapter2.tex [5]
-Chapter 2.
-[6
-
-]
-Overfull \hbox (11.37576pt too wide) in paragraph at lines 19--20
-[]\T1/cmr/m/n/12 Kolejnym etapem byªo po-jaw-ie-nie si¦ kon-teneryza-cji, przede wszys-tkim dz-i¦ki Dockerowi,
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+\T1/ptm/m/n/12 (KVM) i kon-te-ne-rów (LXC);
  []
 
 
-Overfull \hbox (13.69052pt too wide) in paragraph at lines 23--24
-[]\T1/cmr/m/n/12 Wprowadzenie orkies-tra-torów kon-tenerów, ta-kich jak Ku-ber-netes, umo»li-wiªo zarz¡dzanie
- []
-
-[7]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 38.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Overfull \hbox (203.82681pt too wide) in paragraph at lines 41--41
- []    \T1/cmtt/m/n/12 qm create 100 --memory 2048 --net0 virtio,bridge=vmbr0 --cdrom /var/lib/vz/template/iso/ubuntu.iso[] 
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+\T1/ptm/m/n/12 Mo»-li-wo±¢ two-rze-nia kla-strów
  []
 
 
-Overfull \hbox (172.95935pt too wide) in paragraph at lines 48--48
- []    \T1/cmtt/m/n/12 New-VM -Name "TestVM" -ResourcePool "Resources" -Datastore "Datastore1" -MemoryGB 4 -NumCPU 2[] 
+Underfull \hbox (badness 1418) in paragraph at lines 191--192
+[]\T1/ptm/m/n/12 Brak peª-nej au-to-ma-ty-za-cji wdro-
  []
 
 
-Overfull \hbox (290.2557pt too wide) in paragraph at lines 55--55
- []    \T1/cmtt/m/n/12 New-VM -Name "LabVM" -MemoryStartupBytes 2GB -Generation 2 -NewVHDPath "C:\VMs\LabVM.vhdx" -NewVHDSizeBytes 40GB[] 
- []
-
-[8] [9]
-Overfull \hbox (13.55586pt too wide) in paragraph at lines 128--129
-\T1/cmr/m/n/12 Bezpiecze«stwo jest kluc-zowym as-pek-tem ka»dego Home-Laba, zwªaszcza gdy prze-chowywane
- []
-
-[10]
-Overfull \hbox (7.86945pt too wide) in paragraph at lines 168--168
-|[]\T1/cmr/bx/n/17.28 Analiza ist-niej¡-cych sys-temów do zarz¡dza-nia home-
- []
-
-
-LaTeX Warning: Citation 'CasaOS' on page 11 undefined on input line 177.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-[]\T1/cmr/m/n/12 Mo»liwo±¢ tworzenia klas-trów
- []
-
-
-Underfull \hbox (badness 7468) in paragraph at lines 189--190
-\T1/cmr/m/n/12 firm wyma-ga-j¡-cych elasty-cznej
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
-[]\T1/cmr/m/n/12 Brak peªnej au-tomatyza-cji
- []
-
-
-Underfull \hbox (badness 7576) in paragraph at lines 197--198
-[]\T1/cmr/m/n/12 Przykªad ograniczenia: mniej
- []
-
-[11]
-Underfull \hbox (badness 1540) in paragraph at lines 207--208
-[]\T1/cmr/m/n/12 Przykªad za-s-tosowa-nia: ide-alne
- []
-
-
-Underfull \hbox (badness 7631) in paragraph at lines 214--215
-[]\T1/cmr/m/n/12 Ograniczona in-te-gracja z sys-
- []
-
-
-Underfull \hbox (badness 7576) in paragraph at lines 215--216
-[]\T1/cmr/m/n/12 Przykªad ograniczenia: mniej
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-[]\T1/cmr/m/n/12 Przykªad za-s-tosowa-nia:
- []
-
-
-Underfull \hbox (badness 6775) in paragraph at lines 232--233
-[]\T1/cmr/m/n/12 Wymaga du»ej ilo±ci za-sobów
- []
-
-
-Underfull \hbox (badness 1377) in paragraph at lines 243--244
-\T1/cmr/m/n/12 prze-chowywa-nia du»ych zbiorów
- []
-
-
-Underfull \hbox (badness 2503) in paragraph at lines 249--250
-[]\T1/cmr/m/n/12 Skupione gªównie na funkc-jach
- []
-
-
-Underfull \hbox (badness 6675) in paragraph at lines 250--251
-[]\T1/cmr/m/n/12 Brak naty-wnego ws-par-cia dla
- []
-
-
-Underfull \hbox (badness 2189) in paragraph at lines 251--252
-\T1/cmr/m/n/12 zona funkcjon-al-no±¢ w za-kre-sie
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 185--194
+ [][] 
  []
 
 [12]
-Underfull \hbox (badness 1168) in paragraph at lines 259--260
-[]\T1/cmr/m/n/12 Elastyczno±¢ w zarz¡dza-niu ap-
+Underfull \hbox (badness 3260) in paragraph at lines 206--206
+[]\T1/ptm/m/n/12 Intuicyjny in-ter-fejs u»yt-kow-nika;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-[]\T1/cmr/m/n/12 Przykªad za-s-tosowa-nia: ide-
+Underfull \hbox (badness 1515) in paragraph at lines 206--206
+\T1/ptm/m/n/12 kon-tro-le-rów; Ide-alny do me-diów
  []
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 261--262
-\T1/cmr/m/n/12 alne dla dewelop-erów ap-likacji
+Underfull \hbox (badness 2020) in paragraph at lines 206--206
+\T1/ptm/m/n/12 do-mo-wych i pro-stych roz-wi¡-za«
  []
 
 
-Underfull \hbox (badness 4967) in paragraph at lines 269--270
-[]\T1/cmr/m/n/12 Przykªad ograniczenia: nieod-
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 201--210
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
-\T1/cmr/m/n/12 powied-nie dla u»ytkown-ików
+Underfull \hbox (badness 2486) in paragraph at lines 223--224
+\T1/ptm/m/n/12 nia; Wy-maga du-»ej ilo-±ci za-so-
  []
 
 
-LaTeX Warning: Citation 'CasaOS' on page 13 undefined on input line 273.
-
-
-Underfull \hbox (badness 1540) in paragraph at lines 280--281
-[]\T1/cmr/m/n/12 Przykªad za-s-tosowa-nia: ide-alne
+Underfull \hbox (badness 2080) in paragraph at lines 223--224
+\T1/ptm/m/n/12 bów sprz¦-to-wych; Nie-prak-tyczny
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
-\T1/cmr/m/n/12 dla u»ytkown-ików do-mowych
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 217--226
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-[]\T1/cmr/m/n/12 Ograniczona skalowal-no±¢ i
- []
-
-[13]
-Overfull \hbox (18.26782pt too wide) in paragraph at lines 296--297
-[]\T1/cmr/m/n/12 Prostego i in-tu-icyjnego in-ter-fe-jsu dla u»ytkown-ików nieb¦d¡-cych eksper-tami w zarz¡dza-
- []
-
-) (./chapters/chapter3.tex
-Overfull \hbox (5.97253pt too wide) in paragraph at lines 306--1
-\T1/cmr/m/n/12 Home-Lab ma wypeªni¢. Nowa plat-forma ma za zadanie dostar-czy¢ u»ytkown-ikom narz¦dzie
- []
-
-[14]
-Chapter 3.
-
-Overfull \hbox (16.7071pt too wide) in paragraph at lines 11--12
-[]\T1/cmr/bx/n/12 Bezpieczny dost¦p zdalny \T1/cmr/m/n/12 - in-te-gracja z Tailscale umo»li-wia-j¡ca dost¦p z dowolonego
+Underfull \hbox (badness 1147) in paragraph at lines 238--238
+\T1/ptm/m/n/12 cho-wy-wa-nia du-»ych zbio-rów da-
  []
 
 
-Overfull \hbox (9.23824pt too wide) in paragraph at lines 13--14
-[]\T1/cmr/bx/n/12 Obsªuga domeny \T1/cmr/m/n/12 - in-te-gracja z DuckDNS w celu dy-nam-icznego zarz¡dza-nia domen¡,
- []
-
-[15
-
-]
-Overfull \hbox (56.15434pt too wide) in paragraph at lines 25--26
-\T1/cmr/m/n/12 nowego wyda-nia, u»ytkownik zostanie poin-for-mowany oraz otrzyma mo»li-wo±¢ przeprowadzenia
+Underfull \hbox (badness 4403) in paragraph at lines 239--240
+[]\T1/ptm/m/n/12 Skupione gªów-nie na funk-cjach
  []
 
 
-Overfull \hbox (2.6446pt too wide) in paragraph at lines 26--27
-[]\T1/cmr/bx/n/12 Skalowalno±¢ \T1/cmr/m/n/12 - Sys-tem wspiera równie» mo»li-wo±¢ do-dawa-nia nowych usªug poprzez
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 233--242
+ [][] 
+ []
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.243 \end{table}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.243 \end{table}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.243 \end{table}
+                 ]
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 249--258
+ [][] 
  []
 
 
-Overfull \hbox (0.57307pt too wide) in paragraph at lines 26--27
-\T1/cmr/m/n/12 au-tomaty-cznie zainicjuje i uru-chomi kon-tenery na jego pod-stawie. Obec-nie funkcjon-
+Underfull \hbox (badness 3872) in paragraph at lines 270--270
+\T1/ptm/m/n/12 u»yt-kow-nika; Ša-twa in-sta-la-cja i
  []
 
-[16] [17]
-<./chapters/mermeid/schemat_architektury_updated.png, id=253, 681.54625pt x 864.22874pt>
+
+Underfull \hbox (badness 2221) in paragraph at lines 270--270
+\T1/ptm/m/n/12 kon-fi-gu-ra-cja; Sku-pie-nie na usªu-
+ []
+
+
+Overfull \hbox (7.5472pt too wide) in paragraph at lines 265--274
+ [][] 
+ []
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.276 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.276 
+      ]) (./chapters/chapter3.tex [15
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \chapter
+            {Projekt Systemu Homelab}]
+Rozdzia\l  3.
+[16
+
+
+] [17] [18]
+<./chapters/mermeid/schemat_architektury_updated.png, id=321, 681.54625pt x 864.22874pt>
 File: ./chapters/mermeid/schemat_architektury_updated.png Graphic file (type png)
 <use ./chapters/mermeid/schemat_architektury_updated.png>
-Package pdftex.def Info: ./chapters/mermeid/schemat_architektury_updated.png  used on input line 44.
-(pdftex.def)             Requested size: 455.24411pt x 577.27637pt.
- [18]
-<./chapters/mermeid/schemat przepÅ‚yw danych.png, id=260, 1155.31625pt x 513.92pt>
-File: ./chapters/mermeid/schemat przepÅ‚yw danych.png Graphic file (type png)
-<use ./chapters/mermeid/schemat przepÅ‚yw danych.png>
-Package pdftex.def Info: ./chapters/mermeid/schemat przepÅ‚yw danych.png  used on input line 53.
-(pdftex.def)             Requested size: 409.71692pt x 182.25075pt.
+Package pdftex.def Info: ./chapters/mermeid/schemat_architektury_updated.png  used on input line 47.
+(pdftex.def)             Requested size: 364.19667pt x 461.82373pt.
  [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.56 \end{figure}
-                  <./chapters/mermeid/schemat_architektury_updated.png>] [20
+l.52 \subsection{Diagram przepÅ‚ywu danych}
+                                            <./chapters/mermeid/schemat_architektury_updated.png>]
+<./chapters/mermeid/schemat przepÅ‚yw danych.png, id=329, 1155.31625pt x 513.92pt>
+File: ./chapters/mermeid/schemat przepÅ‚yw danych.png Graphic file (type png)
+<use ./chapters/mermeid/schemat przepÅ‚yw danych.png>
+Package pdftex.def Info: ./chapters/mermeid/schemat przepÅ‚yw danych.png  used on input line 56.
+(pdftex.def)             Requested size: 409.71692pt x 182.25075pt.
+ [20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.90 \end{verbatim}
-                    <./chapters/mermeid/schemat przepÅ‚yw danych.png>]
-Overfull \hbox (7.76782pt too wide) in paragraph at lines 90--90
-[]        \T1/cmtt/m/n/12 return fmt.Errorf("failed to start container: %s, %v", output, err)[] 
- []
-
-[21]
-<./chapters/mermeid/schemat sieci homelab.png, id=280, 1069.9975pt x 458.71375pt>
+l.66     \item A
+                plikacja backendowa zarzÄ…dza stanem usÅ‚ug, umoÅ¼liwia ich ... <./chapters/mermeid/schemat przepÅ‚yw danych.png>] [21] [22]
+<./chapters/mermeid/schemat sieci homelab.png, id=396, 1069.9975pt x 458.71375pt>
 File: ./chapters/mermeid/schemat sieci homelab.png Graphic file (type png)
 <use ./chapters/mermeid/schemat sieci homelab.png>
-Package pdftex.def Info: ./chapters/mermeid/schemat sieci homelab.png  used on input line 139.
+Package pdftex.def Info: ./chapters/mermeid/schemat sieci homelab.png  used on input line 144.
 (pdftex.def)             Requested size: 432.48051pt x 185.40707pt.
- [22]
-Overfull \hbox (1.31578pt too wide) in paragraph at lines 156--157
-[]\T1/cmr/m/n/12 Konfiguracja umo»li-wia urz¡dze-niu au-tomaty-czne poª¡cze-nie si¦ z sieci¡ VPN Tailscale,
- []
-
-[23
+ [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.168     \item P
-                 o pomyÅ›lnym przejÅ›ciu testÃ³w generowana jest nowa wersja... <./chapters/mermeid/schemat sieci homelab.png>]
-Overfull \hbox (10.72797pt too wide) in paragraph at lines 170--171
-[]\T1/cmr/m/n/12 Nie do-chodzi do au-tomaty-cznego wdro»e-nia na urz¡dze-niu pro-duk-cyjnym - u»ytkownik
- []
-
-[24]
-<./chapters/mermeid/schematcicd.png, id=300, 810.02625pt x 929.4725pt>
+l.159 \end{lstlisting}
+                       <./chapters/mermeid/schemat sieci homelab.png>] [24]
+<./chapters/mermeid/schematcicd.png, id=430, 810.02625pt x 929.4725pt>
 File: ./chapters/mermeid/schematcicd.png Graphic file (type png)
 <use ./chapters/mermeid/schematcicd.png>
-Package pdftex.def Info: ./chapters/mermeid/schematcicd.png  used on input line 224.
-(pdftex.def)             Requested size: 432.48051pt x 496.26302pt.
- [25]
-Overfull \hbox (8.56754pt too wide) in paragraph at lines 231--232
-\T1/cmr/m/n/12 System do-celowo uruchami-any jest na urz¡dze-niu Rasp-berry Pi 5, które za-pew-nia odpowied-
- []
-
-[26
+Package pdftex.def Info: ./chapters/mermeid/schematcicd.png  used on input line 228.
+(pdftex.def)             Requested size: 409.71692pt x 470.13869pt.
+ [25] [26
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.237 \subsection{Backend}
-                           <./chapters/mermeid/schematcicd.png>]) (./chapters/chapter4.tex [27] [28]
-Chapter 4.
-<./chapters/mermeid/schemat api.png, id=326, 1569.865pt x 676.5275pt>
+l.234 
+       <./chapters/mermeid/schematcicd.png>] [27]) (./chapters/chapter4.tex [28]
+Rozdzia\l  4.
+<./chapters/mermeid/schemat api.png, id=491, 1569.865pt x 676.5275pt>
 File: ./chapters/mermeid/schemat api.png Graphic file (type png)
 <use ./chapters/mermeid/schemat api.png>
 Package pdftex.def Info: ./chapters/mermeid/schemat api.png  used on input line 8.
@@ -934,27 +883,24 @@ Package pdftex.def Info: ./chapters/mermeid/schemat api.png  used on input line 
 [29
 
 
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.24     \item \textbf
                       {POST /api/services/add} - dodanie nowej usÅ‚ugi do sy... <./chapters/mermeid/schemat api.png>]
-Overfull \hbox (0.8949pt too wide) in paragraph at lines 25--26
-[]\T1/cmr/bx/n/12 POST /api/ser-vices/:name \T1/cmr/m/n/12 - przeª¡cze-nie (uru-chomie-nie/za-trzy-manie) wybranej
+Overfull \hbox (0.26932pt too wide) in paragraph at lines 30--31
+[]\T1/ptm/b/n/12 GET /a-pi-/sys-te-m/stats \T1/ptm/m/n/12 - po-bra-nie sta-ty-styk sys-te-mo-wych, ta-kich jak zu-»y-cie CPU, RAM,
  []
 
 [30] [31]
-Overfull \hbox (8.04823pt too wide) in paragraph at lines 71--72
-\T1/cmr/m/n/12 Z za-ªo»e-nia in-ter-fejs u»ytkown-ika powinien by¢ jak na-jprost-szy oraz jak na-jbardziej uªatwia¢
- []
-
-<./chapters/assets/UI_HomePage.png, id=344, 1691.31876pt x 915.42pt>
+<./chapters/assets/UI_HomePage.png, id=510, 1691.31876pt x 915.42pt>
 File: ./chapters/assets/UI_HomePage.png Graphic file (type png)
 <use ./chapters/assets/UI_HomePage.png>
 Package pdftex.def Info: ./chapters/assets/UI_HomePage.png  used on input line 86.
 (pdftex.def)             Requested size: 455.24411pt x 246.39845pt.
-[32]
-<./chapters/assets/login_page.png, id=350, 1710.39pt x 918.43124pt>
+ [32]
+<./chapters/assets/login_page.png, id=516, 1710.39pt x 918.43124pt>
 File: ./chapters/assets/login_page.png Graphic file (type png)
 <use ./chapters/assets/login_page.png>
 Package pdftex.def Info: ./chapters/assets/login_page.png  used on input line 101.
@@ -965,7 +911,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) h
                                                   \__shipout_drop_firstpage_...
 l.105 
        <./chapters/assets/UI_HomePage.png>]
-<./chapters/assets/signup_page.png, id=357, 1445.4pt x 856.19875pt>
+<./chapters/assets/signup_page.png, id=523, 1445.4pt x 856.19875pt>
 File: ./chapters/assets/signup_page.png Graphic file (type png)
 <use ./chapters/assets/signup_page.png>
 Package pdftex.def Info: ./chapters/assets/signup_page.png  used on input line 108.
@@ -981,12 +927,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) h
                                                   \__shipout_drop_firstpage_...
 l.114 
        <./chapters/assets/login_page.png> <./chapters/assets/signup_page.png>]
-<./chapters/assets/services_page.png, id=366, 1710.39pt x 628.3475pt>
+<./chapters/assets/services_page.png, id=532, 1710.39pt x 628.3475pt>
 File: ./chapters/assets/services_page.png Graphic file (type png)
 <use ./chapters/assets/services_page.png>
 Package pdftex.def Info: ./chapters/assets/services_page.png  used on input line 118.
 (pdftex.def)             Requested size: 455.24411pt x 167.23996pt.
-<./chapters/assets/profile_page.png, id=367, 1715.40875pt x 917.4275pt>
+<./chapters/assets/profile_page.png, id=533, 1715.40875pt x 917.4275pt>
 File: ./chapters/assets/profile_page.png Graphic file (type png)
 <use ./chapters/assets/profile_page.png>
 Package pdftex.def Info: ./chapters/assets/profile_page.png  used on input line 128.
@@ -1001,7 +947,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-<./chapters/assets/server_page.png, id=374, 1710.39pt x 919.435pt>
+<./chapters/assets/server_page.png, id=540, 1710.39pt x 919.435pt>
 File: ./chapters/assets/server_page.png Graphic file (type png)
 <use ./chapters/assets/server_page.png>
 Package pdftex.def Info: ./chapters/assets/server_page.png  used on input line 139.
@@ -1010,207 +956,108 @@ Package pdftex.def Info: ./chapters/assets/server_page.png  used on input line 1
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.143 
-       <./chapters/assets/profile_page.png>]
-Overfull \hbox (3.04588pt too wide) in paragraph at lines 147--148
-\T1/cmr/m/n/12 #0ba5ec) wyko-rzysty-wane m.in. w wykre-sach, przy-ciskach akcji oraz wska¹nikach post¦pu.
- []
-
-[37
+l.143 \noindent
+                Strona przedstawiona na Rys. 4.7 zawiera nastÄ™pujÄ…ce eleme... <./chapters/assets/profile_page.png>] [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 
+l.153 
        <./chapters/assets/server_page.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
-
+Overfull \hbox (1.68756pt too wide) in paragraph at lines 158--159
+\T1/ptm/m/n/12 wane na ry-sunku po-ni-»ej. W tym try-bie do-mi-nu-j¡-cym ko-lo-rem tªa jest gª¦-boka barwa granatowo-
  []
 
 
-Overfull \hbox (6.21408pt too wide) in paragraph at lines 167--169
-[]\T1/cmr/m/n/12 Efektywno±¢ en-er-gety-czna (w przy-padku ekranów OLED) W urz¡dzeni-ach z ekranami
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
  []
 
-
-Overfull \hbox (22.27516pt too wide) in paragraph at lines 176--177
-\T1/cmr/m/n/12 sz-ablon \T1/cmr/bx/n/12 TailAd-min\T1/cmr/m/n/12 , który dost¦pny jest pub-licznie na li-cencji \T1/cmr/bx/n/12 MIT\T1/cmr/m/n/12 . TailAd-min to nowoczesny
- []
-
-[38]
-Overfull \hbox (1.9082pt too wide) in paragraph at lines 184--185
-\T1/cmr/m/n/12 API stwor-zonym w tech-nologii Go. Dos-tosowanie sz-ablonu TailAd-min do wspóªpracy
- []
-
-[39] (./chapters/installationInstruction.tex
+[38] [39] (./chapters/installationInstruction.tex [40]
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
 
-Overfull \hbox (22.08293pt too wide) in paragraph at lines 14--15
-[]\T1/cmr/m/n/12 Program wyko-rzys-tuje stan-dar-d-owe bib-lioteki Go do ob-sªugi po-biera-nia plików (\T1/cmtt/m/n/12 net/http\T1/cmr/m/n/12 ),
+Overfull \hbox (27.64256pt too wide) in paragraph at lines 14--15
+[]\T1/ptm/m/n/12 Program wy-ko-rzy-stuje stan-dar-dowe bi-blio-teki Go do ob-sªugi po-bie-ra-nia pli-ków (\T1/pcr/m/n/12 net/http\T1/ptm/m/n/12 ),
  []
 
 
-Overfull \hbox (32.32503pt too wide) in paragraph at lines 14--15
-\T1/cmr/m/n/12 (\T1/cmtt/m/n/12 os/exec\T1/cmr/m/n/12 ). Dz-i¦ki temu dzi-aªa w peªni samodziel-nie, bez konieczno±ci in-stalowa-nia zewn¦trznych
+Overfull \hbox (37.42459pt too wide) in paragraph at lines 14--15
+\T1/ptm/m/n/12 roz-pa-ko-wy-wa-nia ar-chi-wów ZIP (\T1/pcr/m/n/12 archive/zip\T1/ptm/m/n/12 ) oraz uru-cha-mia-nia pro-ce-sów lo-kal-nych (\T1/pcr/m/n/12 os/exec\T1/ptm/m/n/12 ).
  []
 
-[40]) [41] [42] [43]) (./chapters/chapter5.tex [44]
-Chapter 5.
-
-Overfull \hbox (4.22206pt too wide) in paragraph at lines 20--21
-[]\T1/cmr/m/n/12 Przeprowadzenie testów jed-nos-tkowych umo»li-wiªo rozwój ser-wisu API bez konieczno±ci
- []
+[41]) [42] [43] [44]) (./chapters/chapter5.tex [45] [46]
+Rozdzia\l  5.
+[47
 
 
-Overfull \hbox (22.92155pt too wide) in paragraph at lines 20--21
-\T1/cmr/m/n/12 testowym uzyski-wa¢ odpowiedzi HTTP poprzez zwracanie staªych odpowiedzi bez konieczno±ci
- []
-
-[45
-
-] [46]
-<chapters/assets/wykres czasu odpowiedzi.png, id=444, 642.4pt x 481.8pt>
+] [48] [49]
+<chapters/assets/wykres czasu odpowiedzi.png, id=682, 642.4pt x 481.8pt>
 File: chapters/assets/wykres czasu odpowiedzi.png Graphic file (type png)
 <use chapters/assets/wykres czasu odpowiedzi.png>
-Package pdftex.def Info: chapters/assets/wykres czasu odpowiedzi.png  used on input line 55.
+Package pdftex.def Info: chapters/assets/wykres czasu odpowiedzi.png  used on input line 65.
 (pdftex.def)             Requested size: 409.71692pt x 307.2923pt.
-
-Overfull \hbox (8.24521pt too wide) in paragraph at lines 59--60
-[]\T1/cmr/m/n/12 Na powy»szym wykre-sie za-uwa»alna jest wzgl¦dna sta-bil-no±¢ ±red-niego czasu odpowiedzi
- []
-
-[47
+ [50
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.61 Z
-      a gÅ‚Ã³wnÄ… przyczynÄ™ wystÄ…pienia bÅ‚Ä™dÃ³w uznano ograniczenia wyda... <./chapters/assets/wykres czasu odpowiedzi.png>]
-Overfull \hbox (20.2512pt too wide) in paragraph at lines 61--62
-\T1/cmr/m/n/12 Do-datkowym czyn-nikiem byªa ogranic-zona liczba za-sobów przy-dzielona ap-likacji w ±rodowisku
+l.73 \textbf{Wnioski:}
+                       <./chapters/assets/wykres czasu odpowiedzi.png>] [51] [52]) (./chapters/chapter6.tex [53]
+Rozdzia\l  6.
+
+Overfull \hbox (18.22119pt too wide) in paragraph at lines 9--10
+[]\T1/ptm/m/n/12 Instrukcja in-sta-la-cji oraz uru-cho-mie-nia apli-ka-cji zo-staªa za-miesz-czona w pliku \T1/pcr/m/n/12 README.md
  []
 
 
-Overfull \hbox (3.12488pt too wide) in paragraph at lines 65--66
-[]\T1/cmr/m/n/12 Aplikacja dzi-aªa sta-bil-nie przy niskim i umi-arkowanym ob-ci¡»e-niu (do 300 równoczes-
+Overfull \hbox (0.58311pt too wide) in paragraph at lines 17--18
+[]\T1/ptm/m/n/12 Zaprojektowano oraz za-im-ple-men-to-wano bac-kend sys-temu przy u»y-ciu j¦-zyka Go. Dzi¦ki
  []
 
+[54
 
-Overfull \hbox (21.75447pt too wide) in paragraph at lines 83--84
-\T1/cmr/m/n/12 zabez-piecze«, aby za-po-biec nieau-to-ry-zowanemu dost¦powi, ma-nip-u-lacji danymi oraz wyciekom
+
+] [55] [56] [57]
+Overfull \hbox (5.5281pt too wide) in paragraph at lines 90--91
+\T1/ptm/m/n/12 Chocia» w pracy omó-wiono teo-re-tyczne aspekty bez-pie-cze«-stwa, mo»-liwe s¡ do-dat-kowe uspraw-
  []
 
-[48]
-Overfull \hbox (11.89095pt too wide) in paragraph at lines 103--104
-[]\T1/cmr/m/n/12 Aplikacja wyko-rzys-tuje to-ken JWT w nagªówkach, co re-dukuje ryzyko CSRF, poniewa»
- []
+[58]) [59] [60
 
 
-Overfull \hbox (8.80685pt too wide) in paragraph at lines 103--104
-\T1/cmr/m/n/12 brak ciasteczek sesyjnych elimin-uje mo»li-wo±¢ au-tomaty-cznego przesyªa-nia uwierzytel-
- []
+] (./main.lof [61])
+\tf@lof=\write6
+\openout6 = `main.lof'.
 
+ (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
 
-Overfull \hbox (9.22433pt too wide) in paragraph at lines 115--116
-[] []\T1/cmr/bx/n/12 5. Odporno±¢ na prze-ci¡»e-nie (DoS)[] \T1/cmr/m/n/12 W ra-mach testów wyda-jno±-ciowych przeprowad-
- []
-
-[49]
-Overfull \hbox (0.26277pt too wide) in paragraph at lines 125--126
-[]\T1/cmr/m/n/12 Wdro»enie peªnych testów pen-e-tra-cyjnych (np. z u»y-ciem Burp Suite [[][]8[][]] lub OWASP
- []
-
-) (./chapters/chapter6.tex [50]
-Chapter 6.
-
-Overfull \hbox (4.4274pt too wide) in paragraph at lines 5--6
-\T1/cmr/m/n/12 likacji umo»li-wia-j¡cej ad-min-is-tra-torom zarz¡dzanie usªugami sys-te-mowymi, mon-i-torowanie
- []
-
-
-Overfull \hbox (10.12872pt too wide) in paragraph at lines 9--10
-[]\T1/cmr/m/n/12 Instrukcja in-sta-lacji oraz uru-chomienia ap-likacji zostaªa za-mieszc-zona w pliku \T1/cmtt/m/n/12 README.md
- []
-
-
-Overfull \hbox (8.95287pt too wide) in paragraph at lines 19--20
-[]\T1/cmr/m/n/12 Stworzono kom-pletne REST API umo»li-wia-j¡ce zarz¡dzanie u»ytkown-ikami, usªugami
- []
-
-
-Overfull \hbox (4.28134pt too wide) in paragraph at lines 19--20
-\T1/cmr/m/n/12 oraz mon-i-torowanie parametrów sys-te-mowych. API zostaªo za-pro-jek-towane w sposób
- []
-
-[51
-
-]
-Overfull \hbox (1.46489pt too wide) in paragraph at lines 27--28
-\T1/cmr/m/n/12 warto in-strukcj¦ in-sta-lacji, kon-fig-u-racji i uru-chomienia sys-temu zarówno na lokalnych
- []
-
-[52]
-Overfull \hbox (3.61433pt too wide) in paragraph at lines 50--51
-[]\T1/cmr/m/n/12 Wprowadzenie funkcjon-al-no±ci cache'owania danych, aby zm-niejszy¢ ob-ci¡»e-nie back-
- []
-
-[53]
-Overfull \hbox (18.2192pt too wide) in paragraph at lines 65--66
-[]\T1/cmr/bx/n/12 Harmonogramowanie zada« \T1/cmr/m/n/12 ^^U funkcja umo»li-wia-j¡ca ad-min-is-tra-torom za-planowanie
- []
-
-[54]
-Overfull \hbox (11.76945pt too wide) in paragraph at lines 92--93
-[]\T1/cmr/bx/n/12 Wdro»enie uwierzytel-ni-a-nia wieloskªad-nikowego (MFA) \T1/cmr/m/n/12 ^^U zwi¦k-sze-nie poziomu
- []
-
-
-Overfull \hbox (4.12833pt too wide) in paragraph at lines 100--101
-\T1/cmr/m/n/12 W celu zwi¦k-szenia u»yteczno±ci sys-temu warto rozwa»y¢ jego in-te-gracj¦ z in-nymi rozwi¡za-
- []
-
-[55]) [56]
-Overfull \hbox (0.18889pt too wide) in paragraph at lines 63--63
-[]\T1/cmr/m/n/12 Home-Assistant Fo-rum. \T1/cmr/m/it/12 Zu»y-cie pr¡du przez urz¡dze-nie Rasp-berry Pi 5\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https :
- []
-
-
-Overfull \hbox (11.06296pt too wide) in paragraph at lines 63--63
-[]\T1/cmr/m/n/12 NTFY. \T1/cmr/m/it/12 NTFY Doc-u-men-ta-tion\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / ntfy . sh / docs/$[][]\T1/cmr/m/n/12 . (ac-cessed: 02.02.2025). 
- []
-
-
-Overfull \hbox (7.78423pt too wide) in paragraph at lines 63--63
-[]\T1/cmr/m/n/12 Maciej Ton-der-ski. \T1/cmr/m/it/12 NestOpsV2\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 https : / / github . com / McTonderski / NestOpsV2$[][]\T1/cmr/m/n/12 .
- []
-
-[57
-
-] (./main.aux)
+ [62] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7E173551E06718C3210A73310C21D48;4623.
+(rerunfilecheck)             Checksum: 410E05ED396D43295C21A53DC672D885;4865.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19373 strings out of 474116
- 335055 string characters out of 5743682
- 1938187 words of memory out of 5000000
- 41332 multiletter control sequences out of 15000+600000
- 569766 words of font info for 58 fonts, out of 8000000 for 9000
+ 21587 strings out of 474116
+ 369043 string characters out of 5743682
+ 2088187 words of memory out of 5000000
+ 43267 multiletter control sequences out of 15000+600000
+ 591214 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,81p,1277b,1301s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (58 pages, 4424924 bytes).
+ 75i,12n,81p,1277b,2118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (63 pages, 4302128 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 510 compressed objects within 6 object streams
- 181 named destinations out of 1000 (max. 500000)
+ 922 PDF objects out of 1000 (max. 8388607)
+ 816 compressed objects within 9 object streams
+ 417 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 

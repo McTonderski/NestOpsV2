@@ -19,7 +19,7 @@ W ramach realizacji pracy magisterskiej osiągnięto szereg istotnych rezultató
     \item Stworzono kompletne REST API umożliwiające zarządzanie użytkownikami, usługami oraz monitorowanie parametrów systemowych. API zostało zaprojektowane w sposób modularny i rozszerzalny.
     \item Wdrożono mechanizmy uwierzytelniania i autoryzacji użytkowników z wykorzystaniem JWT. System obsługuje różne poziomy uprawnień oraz zabezpiecza dostęp do krytycznych funkcjonalności.
     \item Zaimplementowano funkcjonalności administracyjne obejmujące dodawanie, edytowanie, usuwanie i przeglądanie użytkowników z poziomu panelu administratora.
-    \item Umożliwiono rejestrowanie i zarządzanie usługami systemowymi – uruchamianie, zatrzymywanie oraz monitorowanie ich stanu w czasie rzeczywistym.
+    \item Umożliwiono rejestrowanie i zarządzanie usługami systemowymi - uruchamianie, zatrzymywanie oraz monitorowanie ich stanu w czasie rzeczywistym.
     \item Zintegrowano backend z systemem operacyjnym w zakresie kontroli nad aktywnymi usługami systemowymi i dostępem do danych o zużyciu zasobów (RAM, CPU, dysk).
     \item Przeprowadzono testy wydajnościowe z użyciem narzędzia Ddosify, które wykazały odporność aplikacji na duże obciążenia oraz pomogły zidentyfikować krytyczne momenty wymagające optymalizacji.
     \item Zrealizowano testy bezpieczeństwa, w tym odporności na ataki typu brute-force, dostęp nieautoryzowany, SQL Injection oraz Cross-Site Scripting, potwierdzając bezpieczeństwo podstawowych mechanizmów aplikacji.
@@ -35,7 +35,7 @@ Na podstawie przeprowadzonych badań, testów oraz implementacji można sformuł
 
 \begin{itemize}
     \item Połączenie języka Go w warstwie backendu oraz szablonu TailAdmin w warstwie frontendowej pozwala na szybkie tworzenie aplikacji o wysokiej wydajności i przejrzystym interfejsie użytkownika.
-    \item Architektura systemu została zaprojektowana w sposób umożliwiający jego łatwą rozbudowę – zarówno poprzez dodawanie nowych endpointów API, jak i integrację z zewnętrznymi usługami.
+    \item Architektura systemu została zaprojektowana w sposób umożliwiający jego łatwą rozbudowę - zarówno poprzez dodawanie nowych endpointów API, jak i integrację z zewnętrznymi usługami.
     \item Testy wydajnościowe ujawniły, że system dobrze radzi sobie z typowym obciążeniem, jednak należy zwrócić uwagę na ograniczenia wynikające z zastosowania SQLite, szczególnie przy dużej liczbie jednoczesnych operacji zapisu.
     \item Mechanizmy bezpieczeństwa wdrożone w systemie (autoryzacja JWT, kontrola ról, odporność na podstawowe ataki webowe) są wystarczające na etapie prototypowania, jednak wymagają dalszej rozbudowy przed wdrożeniem produkcyjnym.
 \end{itemize}
@@ -47,7 +47,7 @@ W przyszłości system może zostać rozszerzony o:
     \item Rozszerzenie API o nowe funkcjonalności, takie jak integracja z narzędziami CI/CD, mechanizmy webhooków, czy eksport danych do zewnętrznych systemów.
     \item Zastosowanie bazy danych wspierającej jednoczesne zapisy (np. PostgreSQL) dla zwiększenia skalowalności.
     \item Integrację z narzędziami monitorującymi (np. Prometheus, Grafana) i systemami SIEM w celu zwiększenia widoczności operacyjnej i poziomu bezpieczeństwa.
-    \item Wprowadzenie funkcjonalności cache’owania danych, aby zmniejszyć obciążenie backendu i przyspieszyć odpowiedzi aplikacji.
+    \item Wprowadzenie funkcjonalności cache'owania danych, aby zmniejszyć obciążenie backendu i przyspieszyć odpowiedzi aplikacji.
     \item Wdrożenie mechanizmów uwierzytelniania wieloskładnikowego (MFA) oraz integrację z zewnętrznymi systemami tożsamości (np. LDAP, OAuth).
 \end{itemize}
 
@@ -61,50 +61,47 @@ Opracowany system zarządzania usługami i monitorowania serwera został zaproje
 \subsection{Rozszerzenie funkcjonalności zarządzania usługami}
 Jednym z kluczowych aspektów rozwoju systemu jest zwiększenie możliwości zarządzania usługami. W obecnej wersji administratorzy mogą rejestrować, uruchamiać, zatrzymywać i monitorować usługi. Można jednak wprowadzić dodatkowe funkcjonalności, takie jak:
 \begin{itemize}
-    \item \textbf{Automatyczna rekonfiguracja usług} – możliwość dynamicznego dostosowywania parametrów działania usług na podstawie monitorowanych wskaźników wydajności,
-    \item \textbf{Harmonogramowanie zadań} – funkcja umożliwiająca administratorom zaplanowanie uruchamiania lub restartowania usług w określonych przedziałach czasowych,
-    \item \textbf{Rejestrowanie logów systemowych} – pełna historia zmian w stanie usług wraz z integracją z narzędziami do analizy logów (np. ELK Stack),
-    \item \textbf{Automatyczna naprawa błędów} – system wykrywania i samonaprawy usług w przypadku wykrycia awarii.
+    \item \textbf{Automatyczna rekonfiguracja usług} - możliwość dynamicznego dostosowywania parametrów działania usług na podstawie monitorowanych wskaźników wydajności,
+    \item \textbf{Harmonogramowanie zadań} - funkcja umożliwiająca administratorom zaplanowanie uruchamiania lub restartowania usług w określonych przedziałach czasowych,
+    \item \textbf{Rejestrowanie logów systemowych} - pełna historia zmian w stanie usług wraz z integracją z narzędziami do analizy logów (np. ELK Stack),
+    \item \textbf{Automatyczna naprawa błędów} - system wykrywania i samonaprawy usług w przypadku wykrycia awarii.
 \end{itemize}
 
 \subsection{Zaawansowane mechanizmy monitorowania}
 Obecnie system pozwala na podstawowe monitorowanie wykorzystania CPU, pamięci RAM oraz aktywnych usług. Możliwości dalszego rozwoju obejmują:
 \begin{itemize}
-    \item \textbf{Monitorowanie wykorzystania sieci} – analiza ruchu sieciowego generowanego przez poszczególne usługi,
+    \item \textbf{Monitorowanie wykorzystania sieci} - analiza ruchu sieciowego generowanego przez poszczególne usługi,
     \item \textbf{Alerty i powiadomienia} – implementacja powiadomień o przekroczeniu krytycznych wartości obciążenia systemu (NTFY \cite{NTFY}, Slack \cite{Slack}, Telegram \cite{Telegram}),
     \item \textbf{Predykcja awarii} – zastosowanie algorytmów uczenia maszynowego do przewidywania potencjalnych awarii na podstawie analizy historycznych danych,
-    \item \textbf{Dashboard w czasie rzeczywistym} – interaktywna wizualizacja danych systemowych z aktualizacją w czasie rzeczywistym,
-    \item \textbf{Integracja z Prometheus i Grafana} – zaawansowane narzędzia monitorowania umożliwiające gromadzenie metryk i ich wizualizację.
+    \item \textbf{Dashboard w czasie rzeczywistym} - interaktywna wizualizacja danych systemowych z aktualizacją w czasie rzeczywistym,
+    \item \textbf{Integracja z Prometheus i Grafana} - zaawansowane narzędzia monitorowania umożliwiające gromadzenie metryk i ich wizualizację.
 \end{itemize}
 
 \subsection{Optymalizacja wydajności systemu}
 Testy wydajnościowe wykazały, że system działa sprawnie, ale jego dalszy rozwój może skupić się na:
 \begin{itemize}
-    \item \textbf{Implementacji cache'owania danych} – redukcja liczby zapytań do bazy danych i API poprzez zastosowanie Redis lub dekoratora cache,
-    \item \textbf{Asynchronicznego przetwarzania operacji} – wdrożenie systemu kolejkowania zadań (np. Celery) dla długotrwałych operacji,
-    \item \textbf{Load Balancing} – równoważenie obciążenia poprzez podział ruchu między wiele instancji serwera API,
-    \item \textbf{Obsługa kontenerów} – rozszerzenie systemu o pełne zarządzanie kontenerami Docker, w tym automatyczne skalowanie usług w zależności od obciążenia.
+    \item \textbf{Implementacji cache'owania danych} - redukcja liczby zapytań do bazy danych i API poprzez zastosowanie Redis lub dekoratora cache,
+    \item \textbf{Asynchronicznego przetwarzania operacji} - wdrożenie systemu kolejkowania zadań (np. Celery) dla długotrwałych operacji,
+    \item \textbf{Load Balancing} - równoważenie obciążenia poprzez podział ruchu między wiele instancji serwera API,
+    \item \textbf{Obsługa kontenerów} - rozszerzenie systemu o pełne zarządzanie kontenerami Docker, w tym automatyczne skalowanie usług w zależności od obciążenia.
 \end{itemize}
 
 \subsection{Zaawansowane mechanizmy bezpieczeństwa}
 Chociaż w pracy omówiono teoretyczne aspekty bezpieczeństwa, możliwe są dodatkowe usprawnienia:
 \begin{itemize}
-    \item \textbf{Wdrożenie uwierzytelniania wieloskładnikowego (MFA)} – zwiększenie poziomu bezpieczeństwa użytkowników,
-    \item \textbf{Rozszerzone uprawnienia użytkowników} – możliwość nadawania niestandardowych ról z precyzyjnie określonymi uprawnieniami,
-    \item \textbf{Audyt logów i analiza zachowań} – monitorowanie aktywności użytkowników oraz automatyczne wykrywanie podejrzanych działań,
-    \item \textbf{Automatyczne skanowanie podatności} – integracja z narzędziami do analizy bezpieczeństwa, np. OWASP ZAP czy Nessus,
-    \item \textbf{Szyfrowanie danych wrażliwych} – wdrożenie szyfrowania kluczowych danych przechowywanych w systemie.
+    \item \textbf{Wdrożenie uwierzytelniania wieloskładnikowego (MFA)} - zwiększenie poziomu bezpieczeństwa użytkowników,
+    \item \textbf{Rozszerzone uprawnienia użytkowników} - możliwość nadawania niestandardowych ról z precyzyjnie określonymi uprawnieniami,
+    \item \textbf{Audyt logów i analiza zachowań} - monitorowanie aktywności użytkowników oraz automatyczne wykrywanie podejrzanych działań,
+    \item \textbf{Automatyczne skanowanie podatności} - integracja z narzędziami do analizy bezpieczeństwa, np. OWASP ZAP czy Nessus,
+    \item \textbf{Szyfrowanie danych wrażliwych} - wdrożenie szyfrowania kluczowych danych przechowywanych w systemie.
 \end{itemize}
 
 \subsection{Integracja z innymi systemami}
 W celu zwiększenia użyteczności systemu warto rozważyć jego integrację z innymi rozwiązaniami IT, np.:
 \begin{itemize}
-    \item \textbf{Integracja z Active Directory / LDAP} – centralne zarządzanie użytkownikami i uprawnieniami,
-    \item \textbf{Integracja z systemami DevOps} – połączenie z narzędziami CI/CD (Jenkins, GitHub Actions) w celu automatyzacji wdrożeń,
-    \item \textbf{API publiczne} – umożliwienie innym systemom korzystania z funkcjonalności poprzez bezpieczne, udokumentowane API,
-    \item \textbf{Obsługa wielu serwerów} – rozbudowa systemu do zarządzania wieloma maszynami w ramach jednej platformy,
-    \item \textbf{Integracja z chmurą} – możliwość wdrożenia systemu w chmurach publicznych (AWS, Azure, GCP) i zarządzania zasobami.
+    \item \textbf{Integracja z Active Directory / LDAP} - centralne zarządzanie użytkownikami i uprawnieniami,
+    \item \textbf{Integracja z systemami DevOps} - połączenie z narzędziami CI/CD (Jenkins, GitHub Actions) w celu automatyzacji wdrożeń,
+    \item \textbf{API publiczne} - umożliwienie innym systemom korzystania z funkcjonalności poprzez bezpieczne, udokumentowane API,
+    \item \textbf{Obsługa wielu serwerów} - rozbudowa systemu do zarządzania wieloma maszynami w ramach jednej platformy,
+    \item \textbf{Integracja z chmurą} - możliwość wdrożenia systemu w chmurach publicznych (AWS, Azure, GCP) i zarządzania zasobami.
 \end{itemize}
-
-\subsection{Podsumowanie}
-Proponowane kierunki rozwoju pokazują szerokie możliwości dalszej rozbudowy systemu. Obecna wersja stanowi solidną bazę do wprowadzania nowych funkcjonalności, zarówno pod kątem optymalizacji działania, jak i zwiększenia bezpieczeństwa oraz zakresu zastosowań. W przyszłości system może ewoluować w kierunku kompleksowego narzędzia do zarządzania infrastrukturą IT, łącząc aspekty monitorowania, automatyzacji i bezpieczeństwa w jednym rozwiązaniu. Dzięki elastycznej architekturze opartej na API wykonanym w GO GIN oraz szablonu frontendu TailAdmin, aplikacja jest gotowa na integrację z innymi systemami i dalszy rozwój w zależności od potrzeb użytkowników.

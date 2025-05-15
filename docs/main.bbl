@@ -37,7 +37,7 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 10.05.2025)}
+      \field{addendum}{(odwiedzono: 10.05.2025)}
       \field{title}{Tail Admin Docs}
       \verb{urlraw}
       \verb https://tailadmin.com/docs
@@ -46,6 +46,32 @@
       \verb https://tailadmin.com/docs
       \endverb
       \keyw{tailadmin,admin,dashboard,frontend}
+    \endentry
+    \entry{CasaOS}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1b8eb55acf0a271d8841bf0387de6bfd}{%
+           family={CasaOS},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \strng{fullhash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \strng{bibnamehash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \strng{authorbibnamehash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \strng{authornamehash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \strng{authorfullhash}{1b8eb55acf0a271d8841bf0387de6bfd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(odwiedzono: 11.05.2025)}
+      \field{title}{CasaOS Documentation}
+      \verb{urlraw}
+      \verb https://casaos.zimaspace.com/
+      \endverb
+      \verb{url}
+      \verb https://casaos.zimaspace.com/
+      \endverb
+      \keyw{casaos,homelab,os}
     \endentry
     \entry{Docker}{online}{}
       \name{author}{1}{}{%
@@ -63,7 +89,7 @@
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Docker Documentation}
       \verb{urlraw}
       \verb https://docs.docker.com
@@ -91,7 +117,7 @@
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 11.05.2025)}
+      \field{addendum}{(odwiedzono: 11.05.2025)}
       \field{title}{Zużycie prądu przez urządzenie Raspberry Pi 5}
       \verb{urlraw}
       \verb https://community.home-assistant.io/t/raspberry-pi-5/619702/26?page=2
@@ -100,6 +126,32 @@
       \verb https://community.home-assistant.io/t/raspberry-pi-5/619702/26?page=2
       \endverb
       \keyw{rpi,rpi5,raspberry Pi,power}
+    \endentry
+    \entry{Actions}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(odwiedzono: 11.05.2025)}
+      \field{title}{GitHub Actions}
+      \verb{urlraw}
+      \verb https://github.com/features/actions
+      \endverb
+      \verb{url}
+      \verb https://github.com/features/actions
+      \endverb
+      \keyw{github,actions,ci,cd}
     \endentry
     \entry{Kubernetes}{online}{}
       \name{author}{1}{}{%
@@ -117,7 +169,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Kubernetes Documentation}
       \verb{urlraw}
       \verb https://kubernetes.io/docs/
@@ -143,7 +195,7 @@
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{NTFY Documentation}
       \verb{urlraw}
       \verb https://ntfy.sh/docs/
@@ -169,7 +221,7 @@
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{OpenStack Documentation}
       \verb{urlraw}
       \verb https://docs.openstack.org
@@ -195,7 +247,7 @@
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 10.05.2025)}
+      \field{addendum}{(odwiedzono: 10.05.2025)}
       \field{title}{OWASP ZAP Documentation}
       \verb{urlraw}
       \verb https://www.zaproxy.org
@@ -221,7 +273,7 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 10.05.2025)}
+      \field{addendum}{(odwiedzono: 10.05.2025)}
       \field{title}{Burp Suite Documentation}
       \verb{urlraw}
       \verb https://portswigger.net/burp
@@ -247,7 +299,7 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Proxmox Documentation}
       \verb{urlraw}
       \verb https://pve.proxmox.com/wiki/Main_Page
@@ -273,7 +325,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Slack API Documentation}
       \verb{urlraw}
       \verb https://api.slack.com/docs
@@ -282,6 +334,32 @@
       \verb https://api.slack.com/docs
       \endverb
       \keyw{slack,communication,api}
+    \endentry
+    \entry{Tailscale}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bda11f067c057c66428afee52f963f1f}{%
+           family={Tailscale},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{bda11f067c057c66428afee52f963f1f}
+      \strng{fullhash}{bda11f067c057c66428afee52f963f1f}
+      \strng{bibnamehash}{bda11f067c057c66428afee52f963f1f}
+      \strng{authorbibnamehash}{bda11f067c057c66428afee52f963f1f}
+      \strng{authornamehash}{bda11f067c057c66428afee52f963f1f}
+      \strng{authorfullhash}{bda11f067c057c66428afee52f963f1f}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(odwiedzono: 11.05.2025)}
+      \field{title}{Tailscale Install Guide}
+      \verb{urlraw}
+      \verb https://tailscale.com/kb/1017/install
+      \endverb
+      \verb{url}
+      \verb https://tailscale.com/kb/1017/install
+      \endverb
+      \keyw{tailscale,networking,vpn}
     \endentry
     \entry{Telegram}{online}{}
       \name{author}{1}{}{%
@@ -299,7 +377,7 @@
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Telegram Bot API Documentation}
       \verb{urlraw}
       \verb https://core.telegram.org/bots/api
@@ -327,7 +405,7 @@
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 11.05.2025)}
+      \field{addendum}{(odwiedzono: 11.05.2025)}
       \field{title}{NestOpsV2}
       \verb{urlraw}
       \verb https://github.com/McTonderski/NestOpsV2
@@ -353,7 +431,7 @@
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{TrueNAS Documentation}
       \verb{urlraw}
       \verb https://www.truenas.com/docs/
@@ -379,7 +457,7 @@
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(accessed: 02.02.2025)}
+      \field{addendum}{(odwiedzono: 02.02.2025)}
       \field{title}{Unraid Documentation}
       \verb{urlraw}
       \verb https://docs.unraid.net
@@ -390,7 +468,6 @@
       \keyw{unraid,nas,virtualization}
     \endentry
   \enddatalist
-  \missing{CasaOS}
 \endrefsection
 \endinput
 

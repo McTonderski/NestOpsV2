@@ -1,0 +1,19 @@
+\babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat architektury działania i komunikacji wewnątrz stworzonego systemu.}}{19}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram przepływu danych w systemie HomeLab.}}{20}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mapa sieci HomeLaba z uwzględnieniem kluczowych komponentów i połączeń.}}{23}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Schemat procesu CI/CD od momentu zatwierdzenia zmiany aż do utworzenia wydania.}}{26}{figure.3.4}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schemat architektury API aplikacji HomeNest.}}{29}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Strona główna aplikacji Homelab.}}{33}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Strona logowania do serwisu wyświetlająca logo oraz pola do wprowadzenia danych logowania}}{34}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Strona Rejestracji do serwisu wyświetlająca logo oraz pola do wprowadzenia danych rejestracji}}{34}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Podstrona aplikacji odpowiedzialna za wyświetlanie stanu obecnie uruchomionych aplikacji, pozwalająca na ich zarządzanie oraz przekierowująca użytkownika do serwisu.}}{35}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Podstrona aplikacji odpowiedzialna za wyświetlanie stanu obecnie uruchomionych aplikacji, pozwalająca na ich zarządzanie oraz przekierowująca użytkownika do serwisu.}}{36}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Podstrona wyświetlająca informacje o stanie serwera, jego zasobach oraz umożliwiająca zarządzanie nimi.}}{37}{figure.4.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Średni czas odpowiedzi API w zależności od liczby żądań}}{50}{figure.5.1}%
+\addvspace {10\p@ }

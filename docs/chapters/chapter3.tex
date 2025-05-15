@@ -4,6 +4,8 @@
 
 \subsection{Wymagania funkcjonalne}
 
+Wymagania funkcjonalne określają konkretne działania, funkcje lub usługi, które system powinien realizować z punktu widzenia użytkownika końcowego. Obejmują one zachowania systemu w odpowiedzi na dane wejściowe oraz interakcje z użytkownikiem, np. możliwość logowania, zarządzania usługami czy monitorowania zasobów.
+
 \begin{enumerate}
     \item \textbf{Zarządzanie kontenerami} - możliwość konfigurowania i zarządzania kontenerami Docker w systemie, z planowaną możliwością rozszerzenia o maszyny wirtualne w przyszłości.
     \item \textbf{Panel administracyjny} - intuicyjny interfejs użytkownika stworzony przy pomocy szablonu TailAdmin\cite{TailAdmin}, umożliwiający zarządzanie zasobami systemu oraz usługami uruchamianymi w kontenerach.
@@ -18,6 +20,8 @@
 \end{enumerate}
 
 \subsection{Wymagania niefunkcjonalne}
+
+Wymagania niefunkcjonalne natomiast odnoszą się do cech jakościowych systemu, takich jak wydajność, bezpieczeństwo, skalowalność czy łatwość utrzymania. Nie definiują one konkretnych funkcji, ale określają standardy, jakie system musi spełniać w różnych warunkach działania.
 
 \begin{enumerate}
     \item \textbf{Niski pobór energii} - system wdrażany jest na platformie Raspberry Pi 5, która cechuje się niskim zużyciem energii przy zachowaniu odpowiedniej wydajności. W stanie bezczynności urządzenie zużywa średnio 4-5 W \cite{RaspberryPiPowerConsumption}, natomiast podczas pełnego obciążenia zapotrzebowanie może wzrosnąć do około 12 W. Zalecane jest zasilanie 5V przy 5A (25 W), co gwarantuje stabilność działania, szczególnie podczas intensywnych operacji takich jak uruchamianie systemu czy dekodowanie wideo. Typowe zużycie prądu w trybie aktywnym wynosi około 0.8 A, a podczas rozruchu lub odtwarzania multimediów może chwilowo wzrosnąć do 1.2 A. Dzięki takim parametrom Raspberry Pi 5 stanowi idealną bazę do uruchamiania domowych systemów serwerowych przy zachowaniu niskich kosztów eksploatacji.
@@ -38,14 +42,13 @@
 System HomeLab został zaprojektowany jako aplikacja umożliwiająca zarządzanie kontenerami Docker poprzez backend zrealizowany w języku Go, z frontendem opartym o TailAdmin oraz bazą danych SQLite. Architektura przewiduje możliwość przyszłej rozbudowy o funkcjonalność zarządzania maszynami wirtualnymi.
 
 System HomeLab składa się z kilku kluczowych komponentów:
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{./chapters/mermeid/schemat_architektury_updated.png}
+    \includegraphics[width=0.8\textwidth]{./chapters/mermeid/schemat_architektury_updated.png}
     \caption{Schemat architektury działania i komunikacji wewnątrz stworzonego systemu.}
     \label{fig:architecture_app}
   \end{figure}
-
+Rysunek 3.1 przedstawia ogólną architekturę systemu HomeLab, ukazującą zależności pomiędzy jego głównymi komponentami. Użytkownik uzyskuje dostęp do systemu poprzez interfejs oparty na Next.js i TailAdmin. Interfejs ten komunikuje się z backendem napisanym w języku Go, który realizuje logikę biznesową oraz zarządza systemem operacyjnym i kontenerami Docker. Dane konfiguracyjne przechowywane są w bazie SQLite. System umożliwia zdalny dostęp dzięki integracji z Tailscale (VPN) oraz DuckDNS (dynamiczny DNS). Całość uruchamiana jest na platformie Raspberry Pi 5, co zapewnia niskie zużycie energii i niski koszt utrzymania.
 \subsection{Diagram przepływu danych}
 W celu lepszego zrozumienia interakcji pomiędzy komponentami systemu, poniżej przedstawiono diagram przepływu danych ilustrujący komunikację pomiędzy frontendem, backendem, bazą danych oraz zewnętrznymi usługami:
 \begin{figure}[H]
@@ -54,6 +57,8 @@ W celu lepszego zrozumienia interakcji pomiędzy komponentami systemu, poniżej 
     \caption{Diagram przepływu danych w systemie HomeLab.}
     \label{fig:data_flow}
 \end{figure}
+
+Rysunek 3.2 przedstawia przepływ danych oraz interakcje pomiędzy głównymi komponentami systemu HomeLab. Użytkownik komunikuje się z interfejsem frontendowym (TailAdmin), który z kolei wykonuje żądania HTTP do API opartego na backendzie napisanym w Go z wykorzystaniem frameworka Gin. Backend odpowiada za obsługę logiki biznesowej, zarządzanie kontenerami Docker, wykonywanie operacji na bazie danych SQLite oraz odczyt parametrów systemu operacyjnego. Informacje o stanie systemu są pobierane przy użyciu narzędzi CLI, takich jak \texttt{df}, \texttt{free}, \texttt{top} oraz \texttt{speedtest}, a następnie zapisywane w bazie danych lub zwracane do interfejsu użytkownika.
 
 \subsection{Backend (Go + SQLite)}
 \begin{itemize}
@@ -64,7 +69,7 @@ W celu lepszego zrozumienia interakcji pomiędzy komponentami systemu, poniżej 
 \end{itemize}
 
 \textbf{Przykładowy fragment kodu CLI w Go odpowiedzialny za start kontenera:}
-\begin{verbatim}
+\begin{lstlisting}
 package main
 
 import (
@@ -87,7 +92,7 @@ func main() {
         fmt.Println(err)
     }
 }
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Frontend (TailAdmin)}
 \begin{itemize}
@@ -98,7 +103,7 @@ func main() {
 \end{itemize}
 
 \textbf{Przykładowy fragment kodu React/JSX używanego do pobrania danych systemowych:}
-\begin{verbatim}
+\begin{lstlisting}
 import React, { useEffect, useState } from 'react';
 
 function SystemStatus() {
@@ -124,7 +129,7 @@ function SystemStatus() {
 }
 
 export default SystemStatus;
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Warstwa sieciowa}
 \begin{itemize}
@@ -142,16 +147,16 @@ Aby lepiej zobrazować środowisko, w którym działa system HomeLab, przedstawi
 \end{figure}
 \textbf{Przykładowa konfiguracja Tailscale z urządzeniem:}
 
-\begin{verbatim}
+\begin{lstlisting}
 # Instalacja Tailscale na Raspberry Pi
 curl -fsSL https://tailscale.com/install.sh | sh
 
 # Uruchomienie i logowanie do sieci Tailscale
 sudo tailscale up --authkey tskey-xxxxxxxxxxxx
 
-# Sprawdzenie statusu połączenia
+# Sprawdzenie statusu polaczenia
 tailscale status
-\end{verbatim}
+\end{lstlisting}
 
 Konfiguracja umożliwia urządzeniu automatyczne połączenie się z siecią VPN Tailscale, co pozwala na bezpieczny dostęp zdalny do usług HomeLab bez konieczności konfiguracji przekierowań portów.
 
@@ -171,7 +176,7 @@ Konfiguracja umożliwia urządzeniu automatyczne połączenie się z siecią VPN
 \end{itemize}
 
 \textbf{Przykładowy plik `.github/workflows/build.yml`:}
-\begin{verbatim}
+\begin{lstlisting}
 name: Build and Test
 
 on:
@@ -215,22 +220,21 @@ jobs:
         tag_name: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-\end{verbatim}
-
+\end{lstlisting}
 \subsection{Wizualizacja procesu CI/CD}
 Dla pełnego zrozumienia cyklu automatyzacji wdrożenia systemu, przedstawiono uproszczony wykres przepływu operacji CI/CD:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{./chapters/mermeid/schematcicd.png}
+    \includegraphics[width=0.90\textwidth]{./chapters/mermeid/schematcicd.png}
     \caption{Schemat procesu CI/CD od momentu zatwierdzenia zmiany aż do utworzenia wydania.}
     \label{fig:ci_cd_pipeline}
 \end{figure}
 
+Diagram przedstawia proces automatyzacji CI/CD zastosowany w projekcie HomeLab. Cały proces rozpoczyna się od zatwierdzenia zmian w repozytorium GitHub, co uruchamia mechanizm testów jednostkowych oraz analizę statyczną kodu (linter). Następnie aplikacja jest budowana - zarówno frontend, backend, jak i instalator. Po zakończeniu kompilacji instalator zostaje spakowany, a całość publikowana w formie GitHub Release. Użytkownik końcowy może następnie pobrać instalator, który automatycznie pobierze najnowsze wersje komponentów z GitHuba i zainstaluje je lokalnie.
+
 \subsection{Urządzenie docelowe}
 
 System docelowo uruchamiany jest na urządzeniu Raspberry Pi 5, które zapewnia odpowiednią wydajność przy bardzo niskim zużyciu energii. Dzięki temu możliwe jest ciągłe działanie systemu w warunkach domowych, przy minimalnych kosztach utrzymania.
-
-
 \section{Technologie i narzędzia uzyte w systemie}
 
 System HomeLab wykorzystuje następujące technologie:
@@ -261,6 +265,3 @@ System HomeLab wykorzystuje następujące technologie:
 \end{itemize}
 
 Dzięki zastosowaniu powyzszych technologii system Homelab będzie nowoczesnym, skalowalnym i energooszczędnym rozwiązaniem dla uzytkowników domowych.
-
-\section{Podsumowanie rozdziału}
-W tym rozdziale szczegółowo opisano architekturę systemu HomeLab, komponenty techniczne oraz dobór technologii. Przedstawiono również sposób automatyzacji procesu wdrożenia. Na bazie tych informacji możliwa jest dalsza analiza procesu implementacji, omówiona w kolejnym rozdziale.

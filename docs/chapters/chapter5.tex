@@ -1,4 +1,4 @@
-\chapter{Testowanie i analiza systemu}
+\chapter{Analiza efektywności i bezpieczeństwa systemu}
 
 \section{Testy jednostkowe i integracyjne}
 Testowanie oprogramowania jest kluczowym elementem zapewnienia jego jakości, stabilności i niezawodności. W ramach niniejszej pracy zastosowano zarówno testy jednostkowe, jak i testy integracyjne w celu weryfikacji poprawności działania poszczególnych modułów systemu oraz ich wzajemnych interakcji.
@@ -19,7 +19,17 @@ Wszystkie testy jednostkowe zostały zautomatyzowane i uruchamiane w ramach proc
 
 Przeprowadzenie testów jednostkowych umożliwiło rozwój serwisu API bez konieczności posiadania gotowego rozwiązania frontend. Dzięki czemu od samego początku możliwa była weryfikacja oraz wychwycenie błędów logicznych w aplikacji. Takie podejście umożliwia szybki rozwój programu bez obawy o działanie pojedynczych metod i funkcji. Testy jednostkowe nie weryfikują całości działania aplikacji a jedynie indywidualnie jej najmniejsze komponenty. Należy mieć na uwadze, że zgodnie ze sztuką testy jednostkowe powinny nie być zależne od innych metod i funkcji a jeśli dana funkcja lub metoda posiada taką zależność należy ją zasymulować w kodzie poprzez stosowanie tzw. \textbf{Mocków}. Jest to nic innego jak symulowanie działania innej funkcji. Umożliwia ono np. w środowisku testowym uzyskiwać odpowiedzi HTTP poprzez zwracanie stałych odpowiedzi bez konieczności wykonywania zapytań HTTP. Pozwala na integrację z plikami bez fizycznej manipulacji plików. Testy jednostkowe to podstawowy element procesu sprawdzania poprawności oprogramowania. Testów tych powinno być najwięcej zgodnie z paradygmem \textbf{Shift Left}.
 
-\section{Testy wydajnościowe i bezpieczeństwa}
+
+\subsection{Testy integracyjne}
+Testy integracyjne koncentrują się na weryfikacji współpracy między różnymi komponentami systemu. Ich celem jest zapewnienie, że poszczególne moduły działają poprawnie w połączeniu z innymi oraz że komunikacja między nimi przebiega zgodnie z oczekiwaniami. Testy integracyjne są kluczowe dla identyfikacji problemów związanych z interakcjami między komponentami, które mogą nie być widoczne podczas testów jednostkowych.
+W ramach testów integracyjnych przeprowadzono:
+\begin{itemize}
+    \item Weryfikację poprawności działania endpointów API w kontekście komunikacji z bazą danych,
+    \item Weryfikację parsowania danych otrzyamnych z zewnętrznych źródeł (np. speedtest) oraz ich poprawnego zapisu do bazy danych,
+    \item Testy funkcjonalne dla kluczowych scenariuszy użytkowania, takich jak rejestracja, logowanie, dodawanie usług,
+\end{itemize}
+Testy integracyjne zostały zautomatyzowane przy użyciu narzędzi takich jak Postman oraz Newman, co umożliwiło ich łatwe uruchamianie i monitorowanie wyników. Dzięki temu możliwe było szybkie wykrywanie problemów związanych z integracją różnych komponentów systemu oraz ich eliminacja.
+\section{Analiza wydajnościowa systemu}
 \subsection{Testowanie wydajności systemu}
 
 Testowanie wydajności aplikacji jest kluczowe do zweryfikowania zachowania działania programu pod obciążeniem. Przeprowadzenie takiego testu pozwala na znalezienie tzw. "Wąskich gardeł" programu czyli ścieżek logicznych, które najbardziej obciążają działająca aplikację. Dzięki analizie takich testów możemy odpowiednio nadać wagę zadaniom optymalizacyjnym, żeby poprawić odbiór aplikacji poprzez końcowego użytkownika. Testy wydajnościowe to również testy długoterminowe, dzięki nim można zrozumieć jak aplikacja zachowuje się z długotrwałym obciążeniem i poznać jak reaguje na nagłe skoki obciążenia w różnych momentach czasu działania programu.
@@ -78,28 +88,28 @@ Za główną przyczynę wystąpienia błędów uznano ograniczenia wydajnościow
 \noindent
 Należy zaznaczyć, że testy wydajnościowe w przedstawionej formie przypominają bardziej atak typu DDoS niż rzeczywiste wykorzystanie systemu przez użytkowników. Mimo to są one niezwykle przydatne w procesie optymalizacji aplikacji - pozwalają zidentyfikować komponenty wymagające poprawy wydajnościowej. Nawet jeśli dana optymalizacja może wydawać się zbędna na etapie prototypowania, warto mieć na uwadze, że zoptymalizowany kod zużywa mniej zasobów systemowych i lepiej skaluje się w środowiskach produkcyjnych.
 
-\subsection{Testowanie bezpieczeństwa aplikacji}
+\section{Analiza odporności systemu na zagrożenia bezpieczeństwa}
 
 Bezpieczeństwo aplikacji webowych jest jednym z kluczowych aspektów projektowania i wdrażania nowoczesnych systemów. W kontekście niniejszego projektu, który zakłada zarządzanie usługami i użytkownikami, istotne jest zapewnienie odpowiedniego poziomu zabezpieczeń, aby zapobiec nieautoryzowanemu dostępowi, manipulacji danymi oraz wyciekom informacji.
 
-\subsubsection{Zakres testów bezpieczeństwa}
+\subsection{Zakres testów bezpieczeństwa}
 
 Testowanie bezpieczeństwa przeprowadzono w ograniczonym zakresie, skupiając się na ręcznej weryfikacji najczęściej występujących zagrożeń w aplikacjach webowych, zgodnie z zestawieniem OWASP Top 10. Weryfikacji poddano następujące obszary:
 
 \paragraph{1. Uwierzytelnianie i autoryzacja}
 System wykorzystuje tokeny JWT jako mechanizm autoryzacji. W ramach testów:
 \begin{itemize}
-    \item Sprawdzono odporność logowania na ataki brute-force – nie wykryto możliwości obejścia zabezpieczeń, jednak brak limitu prób logowania może stanowić potencjalne ryzyko.
+    \item Sprawdzono odporność logowania na ataki brute-force - nie wykryto możliwości obejścia zabezpieczeń, jednak brak limitu prób logowania może stanowić potencjalne ryzyko.
     \item Zweryfikowano, że po wygaśnięciu tokena nie jest on akceptowany przez serwer.
     \item Potwierdzono, że użytkownicy nieautoryzowani nie mają dostępu do zasobów innych użytkowników.
 \end{itemize}
 
 \paragraph{2. Odporność na SQL Injection}
-Wszystkie zapytania do bazy danych wykonywane są za pomocą ORM (GORM), co zapewnia parametryzację i zmniejsza ryzyko podatności na SQL Injection. Próby wstrzyknięcia kodu SQL w pola formularzy zakończyły się niepowodzeniem – aplikacja poprawnie odrzucała nieprawidłowe dane wejściowe.
+Wszystkie zapytania do bazy danych wykonywane są za pomocą ORM (GORM), co zapewnia parametryzację i zmniejsza ryzyko podatności na SQL Injection. Próby wstrzyknięcia kodu SQL w pola formularzy zakończyły się niepowodzeniem - aplikacja poprawnie odrzucała nieprawidłowe dane wejściowe.
 
 \paragraph{3. Odporność na XSS i CSRF}
 \begin{itemize}
-    \item Testy XSS (reflected i stored) nie przyniosły rezultatów – aplikacja nie wstrzykuje niezweryfikowanych danych wejściowych do HTML.
+    \item Testy XSS (reflected i stored) nie przyniosły rezultatów - aplikacja nie wstrzykuje niezweryfikowanych danych wejściowych do HTML.
     \item Aplikacja wykorzystuje token JWT w nagłówkach, co redukuje ryzyko CSRF, ponieważ brak ciasteczek sesyjnych eliminuje możliwość automatycznego przesyłania uwierzytelnienia.
 \end{itemize}
 
@@ -114,11 +124,11 @@ Przeprowadzono testy zabezpieczeń API:
 \paragraph{5. Odporność na przeciążenie (DoS)}
 W ramach testów wydajnościowych przeprowadzono symulację ataku DoS:
 \begin{itemize}
-    \item Wysyłano dużą liczbę zapytań w krótkim czasie – powyżej 400 jednoczesnych zapytań powodowało błędy odpowiedzi serwera.
+    \item Wysyłano dużą liczbę zapytań w krótkim czasie - powyżej 400 jednoczesnych zapytań powodowało błędy odpowiedzi serwera.
     \item Błędy te były spowodowane ograniczeniami bazy SQLite, która nie wspiera wielu równoczesnych zapisów.
 \end{itemize}
 
-\subsubsection{Rekomendacje i dalsze działania}
+\subsection{Rekomendacje i dalsze działania}
 Choć aplikacja wykazała odporność na najczęstsze zagrożenia, zaleca się:
 \begin{itemize}
     \item Dodanie limitu prób logowania i mechanizmu blokowania IP,

@@ -60,8 +60,8 @@ Każdy użytkownik musi zalogować się do systemu, podając swoje dane uwierzyt
 
 Kluczowe endpointy:
 \begin{itemize}
-    \item \textbf{POST /api/register} – Rejestracja nowego użytkownika,
-    \item \textbf{POST /api/login} – Logowanie użytkownika i zwrócenie tokena JWT.
+    \item \textbf{POST /api/register} - Rejestracja nowego użytkownika,
+    \item \textbf{POST /api/login} - Logowanie użytkownika i zwrócenie tokena JWT.
 \end{itemize}
 \newpage
 \section{Frontend - Interfejs uzytkownika}
@@ -140,7 +140,12 @@ Strona została zaprojektowana z myślą o administratorach systemu, zapewniają
   \caption{Podstrona wyświetlająca informacje o stanie serwera, jego zasobach oraz umożliwiająca zarządzanie nimi.}
   \label{fig:ui_server_page}
 \end{figure}
-
+\noindent Strona przedstawiona na Rys. 4.7 zawiera następujące elementy:
+\begin{itemize}
+  \item \textbf{Panel Informacyjny -  Server Stats} - Zawiera informację na temat wykorzystanych zasobów serwera, takich jak CPU, RAM oraz przestrzeń dyskowa,
+  \item \textbf{Panel Informacyjny -  Control Server} - Umożliwia użykotnikowi uruchomienie lub zatrzymanie serwera, a także zrestartowanie go. Użytkownik może również zaktualizować system operacyjny oraz zainstalować aktualizacje systemowe,
+  \item \textbf{Panel Informacyjny -  Network (Tailscale\cite{Tailscale})} - Umożliwia użytkownikowi zarządzanie połączeniem z siecią Tailscale, w tym wyłączenie lub włączenie połączenia, przeprowadzenie procesu autoryzacji serwera.
+\end{itemize}
 \subsubsection{Kolorystyka i typografia}
 Projekt interfejsu użytkownika aplikacji HomeNest wykorzystuje nowoczesną i spójną kolorystykę opartą na jasnym tle oraz delikatnych akcentach kolorystycznych. Dominującą barwą tła jest biel (\#ffffff), która nadaje przejrzystości oraz zapewnia wysoki kontrast względem elementów graficznych i tekstu.
 
@@ -173,7 +178,7 @@ Zaprojektowanie interfejsu w dwóch wersjach — jasnej i ciemnej — jest coraz
 
 \subsection{Implementacja interfejsu użytkownika}
 
-Interfejs użytkownika aplikacji HomeNest został zaimplementowany w oparciu o gotowy szablon \textbf{TailAdmin}, który dostępny jest publicznie na licencji \textbf{MIT}. TailAdmin to nowoczesny szablon frontendowy oparty na technologii \textbf{React.js}, zbudowany przy użyciu frameworka \textbf{Next.js} oraz systemu stylów \textbf{Tailwind CSS}. Dzięki otwartej licencji możliwe było swobodne dostosowanie szablonu do potrzeb aplikacji oraz jego dalszy rozwój.
+Interfejs użytkownika aplikacji HomeNest został zaimplementowany w oparciu o gotowy szablon \textbf{TailAdmin}\cite{TailAdmin}, który dostępny jest publicznie na licencji \textbf{MIT}. TailAdmin to nowoczesny szablon frontendowy oparty na technologii \textbf{React.js}, zbudowany przy użyciu frameworka \textbf{Next.js} oraz systemu stylów \textbf{Tailwind CSS}. Dzięki otwartej licencji możliwe było swobodne dostosowanie szablonu do potrzeb aplikacji oraz jego dalszy rozwój.
 
 \subsubsection{Proces dostosowania szablonu}
 W ramach prac wdrożeniowych wykonano następujące kroki:
@@ -214,7 +219,7 @@ Podsumowując, wykorzystanie TailAdmin jako szablonu bazowego pozwoliło na szyb
 \subsection{Integracja z narzędziami CI/CD}
 \label{sec:integracja_ci_cd}
 
-System HomeNest wykorzystuje mechanizmy CI/CD oparte na GitHub Actions w celu automatyzacji kluczowych procesów programistycznych — testowania, budowania, wersjonowania i publikacji aplikacji. Dzięki integracji z CI/CD możliwe jest zapewnienie ciągłości rozwoju i wysokiej jakości kodu bez potrzeby ręcznego wykonywania zadań wdrożeniowych.
+System HomeNest wykorzystuje mechanizmy CI/CD oparte na GitHub Actions\cite{Actions} w celu automatyzacji kluczowych procesów programistycznych — testowania, budowania, wersjonowania i publikacji aplikacji. Dzięki integracji z CI/CD możliwe jest zapewnienie ciągłości rozwoju i wysokiej jakości kodu bez potrzeby ręcznego wykonywania zadań wdrożeniowych.
 
 \subsubsection{Schemat działania}
 
@@ -222,7 +227,7 @@ Po każdej zmianie wprowadzonej do głównej gałęzi \texttt{main}, automatyczn
 
 \begin{enumerate}
     \item \textbf{Pipeline testujący} — weryfikuje jakość i poprawność kodu,
-    \item \textbf{Pipeline release’owy} — buduje artefakty i tworzy release.
+    \item \textbf{Pipeline release'owy} — buduje artefakty i tworzy release.
 \end{enumerate}
 
 \subsubsection{Pipeline testujący}
@@ -236,25 +241,25 @@ Pipeline testujący pełni funkcję strażnika jakości kodu. W jego ramach uruc
 
 Dzięki automatycznemu uruchamianiu testów możliwe jest wykrycie regresji i błędów już na etapie developmentu, zanim zostaną wprowadzone do środowiska produkcyjnego.
 
-\subsubsection{Pipeline release’owy}
+\subsubsection{Pipeline release'owy}
 
 Po pozytywnym zakończeniu testów uruchamiany jest pipeline odpowiedzialny za zbudowanie artefaktów aplikacji oraz ich publikację jako nowego release'u na GitHubie. Proces ten jest realizowany przy pomocy pliku Makefile, który automatyzuje cały proces budowania i pakowania aplikacji. Makefile definiuje następujące cele:
 
 \begin{itemize}
-    \item \textbf{build-frontend} – instalacja zależności npm oraz zbudowanie aplikacji frontendowej; pliki wynikowe umieszczane są w katalogu \texttt{backend/static},
-    \item \textbf{build-backend} – kompilacja aplikacji backendowej w Go z ustawieniem zmiennych środowiskowych \texttt{GOOS=linux} i \texttt{GOARCH=amd64}; wynikowy binarny plik jest zapisywany w katalogu \texttt{dist},
-    \item \textbf{package} – kopiowanie plików frontendowych do katalogu dystrybucji oraz utworzenie archiwum \texttt{homelab.tar.gz},
-    \item \textbf{clean} – usunięcie katalogów zbudowanych artefaktów i archiwum,
-    \item \textbf{all} – domyślna akcja wykonująca czyszczenie, budowę frontendu i backendu oraz pakowanie.
+    \item \textbf{build-frontend} - instalacja zależności npm oraz zbudowanie aplikacji frontendowej; pliki wynikowe umieszczane są w katalogu \texttt{backend/static},
+    \item \textbf{build-backend} - kompilacja aplikacji backendowej w Go z ustawieniem zmiennych środowiskowych \texttt{GOOS=linux} i \texttt{GOARCH=amd64}; wynikowy binarny plik jest zapisywany w katalogu \texttt{dist},
+    \item \textbf{package} - kopiowanie plików frontendowych do katalogu dystrybucji oraz utworzenie archiwum \texttt{homelab.tar.gz},
+    \item \textbf{clean} - usunięcie katalogów zbudowanych artefaktów i archiwum,
+    \item \textbf{all} - domyślna akcja wykonująca czyszczenie, budowę frontendu i backendu oraz pakowanie.
 \end{itemize}
 
-Pipeline GitHub Actions wywołuje polecenie \texttt{make all}, co zapewnia spójność budowy na każdym etapie. Dzięki temu proces tworzenia release’u jest w pełni zautomatyzowany, powtarzalny i prosty do uruchomienia lokalnie.
+Pipeline GitHub Actions wywołuje polecenie \texttt{make all}, co zapewnia spójność budowy na każdym etapie. Dzięki temu proces tworzenia release'u jest w pełni zautomatyzowany, powtarzalny i prosty do uruchomienia lokalnie.
 
 \subsubsection{Przykładowy workflow GitHub Actions}
 
 W poniższym przykładzie przedstawiono uproszczony workflow GitHub Actions, który wykorzystuje Makefile do budowania wszystkich komponentów systemu — frontend, backend oraz instalator:
 
-\begin{verbatim}
+\begin{lstlisting}
 name: Release Build
 
 on:
@@ -307,7 +312,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       files: |
         release.tar.gz
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Strategia wersjonowania}
 
@@ -315,7 +320,7 @@ Każdy release oznaczany jest automatycznie na podstawie numeru buildu. W przysz
 
 \subsubsection{Weryfikacja aktualności aplikacji}
 
-W przyszłości system zostanie rozszerzony o mechanizm, który cyklicznie będzie odpytywał GitHub API w celu sprawdzenia dostępności nowego release’u. Porównując aktualnie zainstalowaną wersję z najnowszym tagiem, system będzie w stanie:
+W przyszłości system zostanie rozszerzony o mechanizm, który cyklicznie będzie odpytywał GitHub API w celu sprawdzenia dostępności nowego release'u. Porównując aktualnie zainstalowaną wersję z najnowszym tagiem, system będzie w stanie:
 
 \begin{itemize}
     \item Powiadomić użytkownika o dostępnej aktualizacji,
